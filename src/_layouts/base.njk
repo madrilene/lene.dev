@@ -7,7 +7,7 @@
     <!-- css inline on production -->
     {% if meta.env %} {% set css %}{% include "global.min.css" %}{% include "cube.min.css"
     %}{% endset %}
-    <style>
+    <style nonce="a2cx1c3">
       {{ css | safe }}
     </style>
     {% else %}
