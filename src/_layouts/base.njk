@@ -5,7 +5,8 @@
     {% include "partials/head.njk" %}
 
     <!-- css inline on production -->
-    {% if site.env %} {% set css %}{% include "styles.min.css" %}{% endset %}
+    {% if meta.env %} {% set css %}{% include "global.min.css" %}{% include "cube.min.css"
+    %}{% endset %}
     <style>
       {{ css | safe }}
     </style>
@@ -30,13 +31,5 @@
 
     <!-- include lfooter  -->
     {% include "partials/footer.njk" %}
-
-    <!-- load yt if needed  -->
-    {% if youtube %}
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@0.6.2/lite-youtube.js"
-    ></script>
-    {% endif %}
   </body>
 </html>

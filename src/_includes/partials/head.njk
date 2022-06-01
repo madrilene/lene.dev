@@ -16,7 +16,9 @@
 
 <meta
   name="description"
-  content="{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}"
+  content="{% if description %}{{ description }}{% else %}{{
+    meta.siteDescription
+  }}{% endif %}"
 />
 <meta name="robots" content="index,follow" /><!-- All Search Engines -->
 <meta name="googlebot" content="index,follow" /><!-- Google Specific -->
@@ -43,18 +45,25 @@
 <!-- Facebook Open Graph meta -->
 <meta property="og:url" content="{{ meta.siteURL }}{{ page.url }}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ meta.siteName }}{% endif %}" />
+<meta
+  property="og:title"
+  content="{% if title %}{{ title }}{% else %}{{ meta.siteName }}{% endif %}"
+/>
 {% if site.meta_data.default_social_image or featured_image %}
 <meta
   property="og:image"
-  content="{% if site.env == 'production' %}{{ meta.siteURL }}{% endif %}{% if featured_image  %}{{
-    featured_image
-  }}{% else %}{{ meta.meta_data.opengraph_default }}{% endif %}"
+  content="{% if meta.env == 'production' %}{{
+    meta.siteURL
+  }}{% endif %}{% if featured_image  %}{{ featured_image }}{% else %}{{
+    meta.meta_data.opengraph_default
+  }}{% endif %}"
 />
 {% endif %}
 <meta
   property="og:description"
-  content="{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}"
+  content="{% if description %}{{ description }}{% else %}{{
+    meta.siteDescription
+  }}{% endif %}"
 />
 <meta property="og:site_name" content="{{ meta.siteName }}" />
 <meta property="og:locale" content="{{ meta.locale }}" />

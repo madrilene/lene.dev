@@ -32,6 +32,5 @@ module.exports = {
 	menu: {
 		closedText: 'Menu'
 	},
-
 	env: process.env.ELEVENTY_ENV === 'production'
 };
