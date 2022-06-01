@@ -1,0 +1,17 @@
+{
+	"items": [
+		{
+			"text": "About me",
+			"url": "/#about-me"
+		},
+
+		{
+			"text": "Tools",
+			"url": "/#tools"
+		},
+		{
+			"text": "Projects",
+			"url": "/#projects"
+		}
+	]
+}

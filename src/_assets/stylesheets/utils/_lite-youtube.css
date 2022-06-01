@@ -1,0 +1,11 @@
+.youtube-embed {
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+}
+.youtube-embed > * {
+  height: 100%;
+}
+
+.youtube-embed button {
+  cursor: pointer;
+}

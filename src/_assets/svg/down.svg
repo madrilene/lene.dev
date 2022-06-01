@@ -1,0 +1,12 @@
+<svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="3"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="ai ai-ChevronDown"
+>
+  <path d="m4 9 8 8 8-8" />
+</svg>

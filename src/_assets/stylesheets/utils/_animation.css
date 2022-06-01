@@ -1,0 +1,44 @@
+.fade-in {
+  animation: fade-in 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+.fade-in-bottom {
+  animation-name: fade-in-bottom;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

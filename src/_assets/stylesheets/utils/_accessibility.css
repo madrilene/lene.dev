@@ -1,0 +1,72 @@
+.skip-link {
+	clip: rect(1px, 1px, 1px, 1px);
+	display: block;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	top: 1rem;
+	left: 1rem;
+	z-index: 999;
+}
+
+.skip-link:focus {
+	clip: auto;
+	height: auto;
+	overflow: visible;
+	width: auto;
+	@apply bg-black p-3 text-white;
+}
+
+.skip-link {
+	position: absolute;
+	top: 2rem;
+	left: 1rem;
+	z-index: 99;
+	display: inline-block;
+}
+
+.skip-link:not(:focus),
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+:focus,
+button:focus {
+	outline: #2563eb solid 2px;
+	outline-offset: 0.15rem;
+}
+
+:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+:focus-visible,
+button:focus-visible {
+	outline: #2563eb solid 2px;
+	outline-offset: 0.15rem;
+}
+
+.generatedContent [href^='http']:not([href*='lene.dev'])::after {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-image: url('../assets/svg/icn-external.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70% auto;
+	/* alternative text rules */
+	content: '(external link)';
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 1em; /* the width of the icon */
+}

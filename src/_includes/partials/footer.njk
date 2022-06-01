@@ -1,0 +1,25 @@
+<footer class="wrapper my-size-3" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer information</h2>
+
+  <div class="sidebar space-between">
+    <div class="cluster">
+      {% for site in social %} {% if site.url %}
+      <a
+        aria-label="Link to {{ site.platform }}"
+        href="{{ site.url | url }}"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        {% svg site.platform, "h-5 w-5", "visible" %}
+      </a>
+      {% endif %} {% endfor %}
+    </div>
+
+    <p class="cluster">
+      &copy; {% year %} {{ meta.siteName }}
+      <a href="/imprint/"> Imprint </a>
+
+      <a href="/privacy/"> Privacy policy </a><br />
+    </p>
+  </div>
+</footer>
