@@ -63,7 +63,7 @@ const imageShortcodePlaceholder = async (
     ${
 			caption
 				? `<figcaption class="cluster font-display"><p>${caption}</p> <img
-        src="/_assets/svg/arrow.svg">
+        src="/_assets/svg/arrow.svg" alt="" width="78" height="75" aria-hidden="true" />
 	</figcaption>`
 				: ``
 		}

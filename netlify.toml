@@ -19,7 +19,7 @@
 [[headers]]
     for = "/*"
     [headers.values]
-    Content-Security-Policy = "default-src 'self'; connect-src 'self'; img-src 'self' data:; manifest-src 'self'; style-src 'self' 'nonce-a2cx1c3'; script-src 'self' data; worker-src 'self' blob; font-src 'self' data:;"
+    Content-Security-Policy = "default-src 'self'; connect-src 'self'; img-src 'self' data:; manifest-src 'self'; style-src 'self' 'nonce-a2cx1c3'; script-src 'self' data; worker-src 'self' blob; font-src 'self' data: fonts.gstatic.com;"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"

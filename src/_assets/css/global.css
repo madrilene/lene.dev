@@ -93,7 +93,7 @@ article [href^='http']:not([href*='lene.dev'])::after {
 	display: inline-block;
 	width: 1em;
 	height: 1em;
-	background-image: url('../svg/icn-external.svg');
+	background-image: url('./_assets/svg/icn-external.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 60% auto;
