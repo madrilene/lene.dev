@@ -1,7 +1,7 @@
 # Lene Saile / lene.dev
 
-This is my developer profile. It's built with Eleventy, Javascript and CSS.
-It's where I try new stuff, so things might be a little inconsistent and verbose.
+This is my developer profile. It's built with Eleventy, Javascript and CSS. Based on my personal opiniated Eleventy Starter for client projects, it still brings a lot of preconfigurations I'll have to strip out. It is quite over-engineered considering the simplicity of the page.
+This is also where I try new stuff, so things might be a little inconsistent and verbose.
 
 - [Using this](#using-this)
 - [Credits and Thank yous](#credits-and-thank-yous)
@@ -67,6 +67,13 @@ She provides a lot of resources for Eleventy and modern CSS, you can learn incre
 I love order and structure. Aleksandr Hovhannisyan does this in an exemplary way, which is why I based the structure of eleventy.js on his online resume and blog. Also, he writes great tutorials in his blog.
 
 - https://github.com/AleksandrHovhannisyan
+
+**Oliver Schöndorfer**
+
+For his great taste and knowledge in fonts.
+He introduced Charter and Outfit to me in his weekly newsletter.
+
+https://pimpmytype.com/
 
 ## Logbook
 

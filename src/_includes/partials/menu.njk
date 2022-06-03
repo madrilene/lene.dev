@@ -3,8 +3,15 @@
     {% for item in navigation.items %}
 
     <li>
-      <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-        ><span class="inline-block p-1 md:p-0">{{ item.text }}</span></a
+      <a
+        href="{{ item.url }}"
+        {{
+        helpers.getLinkActiveState(item.url,
+        page.url)
+        |
+        safe
+        }}
+        >{{ item.text }}</a
       >
     </li>
 
