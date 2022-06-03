@@ -1,6 +1,5 @@
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
-const ColorThief = require('colorthief');
 const htmlmin = require('html-minifier');
 
 const imageShortcodePlaceholder = async (
@@ -18,7 +17,7 @@ const imageShortcodePlaceholder = async (
 	}
 
 	let metadata = await Image(src, {
-		widths: [230, 580, 770, 1200],
+		widths: [400, 700, 1280],
 		formats: ['avif', 'webp', 'jpeg'],
 		urlPath: '/_assets/images/',
 		outputDir: './dist/_assets/images/',
@@ -32,7 +31,7 @@ const imageShortcodePlaceholder = async (
 
 	let lowsrc = metadata.jpeg[0];
 
-	// getting the url for colorthief to use
+	// getting the url  to use
 	let imgSrc = src;
 	if (!imgSrc.startsWith('.')) {
 		const inputPath = this.page.inputPath;
@@ -41,11 +40,9 @@ const imageShortcodePlaceholder = async (
 		imgSrc = pathParts.join('/') + '/' + src;
 	}
 
-	// colorthief getting the image colors
-	return ColorThief.getColor(imgSrc).then(color => {
-		return htmlmin.minify(
-			`<figure class="${fcls}">
-      <div class="relative" style="background-color: rgba(${color},1);"><picture class="${pcls}">
+	return htmlmin.minify(
+		`<figure class="${fcls}">
+     <picture class="${pcls}">
     ${Object.values(metadata)
 			.map(imageFormat => {
 				return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
@@ -62,7 +59,7 @@ const imageShortcodePlaceholder = async (
         alt="${alt}"
 				loading = 'lazy'
         decoding="async">
-    </picture></div>
+    </picture>
     ${
 			caption
 				? `<figcaption class="cluster font-display"><p>${caption}</p> <img
@@ -71,9 +68,8 @@ const imageShortcodePlaceholder = async (
 				: ``
 		}
 </figure>`,
-			{collapseWhitespace: true}
-		);
-	});
+		{collapseWhitespace: true}
+	);
 };
 
 module.exports = imageShortcodePlaceholder;

@@ -6,10 +6,10 @@ const svg = require('./svg');
 const svgSprite = require('./svgsprite');
 
 module.exports = {
-  imageShortcode,
-  imageShortcodePlaceholder,
-  asideShortcode,
-  liteYoutube,
-  svg,
-  svgSprite,
+	imageShortcode,
+	imageShortcodePlaceholder,
+	asideShortcode,
+	liteYoutube,
+	svg,
+	svgSprite
 };

@@ -1,7 +1,7 @@
 ---
 permalink: /index.html
 layout: page
-title: Inés Alba - Actriz, cantante, doblaje
+title: Home
 description: 'rsdfg'
 ---
 
@@ -21,7 +21,7 @@ In 2018 I discovered Jamstack and soon after changed all my (somewhat antiquated
 
 <div class="max-w-prose mx-auto flow">
 
-As far as Javascript frameworks are concerned, Svelte appeals to me the most. I also can't wait to learn about brand new tools like Astro and Slinkity.
+As far as Javascript frameworks are concerned, Svelte appeals to me the most. I also want to learn using [Astro](https://astro.build/) and [Slinkity](https://slinkity.dev/).
 
 I take accessibility and performance very seriously, testing and re-testing until the result is what I want it to be. Which is (as close as I can get to) perfect.
 
@@ -33,7 +33,7 @@ I'm constantly reading and learning, and I'm especially enthusiastic about every
 
 ## Tools
 
-These are the tools I work with or have worked with in the past. In bold higher preference/proficiency.
+These are the tools I work with or have worked with in the past. Bold indicates higher preference/proficiency.
 
 </div>
 
@@ -58,3 +58,18 @@ These are the tools I work with or have worked with in the past. In bold higher 
   </div>
     {%- endfor -%}
 </article>
+
+<!-- <div class="max-w-prose mx-auto flow">
+
+## Projects
+
+Projects I finished recently.
+{%- for project in collections.projects -%}
+
+  <h3 class="text-lg uppercase"> {{ project.data.title }}</h3>
+
+<p>{{ project.data.description}}</p>
+
+{%- endfor -%}
+
+</div -->

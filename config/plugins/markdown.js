@@ -7,7 +7,9 @@ const markdownItLinkAttributes = require('markdown-it-link-attributes');
 const {slugifyString} = require('../utils');
 
 const markdownLib = markdownIt({
-	html: true
+	html: true,
+	breaks: true,
+	linkify: true
 })
 	.use(markdownItPrism, {
 		defaultLanguage: 'plaintext'

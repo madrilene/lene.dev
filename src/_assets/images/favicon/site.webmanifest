@@ -1,7 +1,7 @@
 {
-  "name": "Inés Alba - Actriz, doblaje, cantante",
-  "short_name": "Inés Alba",
-  "start_url": "https://www.inesalba.com",
+  "name": "Lene Saile - Frontend developer",
+  "short_name": "Lene Saile",
+  "start_url": "https://www.lene.dev",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -20,7 +20,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#F9F5F1",
+  "background_color": "#F9F5F1",
   "display": "standalone"
 }

@@ -1,219 +1,35 @@
-/* VARIABLES GENERATED WITH TAILWIND CONFIG ON 1.6.2022.
-    Tokens location: ./tailwind.config.js */
+@import 'custom-props.css';
+@import 'reset.css';
+@import 'typography.css';
 
-:root {
-  --color-primary: #ff7f5c;
-  --color-secondary: #3c4558;
-  --color-light: #f9f5f1;
-  --color-dark: #10100f;
-  --space-size-0: clamp(0.83rem, 0.9rem + -0.32vw, 0.67rem);
-  --space-base: clamp(1rem, 1rem + 0vw, 1rem);
-  --space-size-1: clamp(1.2rem, 1.08rem + 0.59vw, 1.5rem);
-  --space-size-2: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
-  --space-size-3: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
-  --space-size-4: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
-  --space-size-5: clamp(2.49rem, 0.5rem + 9.96vw, 7.59rem);
-  --size-size-0: clamp(0.83rem, 0.9rem + -0.32vw, 0.67rem);
-  --size-base: clamp(1rem, 1rem + 0vw, 1rem);
-  --size-size-1: clamp(1.2rem, 1.08rem + 0.59vw, 1.5rem);
-  --size-size-2: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
-  --size-size-3: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
-  --size-size-4: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
-  --size-size-5: clamp(2.49rem, 0.5rem + 9.96vw, 7.59rem);
-}
-
-/* Modern reset: https://piccalil.li/blog/a-modern-css-reset/ */
-
-/* Josh Comeau CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/ */
-
-/* Box sizing rules */
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-/* Remove default margin */
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-	margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-
-ul[role='list'],
-ol[role='list'] {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-/* Set core root defaults */
-
-html:focus-within {
-	scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-
-body {
-	min-height: 100vh;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-
-a:not([class]) {
-	-webkit-text-decoration-skip: ink;
-	        text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-
-img,
-picture,
-video,
-canvas,
-svg {
-	max-width: 100%;
-	display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-
-@media (prefers-reduced-motion: reduce) {
-	html:focus-within {
-		scroll-behavior: auto;
-	}
-
-	*,
-	*::before,
-	*::after {
-		-webkit-animation-duration: 0.01ms !important;
-		        animation-duration: 0.01ms !important;
-		-webkit-animation-iteration-count: 1 !important;
-		        animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
-}
-
-@font-face {
-	font-family: Outfit;
-	font-style: normal;
-	font-display: swap;
-	font-weight: 400;
-	src: local(''), url(/_assets/fonts/outfit/outfit-v5-latin-regular.woff2) format('woff2'),
-		url(/assets/fonts/outfit/outfit-v5-latin-regular.woff) format('woff');
-}
-
-@font-face {
-	font-family: Charter;
-	font-style: normal;
-	font-display: swap;
-	font-weight: 400;
-	src: local(''), url(/_assets/fonts/charter/charter_regular.woff2) format('woff2'),
-		url(/assets/fonts/charter/charter_regular.woff) format('woff');
-}
-
-@font-face {
-	font-family: Charter;
-	font-style: normal;
-	font-display: swap;
-	font-weight: 700;
-	src: local(''), url(/_assets/fonts/charter/charter_bold.woff2) format('woff2'),
-		url(/assets/fonts/charter/charter_bold.woff) format('woff');
-}
-
-.nav__list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--gutter, var(--space-size-2));
-}
-
-.skip-link {
-	clip: rect(1px, 1px, 1px, 1px);
-	display: block;
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	width: 1px;
-	top: 1rem;
-	left: 1rem;
-	z-index: 999;
-}
-
-.skip-link:focus {
-	clip: auto;
-	height: auto;
-	overflow: visible;
-	width: auto;
-	background-color: var(--color-secondary);
-	color: var(--color-dark);
-	padding: var(--space-size-1);
-	line-height: 1;
-}
-
-.skip-link:not(:focus) {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
-}
+@import 'components/nav.css';
+@import 'components/skip-link.css';
 
 /* Global styles */
 
 body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 245 241 / var(--tw-bg-opacity));
-  font-family: Outfit, "Segoe UI", Roboto, "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
-  --tw-text-opacity: 1;
-  color: rgb(16 16 15 / var(--tw-text-opacity));
+	padding: var(--space-size-2) 0;
+	@apply bg-light text-dark text-size-1 font-body;
 }
 
-h1:not([class]), h2:not([class]), h3:not([class]) {
-  font-family: Charter, ui-sans-serif, system-ui, sans-serif;
+h1:not([class]),
+h2:not([class]),
+h3:not([class]) {
+	@apply font-display;
 	line-height: 1.1;
 	font-weight: 400;
 }
 
 h1:not([class]) {
-  font-size: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
+	@apply text-size-2;
 }
 
 h2:not([class]) {
-  margin-bottom: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
-  font-size: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
+	@apply text-size-4 mb-size-2 mt-size-4;
 }
 
 h3:not([class]) {
-  font-size: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
+	@apply text-size-3;
 }
 
 p,
@@ -237,8 +53,9 @@ a {
 
 a:not(.heading-anchor, .logo) {
 	text-decoration: underline;
+	text-decoration-color: var(--color-primary);
 	-webkit-text-decoration-color: var(--color-primary);
-	        text-decoration-color: var(--color-primary);
+	text-decoration-color: var(--color-primary);
 }
 
 /* Prose */

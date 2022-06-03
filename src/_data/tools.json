@@ -40,8 +40,8 @@
 		"possible": ["Sass", "Babel", "Typescript"]
 	},
 	{
-		"division": "Hosts",
-		"preference": ["Netlify"],
+		"division": "Version Control, Hosts",
+		"preference": ["Git/GitHub", "Netlify"],
 		"possible": ["Vercel", "Siteground"]
 	},
 	{

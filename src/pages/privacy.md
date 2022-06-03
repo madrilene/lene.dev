@@ -1,34 +1,28 @@
 ---
 title: Privacy Policy
 permalink: /privacy/index.html
-description: Política de privacidad según la Regulación General de Protección de Datos de la UE (RGPD).
+description: Privacy Policy according to the EU General Data Protection Regulation (GDPR).
 layout: page-prose
 ---
 
-## Privacy Policy
+# Privacy Policy
 
-Respeto la Regulación General de Protección de Datos de la UE (RGPD) y este documento de política explica cómo recopilamos y manejamos cualquier información que nos proporciones.
+I respect the EU General Data Protection Regulation (GDPR) and this policy document explains how I collect and handle any information you provide to me.
 
-**¿Qué datos de fondo se recogen?**
+**What background data is collected?**
+This site does not use any third party tracking scripts.
+For visitor statistics I use Plausible Analytics, a privacy-first web analytics tool. It is built to comply with the different privacy regulations, such as GDPR and CCPA. Plausible does not use cookies and does not collect any personal data.
 
-Esta página no utiliza ningún script de seguimiento de terceros.
+**How do we use the data you provide?**
+This website does not collect any further information.
 
-Para **estadísticas de visitantes** utilizamos Plausible Analytics, una herramienta de análisis web que da prioridad a la privacidad. Está construida para cumplir con las diferentes regulaciones de privacidad, como RGPD y CCPA. Plausible no utiliza cookies y no recoge ningún tipo de datos personales.
+**How secure is your data?**
+Very secure, as this website does not collect any information.
 
-**¿Cómo utilizamos los datos que proporcionas?**
+**How secure is this website?**
+This website transmits itself using HTTPS, encrypting all data between the browser and the server. Your network provider can still see that you are downloading assets from this site, but not its content. This also protects you from third parties intercepting data, for example, while browsing on public WiFi, or from network providers injecting advertisements on this site. All relevant response HTTP headers are set for your protection and the Content Security Policy is adjusted to this websites requirements.
 
-Este sitio web no recoge más información.
-
-**¿Qué tan seguros están tus datos?**
-
-Muy seguro, ya que este sitio web no recoge ninguna información.
-
-**¿Qué tan seguro es este sitio web?**
-
-Este sitio web se transmite a sí mismo usando HTTPS, encriptando todos los datos entre el navegador y el servidor. Tu proveedor de red puede seguir viendo que está cargando archivos de este sitio, pero no su contenido. Esto también te protege de que terceros intercepten datos, por ejemplo, mientras navega en una WiFi pública, o de que los proveedores de red inyecten anuncios en este sitio.
-
-**Responsable del tratamiento de datos**
-
+**Data controller**
 {{ meta.address.firma }}
 {{ meta.address.street }}
 {{ meta.address.zip }}, {{ meta.address.city }},
@@ -36,16 +30,12 @@ Este sitio web se transmite a sí mismo usando HTTPS, encriptando todos los dato
 Tel: <a href="tel:{{ meta.address.mobileCall }}">{{ meta.address.mobileDisplay }}</a>
 Mail: <a href="mailto:{{ meta.address.email }}">{{ meta.address.email }}</a>
 
-Si tienes alguna pregunta o duda al respecto por favor, ponte en contacto conmigo: <a href="mailto:{{ meta.address.email }}">{{ meta.address.email }}</a>
+If you have any questions or doubts, please contact me: <a href="mailto:{{ meta.address.email }}">{{ meta.address.email }}</a>
 
-**Cambios en la política**
+**Changes to the policy**
+If I change the content of this policy, those changes will be effective at the time I post them here.
 
-Si cambio el contenido de esta política, esos cambios serán efectivos en el momento en que los publique en mi sitio web.
+**Complaints**
+If you have any reason to complain about the way I handle your privacy, please contact me by email: <a href="mailto:{{ meta.address.email }}">{{ meta.address.email }}</a>.
 
-**Quejas**
-
-Si tienes alguna razón para quejarte de la forma en que manejo su privacidad, por favor contáctame por correo electrónico: <a href="mailto:{{ meta.address.email }}">{{ meta.address.email }}</a>.
-
-Última actualización: 28 de mayo de 2022
-
-</div>
+Last updated: 28 de mayo de 2022

@@ -8,6 +8,7 @@ const {
 	toHtml,
 	where,
 	toISOString,
+	formatDate,
 	dividedBy,
 	newlineToBr,
 	toAbsoluteUrl,
@@ -27,12 +28,7 @@ const {
 } = require('./config/shortcodes/index.js');
 
 // module import collections
-const {
-	getAllPosts,
-	getAllActriz,
-	getAllDoblaje,
-	getAllCantante
-} = require('./config/collections/index.js');
+const {getAllProjects} = require('./config/collections/index.js');
 
 // module import transforms
 const {compressHTML} = require('./config/transforms/index.js');
@@ -71,6 +67,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter('escape', escape);
 	eleventyConfig.addFilter('toHtml', toHtml);
 	eleventyConfig.addFilter('toIsoString', toISOString);
+	eleventyConfig.addFilter('formatDate', formatDate);
 	eleventyConfig.addFilter('dividedBy', dividedBy);
 	eleventyConfig.addFilter('newlineToBr', newlineToBr);
 	eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
@@ -97,10 +94,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addTransform('compressHTML', compressHTML);
 
 	// 	--------------------- Custom collections -----------------------
-	eleventyConfig.addCollection('posts', getAllPosts);
-	eleventyConfig.addCollection('proyectosActriz', getAllActriz);
-	eleventyConfig.addCollection('proyectosDoblake', getAllDoblaje);
-	eleventyConfig.addCollection('proyectosCantante', getAllCantante);
+	eleventyConfig.addCollection('projects', getAllProjects);
 
 	// 	--------------------- Plugins ---------------------
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
