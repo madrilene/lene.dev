@@ -80,6 +80,8 @@ https://pimpmytype.com/
 ### 22-06-06
 
 Adding projects section. I still have to structure index.md more clearly.
+Adding lightbulb switch for mode-toggle.
+to do: Striving for a better animation and a tiny sound-effect. not optimized on mobile, not well positioned on desktop.
 
 ### 22-06-03
 
