@@ -31,7 +31,6 @@ const {
 const {getAllProjects} = require('./config/collections/index.js');
 
 // module import transforms
-const {compressHTML} = require('./config/transforms/index.js');
 
 // plugins
 const markdownLib = require('./config/plugins/markdown.js');
@@ -91,7 +90,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`); // current year, stephanie eckles
 
 	// 	--------------------- Custom transforms ---------------------
-	eleventyConfig.addTransform('compressHTML', compressHTML);
 
 	// 	--------------------- Custom collections -----------------------
 	eleventyConfig.addCollection('projects', getAllProjects);

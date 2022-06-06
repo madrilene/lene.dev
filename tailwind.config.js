@@ -20,8 +20,8 @@ module.exports = {
 			colors: {
 				primary: '#FF7F5C',
 				secondary: '#3C4558',
-				light: '#F9F5F1',
-				dark: '#10100F'
+				light: 'hsl(30, 40%, 96%)',
+				dark: 'hsl(30, 40%, 8%)'
 			},
 			spacing: {
 				'size-0': 'clamp(0.83rem, 0.90rem + -0.32vw, 0.67rem)',
@@ -30,7 +30,8 @@ module.exports = {
 				'size-2': 'clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem)',
 				'size-3': 'clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem)',
 				'size-4': 'clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem)',
-				'size-5': 'clamp(2.49rem, 0.50rem + 9.96vw, 7.59rem)'
+				'size-5': 'clamp(2.49rem, 0.50rem + 9.96vw, 7.59rem)',
+				'lightbulb': 'clamp(0.83rem, 0.50rem + 9.96vw, 7.59rem)'
 			},
 			fontSize: {
 				'size-0': 'clamp(0.83rem, 0.90rem + -0.32vw, 0.67rem)',

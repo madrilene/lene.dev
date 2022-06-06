@@ -24,11 +24,13 @@ const svgColorDefault = 'text-black';
  */
 
 const svg = (name, classes, hidden, title) => {
-  const nameAttr = name ? name : 'piedpiper';
-  const classesAttr = classes ? `${classes} fill-current` : `${svgColorDefault} fill-current`;
-  const ariaHidden = hidden === 'hidden' ? `aria-hidden="true" focusable="false"` : ``;
-  const titleAttr = title ? title : `missing title`;
-  return `<svg ${ariaHidden} class="${classesAttr}" aria-labelledby="title-${nameAttr}" role="img">
+	const nameAttr = name ? name : 'piedpiper';
+	const classesAttr = classes
+		? `${classes} fill-current`
+		: `${svgColorDefault} fill-current`;
+	const ariaHidden = hidden === 'hidden' ? `aria-hidden="true" focusable="false"` : ``;
+	const titleAttr = title ? title : `missing title`;
+	return `<svg ${ariaHidden} class="${classesAttr}" aria-labelledby="title-${nameAttr}" role="img">
 
 <title id="title-${nameAttr}">${titleAttr}</title>
                 <use xlink:href="#symbol-${nameAttr}"></use>

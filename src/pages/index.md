@@ -59,17 +59,56 @@ These are the tools I work with or have worked with in the past. Bold indicates 
     {%- endfor -%}
 </article>
 
-<!-- <div class="max-w-prose mx-auto flow">
+<div class="max-w-prose mx-auto flow">
 
-## Projects
+## Recent Projects
 
-Projects I finished recently.
+</div>
+
+<!-- get items from projects collections. projects not exported as independet pages. -->
+
 {%- for project in collections.projects -%}
 
-  <h3 class="text-lg uppercase"> {{ project.data.title }}</h3>
+<div class="max-w-prose mx-auto flow">
+
+  <h3 class="mt-size-0"> {{ project.data.title }}</h3>
 
 <p>{{ project.data.description}}</p>
 
-{%- endfor -%}
+<div class="switcher">
+<section>
+  <h3 class="mt-size-2">Technologies </h3>
 
-</div -->
+<ul>
+    {%- for item in project.data.technologies -%}
+
+  <li>
+    {{ item }}
+  </li>
+    {%- endfor -%}
+  </ul>
+
+</section>
+
+<section>
+
+<h3 class="mt-size-2 mb-size-1">Visit website</h3>
+
+<a href="{{ project.data.link}}"  class="box | boxborder linkbutton " style="--space: 0.333em">{{ project.data.link | replace("https://", "") }}</a>
+
+</section>
+
+</div>
+
+</div>
+
+<div class="sidebar mb-size-4">
+
+{% image project.data.mobile.img, "h-full", "object-cover w-full h-max rounded-tr-2xl boxborder", project.data.mobile.alt, "lazy", "
+(max-width: 465px) 400px, (max-width: 765px) 700px, 400px" %}
+
+{% image project.data.desktop.img, "h-full", "object-cover w-full h-max rounded-tr-2xl boxborder", project.data.desktop.alt, "lazy", "(max-width: 465px) 400px, (max-width: 1150px) 700px, 1200px" %}
+
+</div>
+
+{%- endfor -%}

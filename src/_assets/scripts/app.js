@@ -16,3 +16,20 @@ cards.forEach(card => {
 		}
 	};
 });
+
+// extremely simple toggle light/dark mode
+
+const modeToggle = document.querySelector('.lightbulb');
+const bodyInvert = document.body;
+
+// make the bulb wobble slightly on click
+
+function initiateWobble() {
+	modeToggle.classList.add = 'wobble-horizontal-top';
+}
+
+modeToggle.onclick = function () {
+	console.log('clicked!');
+	bodyInvert.classList.toggle('invert');
+	initiateWobble();
+};

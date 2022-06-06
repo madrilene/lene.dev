@@ -7,7 +7,7 @@ const imageShortcode = async (src, pcls, cls, alt, loading, sizes = '100vw') => 
 	}
 
 	let metadata = await Image(src, {
-		widths: [400, 800, 1280],
+		widths: [400, 700, 1280],
 		formats: ['avif', 'webp', 'jpeg'],
 		urlPath: '/_assets/images/',
 		outputDir: './dist/_assets/images/',
@@ -36,7 +36,7 @@ const imageShortcode = async (src, pcls, cls, alt, loading, sizes = '100vw') => 
         width="${lowsrc.width}"
         height="${lowsrc.height}"
         alt="${alt}"
-        loading="lazy"
+				loading="${loading}
         decoding="async">
     </picture>`;
 };

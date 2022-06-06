@@ -4,12 +4,33 @@
 
 @import 'components/nav.css';
 @import 'components/skip-link.css';
+@import 'components/lightbulb.css';
 
 /* Global styles */
 
+html {
+	/* block body's background propagation */
+	background-color: var(--color-light);
+}
+
 body {
-	padding: var(--space-size-2) 0;
-	@apply bg-light text-dark text-size-1 font-body;
+	color: var(--color-dark);
+	background-color: var(--color-light);
+	@apply text-size-1 font-body;
+}
+
+*:not([.lightbulb]) {
+	background-color: inherit;
+}
+
+body.invert {
+	filter: invert(100%);
+}
+
+/* don't invert raster images or videos  */
+.invert img:not([src*='.svg']),
+video {
+	filter: invert(100%);
 }
 
 h1:not([class]),
@@ -51,7 +72,7 @@ a {
 	text-decoration: none;
 }
 
-a:not(.heading-anchor, .logo) {
+a:not(.heading-anchor, .logo, .linkbutton, .nav) {
 	text-decoration: underline;
 	text-decoration-color: var(--color-primary);
 	-webkit-text-decoration-color: var(--color-primary);
@@ -106,7 +127,7 @@ article [href^='http']:not([href*='lene.dev'])::after {
 
 .boxborder {
 	border: 2px solid var(--color-dark);
-	border-radius: var(--space-size-1);
+	border-radius: var(--space, var(--space-size-1, 0.6em));
 }
 
 /* So text scale renders nicely */

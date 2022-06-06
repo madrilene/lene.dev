@@ -59,7 +59,7 @@ He is developing Eleventy.
 
 She provides a lot of resources for Eleventy and modern CSS, you can learn incredibly much from her.
 
-- https://thinkdobecreate.com/
+- https://smolcss.dev/
 - https://moderncss.dev/
 
 **Aleksandr Hovhannisyan**
@@ -77,9 +77,14 @@ https://pimpmytype.com/
 
 ## Logbook
 
+### 22-06-06
+
+Adding projects section. I still have to structure index.md more clearly.
+
 ### 22-06-03
 
 I'm adjusting the image shortcodes for the Eleventy Image Plugin. Deleted colorthief for background color as I consider it unnecessary.
+To do: Projects sections and books I read.
 
 ### 22-05-28
 

@@ -9,7 +9,6 @@ const imageShortcodePlaceholder = async (
 	cls,
 	alt,
 	caption,
-
 	sizes = '100vw'
 ) => {
 	if (!alt) {

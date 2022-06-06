@@ -1,4 +1,11 @@
-<svg width="24" height="24" fill="currentColor" stroke-width="2" class="ai ai-LinkedInV1Fill">
+<svg
+  width="24"
+  height="24"
+  fill="currentColor"
+  stroke-width="2"
+  class="ai ai-LinkedInV1Fill"
+>
+  <title>Link my linkedin-profile</title>
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"

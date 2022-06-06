@@ -8,6 +8,11 @@
 		{
 			"text": "Tools",
 			"url": "/#tools"
+		},
+
+		{
+			"text": "Projects",
+			"url": "/#recent-projects"
 		}
 	]
 }

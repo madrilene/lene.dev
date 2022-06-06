@@ -1,0 +1,42 @@
+.lightbulb {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	transform: translateY(-10px);
+}
+
+.invert #lightcircle,
+.invert #innerbulb,
+.invert #lightlines {
+	display: none;
+}
+
+.bounce-bottom:active {
+	animation: bounce-bottom 0.1s linear both;
+}
+@keyframes bounce-bottom {
+	0% {
+		transform: translateY(-5px);
+		animation-timing-function: ease-in;
+		opacity: 1;
+	}
+	24% {
+		opacity: 1;
+	}
+	40% {
+		transform: translateY(-5px);
+		animation-timing-function: ease-in;
+	}
+	25%,
+	55%,
+	75%,
+	87% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		transform: translateY(0);
+		animation-timing-function: ease-out;
+		opacity: 1;
+	}
+}
