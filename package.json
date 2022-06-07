@@ -13,7 +13,7 @@
 		"build:postcss2": "NODE_ENV=production postcss src/_assets/css/cube.css -o src/_includes/cube.min.css",
 		"build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
 		"build:bundle": "esbuild src/_assets/scripts/app.js --bundle --minify --outfile=dist/_assets/app.min.js",
-		"build:component": "esbuild src/_assets/scripts/webcomponents.js --bundle --minify --outfile=dist/_assets/webcomponents.js",
+		"build:component": "esbuild src/_assets/scripts/webcomponents.js --bundle --outfile=dist/_assets/webcomponents.js",
 		"start": "run-p dev:*",
 		"build": "run-s clean build:*"
 	},
