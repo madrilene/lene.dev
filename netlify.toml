@@ -6,8 +6,6 @@
     # Perform a11y check against WCAG 2.1 AAA
     wcagLevel = 'WCAG2AAA'
 
-[[plugins]]
-  package = "netlify-plugin-inline-critical-css"
 
 [[plugins]]
   package = "netlify-plugin-11ty"
