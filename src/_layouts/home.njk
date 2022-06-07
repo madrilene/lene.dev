@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+<main id="main" class="wrapper mt-size-3">
+  <div class="flow">
+    <article class="content mx-auto flow">
+      {{ content | safe }}
+    </article>
+
+    {% include "components/toolbox.njk" %}
+    <!-- prj -->
+    {% include "components/projects-collapsible.njk" %}
+    <!-- prj -->
+  </div>
+</main>

@@ -1,11 +1,15 @@
 ---
 permalink: /index.html
-layout: page
-title: Home
-description: 'rsdfg'
+layout: home
+title: Lene Saile, frontend developer based in Madrid
+description: 'I make fast and accessible websites and web apps. I enjoy building sites with vanilla Javascript and the possibilities of modern CSS. '
+tools:
+  title: Tools
+  content: 'These are the tools I work with or have worked with in the past. Bold indicates higher preference/proficiency.'
+projects:
+  title: Recent Projects
+  content: 'Expand to see the details of some of my recent client projects.'
 ---
-
-<div class="max-w-prose mx-auto flow">
 
 ## About me
 
@@ -15,100 +19,10 @@ After reaching my limits with static websites, I discovered Wordpress. Theme pla
 
 In 2018 I discovered Jamstack and soon after changed all my (somewhat antiquated) methods. I started integrating Git by default for all projects, tested new bundlers, CSS and Javscript frameworks and discovered the wonderful world of Continuous deployments via GitHub and Netlify. Goodbye FTP.
 
-</div>
-
 {% include "components/presentation.njk" %}
 
-<div class="max-w-prose mx-auto flow">
-
-As far as Javascript frameworks are concerned, Svelte appeals to me the most. I also want to learn using [Astro](https://astro.build/) and [Slinkity](https://slinkity.dev/).
+As far as Javascript frameworks are concerned, Svelte appeals to me the most. I also want to learn more about [Astro](https://astro.build/) and [Slinkity](https://slinkity.dev/).
 
 I take accessibility and performance very seriously, testing and re-testing until the result is what I want it to be. Which is (as close as I can get to) perfect.
 
 I'm constantly reading and learning, and I'm especially enthusiastic about everything that's happening in the areas of Jamstack, accessibility and performance. I don't consider myself an expert anywhere, as I'm constantly optimising and every field is incredibly large. But I am a quick and flexible learner and have no trouble familiarising myself with new methods and techniques. And I am a practised solution-seeker on Google.
-
-</div>
-
-<div class="max-w-prose mx-auto flow">
-
-## Tools
-
-These are the tools I work with or have worked with in the past. Bold indicates higher preference/proficiency.
-
-</div>
-
-<article class="grid">
-{%- for tool in tools -%}
-<div class="box boxborder">
-  <h3 class="text-lg uppercase pb-size-1"> {{ tool.division }}</h3>
-  <ul role="list" class="text-lg">
-{%- for item in tool.preference -%}
-  <li>
-  <strong>  {{ item }}  </strong>
-  </li>
-    {%- endfor -%}
-
-    {%- for item in tool.possible -%}
-
-  <li>
-    {{ item }}
-  </li>
-    {%- endfor -%}
-  </ul>
-  </div>
-    {%- endfor -%}
-</article>
-
-<div class="max-w-prose mx-auto flow">
-
-## Recent Projects
-
-</div>
-
-<!-- get items from projects collections. projects not exported as independet pages. -->
-
-{%- for project in collections.projects -%}
-
-<div class="max-w-prose mx-auto flow">
-
-  <h3 class="mt-size-0"> {{ project.data.title }}</h3>
-
-<p>{{ project.data.description}}</p>
-
-<div class="switcher">
-<section>
-  <h3 class="mt-size-2">Technologies </h3>
-
-<ul>
-    {%- for item in project.data.technologies -%}
-
-  <li>
-    {{ item }}
-  </li>
-    {%- endfor -%}
-  </ul>
-
-</section>
-
-<section>
-
-<h3 class="mt-size-2 mb-size-1">Visit website</h3>
-
-<a href="{{ project.data.link}}"  class="box | boxborder linkbutton " style="--space: 0.333em">{{ project.data.link | replace("https://", "") }}</a>
-
-</section>
-
-</div>
-
-</div>
-
-<div class="sidebar mb-size-4">
-
-{% image project.data.mobile.img, "h-full", "object-cover w-full h-max rounded-tr-2xl boxborder", project.data.mobile.alt, "lazy", "
-(max-width: 465px) 400px, (max-width: 765px) 700px, 400px" %}
-
-{% image project.data.desktop.img, "h-full", "object-cover w-full h-max rounded-tr-2xl boxborder", project.data.desktop.alt, "lazy", "(max-width: 465px) 400px, (max-width: 1150px) 700px, 1200px" %}
-
-</div>
-
-{%- endfor -%}

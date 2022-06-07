@@ -2,10 +2,10 @@
 title: Privacy Policy
 permalink: /privacy/index.html
 description: Privacy Policy according to the EU General Data Protection Regulation (GDPR).
-layout: page-prose
+layout: page
 ---
 
-# Privacy Policy
+## Privacy Policy
 
 I respect the EU General Data Protection Regulation (GDPR) and this policy document explains how I collect and handle any information you provide to me.
 

@@ -1,14 +1,17 @@
 [
 	{
 		"platform": "github",
-		"url": "https://github.com/madrilene"
+		"url": "https://github.com/madrilene/lene.dev",
+		"title": "Link to the github repository of this page"
 	},
 	{
 		"platform": "twitter",
-		"url": "https://twitter.com/lenesaile"
+		"url": "https://twitter.com/lenesaile",
+		"title": " Link to my twitter profile. I'm not much of a broadcaster, I prefer to listen"
 	},
 	{
 		"platform": "linkedin",
-		"url": "https://www.linkedin.com/in/lenesaile/"
+		"url": "https://www.linkedin.com/in/lenesaile/",
+		"title": "Link my linkedin-profile"
 	}
 ]

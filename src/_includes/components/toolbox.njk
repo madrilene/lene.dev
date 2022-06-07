@@ -1,0 +1,23 @@
+<div class="content mx-auto flow">
+  <h2 id="tools">{{ tools.title }}</h2>
+  <p>{{ tools.content }}</p>
+</div>
+
+<article class="grid">
+  {%- for tool in toolbox.tools -%}
+  <div class="box boxborder">
+    <h3 class="text-lg uppercase pb-size-1">{{ tool.division }}</h3>
+    <ul role="list" class="text-lg">
+      {%- for item in tool.preference -%}
+      <li>
+        <strong> {{ item }} </strong>
+      </li>
+      {%- endfor -%} {%- for item in tool.possible -%}
+      <li>
+        {{ item }}
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endfor -%}
+</article>

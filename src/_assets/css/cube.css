@@ -12,6 +12,7 @@
 @import 'utilities/region.css';
 @import 'utilities/visually-hidden.css';
 @import 'utilities/wrapper.css';
+@import 'utilities/content.css';
 
 /* Tailwind utilities */
 @tailwind utilities;

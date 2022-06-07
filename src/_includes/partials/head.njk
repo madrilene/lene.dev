@@ -28,7 +28,7 @@
 <!-- Helps prevent duplicate content issues -->
 <link rel="canonical" href="{{ meta.siteURL }}{{ page.url }}" />
 
-<title>{% if title %}{{ title }} - {% endif %}{{ meta.siteName }}</title>
+<title>{% if title %}{{ title }}{% else %}{{ meta.siteName }}{% endif %}</title>
 
 <!-- Links to information about the author(s) of the document -->
 <link rel="author" href="humans.txt" />

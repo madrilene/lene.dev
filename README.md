@@ -77,6 +77,11 @@ https://pimpmytype.com/
 
 ## Logbook
 
+### 22-06-07
+
+Fixed z-index issue with lightbulb. Added web component for projects accordeon.
+to do: add more projects, learning section with books and courses. generally strip out unneeded filters, dependencies etc.
+
 ### 22-06-06
 
 Adding projects section. I still have to structure index.md more clearly.

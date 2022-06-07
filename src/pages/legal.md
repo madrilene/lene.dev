@@ -2,10 +2,10 @@
 title: Legal notice
 permalink: /imprint/index.html
 description: Emisor, titular y responsable de la página web y información sobre las técnicas usadas en desarrollo y producción
-layout: page-prose
+layout: page
 ---
 
-# Legal notice
+## Legal notice
 
 In accordance with article 10 of spanish Law 34/2002 on information society services and electronic commerce, the owner and party responsible for this website is:
 

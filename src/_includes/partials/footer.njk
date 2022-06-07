@@ -1,4 +1,4 @@
-<footer class="wrapper my-size-3" aria-labelledby="footer-heading">
+<footer class="wrapper pb-size-3 pt-size-5" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer information</h2>
 
   <div class="sidebar space-between">
@@ -10,7 +10,7 @@
         target="_blank"
         rel="noreferrer noopener"
       >
-        {% svg site.platform, "h-5 w-5", "visible" %}
+        {% svg site.platform, "h-5 w-5", "visible", site.title %}
       </a>
       {% endif %} {% endfor %}
     </div>

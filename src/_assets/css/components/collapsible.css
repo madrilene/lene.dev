@@ -1,0 +1,37 @@
+.collapsible .controls {
+	text-align: right;
+	margin-bottom: 1em;
+}
+
+.collapsible .controls li {
+	display: inline;
+}
+
+.collapsible button {
+	background: #000;
+	color: #fff;
+	border: 0;
+	font-size: 0.85rem;
+	border-radius: 0.25rem;
+	cursor: pointer;
+}
+
+/*
+ Custom elements are inline by default
+ */
+.collapsible toggle-section {
+	display: block;
+}
+
+/*
+ Only applies if script runs and
+ `role="region"` is added
+ */
+.collapsible toggle-section[role='region'] {
+	border-width: 2px 0;
+	border-style: solid;
+}
+
+.collapsible toggle-section[role='region'] + toggle-section {
+	border-top: 0;
+}
