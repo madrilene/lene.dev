@@ -81,6 +81,7 @@ https://pimpmytype.com/
 
 Fixed z-index issue with lightbulb. Added web component for projects accordeon.
 to do: add more projects, learning section with books and courses. generally strip out unneeded filters, dependencies etc.
+Learnt that strict csp does not go well with shadow dom styles from web component. deactivated custom csp for now completely.
 
 ### 22-06-06
 
