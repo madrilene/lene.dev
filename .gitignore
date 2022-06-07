@@ -68,5 +68,5 @@ dist
 
 # Don't commit temp build files
 src/_assets/app.min.js
-src/_assets/styles.min.css
-src/_includes/styles.min.css
+src/_includes/global.min.css
+src/_includes/cube.min.css

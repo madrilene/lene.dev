@@ -1,19 +1,17 @@
 {
 	"name": "lene-dev",
-	"version": "0.1.22",
+	"version": "0.1.23",
 	"description": "My developer page. Made with Eleventy, ESBuild and Tailwind CSS as utilities for CUBE CSS",
 	"scripts": {
 		"clean": "rimraf dist",
 		"dev:postcss": "postcss src/_assets/css/ --dir dist/_assets/css --watch --verbose",
-		"dev:bundle": "esbuild src/_assets/scripts/app.js --watch --outfile=dist/_assets/app.min.js",
-		"dev:component": "esbuild src/_assets/scripts/webcomponents.js --watch --outfile=dist/_assets/webcomponents.js",
+		"dev:scripts": "esbuild src/_assets/scripts/app.js --bundle --watch --outfile=dist/_assets/app.min.js",
 		"dev:cube": "node css-props-generator.js",
 		"dev:11ty": "eleventy --serve --watch",
 		"build:postcss1": "NODE_ENV=production postcss src/_assets/css/global.css -o src/_includes/global.min.css",
 		"build:postcss2": "NODE_ENV=production postcss src/_assets/css/cube.css -o src/_includes/cube.min.css",
 		"build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
-		"build:bundle": "esbuild src/_assets/scripts/app.js --bundle --minify --outfile=dist/_assets/app.min.js",
-		"build:component": "esbuild src/_assets/scripts/webcomponents.js --bundle --outfile=dist/_assets/webcomponents.js",
+		"build:scripts": "esbuild src/_assets/scripts/app.js --bundle --minify --outfile=dist/_assets/app.min.js",
 		"start": "run-p dev:*",
 		"build": "run-s clean build:*"
 	},
