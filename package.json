@@ -1,6 +1,6 @@
 {
 	"name": "lene-dev",
-	"version": "0.1.23",
+	"version": "0.1.24",
 	"description": "My developer page. Made with Eleventy, ESBuild and Tailwind CSS as utilities for CUBE CSS",
 	"scripts": {
 		"clean": "rimraf dist",
