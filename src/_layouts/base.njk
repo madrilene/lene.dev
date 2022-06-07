@@ -4,11 +4,12 @@
     <!-- include head  -->
     {% include "partials/head.njk" %}
 
-    <!-- css inline on production -->
-    {% if meta.env %} {% set css %}{% include "global.min.css" %}{% include "cube.min.css"
-    %}{% endset %}
+    <!-- check if production -->
+    {% if meta.env %}
+    <!-- set inline css -->
+    {% set css %}{% include "global.min.css" %}{% include "cube.min.css" %}{% endset %}
     <style nonce="a2cx1c3">
-      {{ css | safe }}
+      {{ css | cssmin | safe }}
     </style>
     {% else %}
     <link rel="stylesheet" href="/_assets/css/global.css" />
@@ -17,6 +18,7 @@
 
     <!-- defer js file  -->
     <script src="/_assets/app.min.js" defer></script>
+    <script src="/_assets/webcomponents.js" defer></script>
 
     <!-- include base schema  -->
     {%- include "schemas/base-schema.njk" %}

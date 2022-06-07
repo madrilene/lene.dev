@@ -1,3 +1,4 @@
+/* Compositions */
 /*
 CLUSTER
 More info: https://every-layout.dev/layouts/cluster/
@@ -14,7 +15,6 @@ horizontally. Can be any acceptable flexbox aligmnent value.
 --cluster-vertical-alignment How items should align vertically.
 Can be any acceptable flexbox alignment value.
 */
-
 .cluster {
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,6 @@ Can be any acceptable flexbox alignment value.
   justify-content: var(--cluster-horizontal-alignment, flex-start);
   align-items: var(--cluster-vertical-alignment, center);
 }
-
 .grid {
 	/* ↓ Establish a grid context */
 	display: grid;
@@ -31,7 +30,6 @@ Can be any acceptable flexbox alignment value.
 	/* ↓ Set the minimum column width */
 	--minimum: 20ch;
 }
-
 @supports (width: min(var(--minimum), 100%)) {
 	.grid {
 		/* ↓ Enhance with the min() function
@@ -39,7 +37,6 @@ Can be any acceptable flexbox alignment value.
 		grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
 	}
 }
-
 /* 
 SIDEBAR
 More info: https://every-layout.dev/layouts/sidebar/
@@ -60,40 +57,33 @@ between the sidebar and main content.
 EXCEPTIONS
 .sidebar[data-direction='rtl']: flips the sidebar to be on the right 
 */
-
 .sidebar {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter, var(--space-size-1));
 }
-
 .sidebar:not([data-direction]) > :first-child {
   flex-basis: var(--sidebar-target-width, 20rem);
   flex-grow: 1;
 }
-
 .sidebar:not([data-direction]) > :last-child {
   flex-basis: 0;
   flex-grow: 999;
   min-width: var(--sidebar-content-min-width, 50%);
 }
-
 /* 
 A flipped version where the sidebar is on the right
 */
-
 .sidebar[data-direction='rtl']
 > :last-child {
   flex-basis: var(--sidebar-target-width, 20rem);
   flex-grow: 1;
 }
-
 .sidebar[data-direction='rtl'] > :first-child {
   flex-basis: 0;
   flex-grow: 999;
   min-width: var(--sidebar-content-min-width, 50%);
 }
-
 /*
 SWITCHER
 More info: https://every-layout.dev/layouts/switcher/
@@ -110,54 +100,45 @@ needs to be to allow items to sit inline with each other
 --switcher-vertical-alignment How items should align vertically.
 Can be any acceptable flexbox alignment value.
 */
-
 .switcher {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter, var(--space-size-1));
   align-items: var(--switcher-vertical-alignment, flex-start);
 }
-
 .switcher > * {
   flex-grow: 1;
   flex-basis: calc((var(--switcher-target-container-width, 40rem) - 100%) * 999);
 }
-
 /* Max 2 items,
 so we target everything *after* those */
-
 .switcher > :nth-last-child(n + 3),
 .switcher > :nth-last-child(n + 3) ~ * {
   flex-basis: 100%;
 }
-
+/* Blocks */
 .box {
-	padding: var(--space-size-1);
+	padding: var(--space, var(--space-size-1, 0.6em));
 }
-
+/* Utilities */
 /*
 FLOW UTILITY
 Info: https://piccalil.li/quick-tip/flow-utility/
 */
-
 .flow > * + * {
 	margin-top: var(--flow-space, var(--space-size-2));
 }
-
 /* 
 REGION UTILITY
 Consistent block padding for page sections
 */
-
 .region {
   padding-block: var(--region-space, var(--space-size-3));
 }
-
 /*
 VISUALLY HIDDEN UTILITY
 Info: https://piccalil.li/quick-tip/visually-hidden/
 */
-
 .visually-hidden,
 .skip-link:not(:focus) {
 	border: 0;
@@ -170,21 +151,32 @@ Info: https://piccalil.li/quick-tip/visually-hidden/
 	width: 1px;
 	white-space: nowrap;
 }
-
 /*
 WRAPPER UTILITY
 A common wrapper/container
 */
-
 .wrapper {
 	margin-inline: auto;
 	width: clamp(16rem, 95vw, 85rem);
 	padding-inline: var(--space-size-1);
 	position: relative;
 }
-
+/* breakout content elements to wrapper based on full bleed image solution by josh cumeau. https://www.joshwcomeau.com/css/full-bleed/ */
+.content {
+	display: grid;
+	grid-template-columns:
+		1fr
+		min(65ch, 100%)
+		1fr;
+}
+.content > * {
+	grid-column: 2;
+}
+.content .breakout {
+	width: 100%;
+	grid-column: 1 / 4;
+}
 /* Tailwind utilities */
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -196,238 +188,134 @@ A common wrapper/container
   white-space: nowrap;
   border-width: 0;
 }
-
 .visible {
   visibility: visible;
 }
-
 .static {
   position: static;
 }
-
 .relative {
   position: relative;
 }
-
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
-
-.my-size-3 {
-  margin-top: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
-  margin-bottom: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
-}
-
 .mt-size-3 {
   margin-top: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
 }
-
-.block {
-  display: block;
+.mt-size-0 {
+  margin-top: clamp(0.83rem, 0.90rem + -0.32vw, 0.67rem);
 }
-
-.inline-block {
-  display: inline-block;
+.mt-size-2 {
+  margin-top: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
 }
-
+.mb-size-1 {
+  margin-bottom: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
+}
+.mb-size-4 {
+  margin-bottom: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
+}
 .inline {
   display: inline;
 }
-
 .grid {
   display: grid;
 }
-
+.contents {
+  display: contents;
+}
 .hidden {
   display: none;
 }
-
-.h-80 {
-  height: 20rem;
+.h-full {
+  height: 100%;
 }
-
+.h-max {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
 .h-5 {
   height: 1.25rem;
 }
-
 .w-full {
   width: 100%;
 }
-
 .w-5 {
   width: 1.25rem;
 }
-
 .max-w-prose {
   max-width: 65ch;
 }
-
-.-rotate-180 {
-  --tw-rotate: -180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .items-center {
   align-items: center;
 }
-
-.divide-gray-800 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-  border-color: rgb(31 41 55 / var(--tw-divide-opacity));
-}
-
 .rounded-tr-2xl {
   border-top-right-radius: 1rem;
 }
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.border-dark {
-  --tw-border-opacity: 1;
-  border-color: rgb(16 16 15 / var(--tw-border-opacity));
-}
-
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .bg-transparent {
   background-color: transparent;
 }
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.p-1 {
-  padding: 0.25rem;
-}
-
 .py-size-1 {
   padding-top: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
   padding-bottom: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
 }
-
-.pb-size-1 {
-  padding-bottom: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
-}
-
 .pt-size-0 {
   padding-top: clamp(0.83rem, 0.90rem + -0.32vw, 0.67rem);
 }
-
+.pb-size-1 {
+  padding-bottom: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
+}
+.pb-size-3 {
+  padding-bottom: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
+}
+.pt-size-5 {
+  padding-top: clamp(2.49rem, 0.50rem + 9.96vw, 7.59rem);
+}
 .font-display {
   font-family: Charter, ui-sans-serif, system-ui, sans-serif;
 }
-
+.text-size-2 {
+  font-size: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-
-.text-size-2 {
-  font-size: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
-}
-
 .font-bold {
   font-weight: 700;
 }
-
 .uppercase {
   text-transform: uppercase;
 }
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.text-rose-700 {
-  --tw-text-opacity: 1;
-  color: rgb(190 18 60 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 .no-underline {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
-
-.opacity-0 {
-  opacity: 0;
+.opacity-70 {
+  opacity: 0.7;
 }
-
-.filter {
+.opacity-80 {
+  opacity: 0.8;
+}
+.outline {
+  outline-style: solid;
+}
+.invert {
+  --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-
-.transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover\:bg-gray-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.hover\:text-gray-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-}
-
-@media (min-width: 768px) {
-
-  .md\:p-0 {
-    padding: 0px;
-  }
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

@@ -1,11 +1,11 @@
-/* VARIABLES GENERATED WITH TAILWIND CONFIG ON 1.6.2022.
+/* VARIABLES GENERATED WITH TAILWIND CONFIG ON 7.6.2022.
     Tokens location: ./tailwind.config.js */
 
 :root {
   --color-primary: #ff7f5c;
   --color-secondary: #3c4558;
-  --color-light: #f9f5f1;
-  --color-dark: #10100f;
+  --color-light: hsl(30, 40%, 96%);
+  --color-dark: hsl(30, 40%, 8%);
   --space-size-0: clamp(0.83rem, 0.9rem + -0.32vw, 0.67rem);
   --space-base: clamp(1rem, 1rem + 0vw, 1rem);
   --space-size-1: clamp(1.2rem, 1.08rem + 0.59vw, 1.5rem);
@@ -13,13 +13,14 @@
   --space-size-3: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
   --space-size-4: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
   --space-size-5: clamp(2.49rem, 0.5rem + 9.96vw, 7.59rem);
-  --size-size-0: clamp(0.83rem, 0.9rem + -0.32vw, 0.67rem);
-  --size-base: clamp(1rem, 1rem + 0vw, 1rem);
-  --size-size-1: clamp(1.2rem, 1.08rem + 0.59vw, 1.5rem);
-  --size-size-2: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
-  --size-size-3: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
-  --size-size-4: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
-  --size-size-5: clamp(2.49rem, 0.5rem + 9.96vw, 7.59rem);
+  --space-lightbulb: clamp(0.83rem, 0.5rem + 9.96vw, 7.59rem);
+  --font-size-0: clamp(0.83rem, 0.9rem + -0.32vw, 0.67rem);
+  --font-base: clamp(1rem, 1rem + 0vw, 1rem);
+  --font-size-1: clamp(1.2rem, 1.08rem + 0.59vw, 1.5rem);
+  --font-size-2: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
+  --font-size-3: clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem);
+  --font-size-4: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
+  --font-size-5: clamp(2.49rem, 0.5rem + 9.96vw, 7.59rem);
 }
 
 /* Modern reset: https://piccalil.li/blog/a-modern-css-reset/ */
@@ -186,15 +187,153 @@ select {
 	white-space: nowrap;
 }
 
+.lightbulb {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	transform: translateY(-10px);
+}
+
+.invert #lightcircle,
+.invert #innerbulb,
+.invert #lightlines {
+	display: none;
+}
+
+.bounce-bottom:active {
+	-webkit-animation: bounce-bottom 0.1s linear both;
+	        animation: bounce-bottom 0.1s linear both;
+}
+
+@-webkit-keyframes bounce-bottom {
+	0% {
+		transform: translateY(-5px);
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		opacity: 1;
+	}
+	24% {
+		opacity: 1;
+	}
+	40% {
+		transform: translateY(-5px);
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+	}
+	25%,
+	55%,
+	75%,
+	87% {
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
+	}
+	100% {
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
+		opacity: 1;
+	}
+}
+
+@keyframes bounce-bottom {
+	0% {
+		transform: translateY(-5px);
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		opacity: 1;
+	}
+	24% {
+		opacity: 1;
+	}
+	40% {
+		transform: translateY(-5px);
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+	}
+	25%,
+	55%,
+	75%,
+	87% {
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
+	}
+	100% {
+		transform: translateY(0);
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
+		opacity: 1;
+	}
+}
+
+.collapsible .controls {
+	text-align: right;
+	margin-bottom: 1em;
+}
+
+.collapsible .controls li {
+	display: inline;
+}
+
+.collapsible button {
+	background: #000;
+	color: #fff;
+	border: 0;
+	font-size: 0.85rem;
+	border-radius: 0.25rem;
+	cursor: pointer;
+}
+
+/*
+ Custom elements are inline by default
+ */
+
+.collapsible toggle-section {
+	display: block;
+}
+
+/*
+ Only applies if script runs and
+ `role="region"` is added
+ */
+
+.collapsible toggle-section[role='region'] {
+	border-width: 2px 0;
+	border-style: solid;
+}
+
+.collapsible toggle-section[role='region'] + toggle-section {
+	border-top: 0;
+}
+
 /* Global styles */
 
+html {
+	/* block body's background propagation */
+	background-color: var(--color-light);
+}
+
 body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 245 241 / var(--tw-bg-opacity));
-  font-family: Outfit, "Segoe UI", Roboto, "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
-  --tw-text-opacity: 1;
-  color: rgb(16 16 15 / var(--tw-text-opacity));
+	color: var(--color-dark);
+	background-color: var(--color-light);
+	font-family: Outfit, "Segoe UI", Roboto, "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+	font-size: clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem);
+}
+
+*:not([.lightbulb]) {
+	background-color: inherit;
+}
+
+body.invert {
+	filter: invert(100%);
+}
+
+/* don't invert raster images or videos  */
+
+.invert img:not([src*='.svg']),
+video {
+	filter: invert(100%);
 }
 
 h1:not([class]), h2:not([class]), h3:not([class]) {
@@ -209,6 +348,7 @@ h1:not([class]) {
 
 h2:not([class]) {
   margin-bottom: clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem);
+  margin-top: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
   font-size: clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem);
 }
 
@@ -235,10 +375,10 @@ a {
 	text-decoration: none;
 }
 
-a:not(.heading-anchor, .logo) {
+a:not(.heading-anchor, .logo, .linkbutton, .nav) {
 	text-decoration: underline;
 	-webkit-text-decoration-color: var(--color-primary);
-	        text-decoration-color: var(--color-primary);
+	text-decoration-color: var(--color-primary);
 }
 
 /* Prose */
@@ -276,7 +416,7 @@ article [href^='http']:not([href*='lene.dev'])::after {
 	display: inline-block;
 	width: 1em;
 	height: 1em;
-	background-image: url('../svg/icn-external.svg');
+	background-image: url('./_assets/svg/icn-external.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 60% auto;
@@ -289,7 +429,7 @@ article [href^='http']:not([href*='lene.dev'])::after {
 
 .boxborder {
 	border: 2px solid var(--color-dark);
-	border-radius: var(--space-size-1);
+	border-radius: var(--space, var(--space-size-1, 0.6em));
 }
 
 /* So text scale renders nicely */

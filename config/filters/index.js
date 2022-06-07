@@ -1,5 +1,6 @@
 const lodash = require('lodash');
 const dayjs = require('dayjs');
+const CleanCSS = require('clean-css');
 const markdownLib = require('../plugins/markdown');
 const site = require('../../src/_data/meta');
 const {throwIfNotType} = require('../utils');
@@ -101,6 +102,8 @@ const getLatestCollectionItemDate = collection => {
 	return latestItem?.data?.lastUpdated ?? latestItem?.date;
 };
 
+const minifyCss = code => new CleanCSS({}).minify(code).styles;
+
 module.exports = {
 	limit,
 	sortByKey,
@@ -114,5 +117,6 @@ module.exports = {
 	stripNewlines,
 	stripHtml,
 	toAbsoluteUrl,
-	getLatestCollectionItemDate
+	getLatestCollectionItemDate,
+	minifyCss
 };

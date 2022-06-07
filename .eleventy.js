@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanCSS = require('clean-css');
 
 // module import filters
 const {
@@ -14,7 +15,8 @@ const {
 	toAbsoluteUrl,
 	stripNewlines,
 	stripHtml,
-	getLatestCollectionItemDate
+	getLatestCollectionItemDate,
+	minifyCss
 } = require('./config/filters/index.js');
 
 // module import shortcodes
@@ -76,6 +78,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter('toJson', JSON.stringify);
 	eleventyConfig.addFilter('fromJson', JSON.parse);
 	eleventyConfig.addFilter('getLatestCollectionItemDate', getLatestCollectionItemDate);
+	eleventyConfig.addFilter('cssmin', minifyCss);
 	eleventyConfig.addFilter('keys', Object.keys);
 	eleventyConfig.addFilter('values', Object.values);
 	eleventyConfig.addFilter('entries', Object.entries);
