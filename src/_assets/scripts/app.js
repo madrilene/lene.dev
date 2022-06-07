@@ -65,6 +65,7 @@ modeToggle.onclick = function () {
           box-sizing: border-box;
           display: flex;
           justify-content: space-between;
+					align-items: center;
           width: 100%;
           padding: 0.5em 0;
 					cursor: pointer;
