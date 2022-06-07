@@ -72,7 +72,7 @@ modeToggle.onclick = function () {
         }
 
         h3 button:focus svg {
-          outline: 2px solid;
+          outline: 3px solid;
         }
 
         button svg {

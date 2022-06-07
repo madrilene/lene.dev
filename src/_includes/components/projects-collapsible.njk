@@ -39,12 +39,15 @@
       </div>
 
       <div class="breakout sidebar mb-size-4">
+        <!-- mobile -->
         {% image project.data.mobile.img, "h-full", "object-cover w-full h-max
         rounded-tr-2xl boxborder", project.data.mobile.alt, "lazy", " (max-width: 465px)
-        400px, (max-width: 765px) 700px, 400px" %} {% image project.data.desktop.img,
-        "h-full", "object-cover w-full h-max rounded-tr-2xl boxborder",
-        project.data.desktop.alt, "lazy", "(max-width: 465px) 400px, (max-width: 1150px)
-        700px, 1200px" %}
+        400px, (max-width: 765px) 700px, 400px" %}
+
+        <!-- desktop -->
+        {% image project.data.desktop.img, "h-full", "object-cover w-full h-max
+        rounded-tr-2xl boxborder", project.data.desktop.alt, "lazy", "(max-width: 465px)
+        400px, (max-width: 1150px) 700px, 1200px" %}
       </div>
     </toggle-section>
 

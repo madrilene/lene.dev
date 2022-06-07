@@ -96,7 +96,7 @@ h3 + * {
 
 :focus,
 button:focus {
-	outline: #2563eb solid 2px;
+	outline: var(--color-primary) solid 3px;
 	outline-offset: 0.15rem;
 }
 
@@ -107,7 +107,7 @@ button:focus:not(:focus-visible) {
 
 :focus-visible,
 button:focus-visible {
-	outline: #2563eb solid 2px;
+	outline: var(--color-primary) solid 3px;
 	outline-offset: 0.15rem;
 }
 

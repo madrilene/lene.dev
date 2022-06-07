@@ -4,6 +4,29 @@
     <!-- include head  -->
     {% include "partials/head.njk" %}
 
+    <!-- fonts preload -->
+    <link
+      rel="preload"
+      href="/_assets/fonts/outfit/outfit-v5-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/_assets/fonts/charter/charter_regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/_assets/fonts/charter/charter_bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <!-- check if production -->
     {% if meta.env %}
     <!-- set inline css -->
@@ -18,8 +41,15 @@
     <link rel="stylesheet" href="/_assets/css/cube.css" />
     {% endif %}
 
-    <!-- not defering because very small and web component contains inline styles  -->
+    <!-- defer js  -->
     <script src="/_assets/app.min.js" defer></script>
+
+    <!-- plausible for gdpr-compliant stats  -->
+    <script
+      defer
+      data-domain="lene.dev"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
 
     <!-- include base schema  -->
     {%- include "schemas/base-schema.njk" %}

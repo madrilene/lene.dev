@@ -36,7 +36,7 @@ const imageShortcode = async (src, pcls, cls, alt, loading, sizes = '100vw') => 
         width="${lowsrc.width}"
         height="${lowsrc.height}"
         alt="${alt}"
-				loading="${loading}
+				loading="${loading}"
         decoding="async">
     </picture>`;
 };

@@ -8,10 +8,10 @@
 }
 
 .collapsible button {
-	background: #000;
-	color: #fff;
+	background: var(--color-dark);
+	color: var(--color-light);
 	border: 0;
-	font-size: 0.85rem;
+	font-size: var(--font-size-0);
 	border-radius: 0.25rem;
 	cursor: pointer;
 }

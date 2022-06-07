@@ -3,9 +3,34 @@
 This is my developer profile. It's built with Eleventy, Javascript and CSS. Based on my personal opiniated Eleventy Starter for client projects, it still brings a lot of preconfigurations I'll have to strip out. It is quite over-engineered considering the simplicity of the page.
 This is also where I try new stuff, so things might be a little inconsistent and verbose.
 
+- [Logbook](#logbook)
 - [Using this](#using-this)
 - [Credits and Thank yous](#credits-and-thank-yous)
-- [Logbook](#logbook)
+
+## Logbook
+
+### 22-06-07
+
+- Fixed z-index issue with lightbulb. Added web component for projects accordeon.
+- Learnt that strict csp does not go well with shadow dom styles from web component. deactivated custom csp for now completely.
+- Added missing bold for font outfit and preloaded them.
+- added plausible.io for stats.
+  **to do**: add more projects, learning section with books and courses. generally strip out unneeded filters, dependencies etc.
+
+### 22-06-06
+
+- Adding projects section. I still have to structure index.md more clearly.
+- Adding lightbulb switch for mode-toggle.
+  **to do**: Striving for a better animation and a tiny sound-effect. not optimized on mobile, not well positioned on desktop.
+
+### 22-06-03
+
+I'm adjusting the image shortcodes for the Eleventy Image Plugin. Deleted colorthief for background color as I consider it unnecessary.
+**to do**: Projects sections and books I read.
+
+### 22-05-28
+
+Trying to figure out the best way to implement Every Layout web components and generally to combine it with the CUBE CSS methodology. Striving to not use any breakpoints and generally achieve an intrinsic and fluid design.
 
 ## Using this
 
@@ -25,7 +50,7 @@ npm start
 
 ### Creating a production build
 
-Minify HTML, minify JS, inline and minify CSS.
+Minify JS, inline and minify CSS.
 
 ```
 npm run build
@@ -75,25 +100,9 @@ He introduced Charter and Outfit to me in his weekly newsletter.
 
 https://pimpmytype.com/
 
-## Logbook
+**Josh Comeau**
 
-### 22-06-07
+He created a fantastic CSS course that I am currently working through. Also, his in-depth tutorials are a great resource.
 
-Fixed z-index issue with lightbulb. Added web component for projects accordeon.
-to do: add more projects, learning section with books and courses. generally strip out unneeded filters, dependencies etc.
-Learnt that strict csp does not go well with shadow dom styles from web component. deactivated custom csp for now completely.
-
-### 22-06-06
-
-Adding projects section. I still have to structure index.md more clearly.
-Adding lightbulb switch for mode-toggle.
-to do: Striving for a better animation and a tiny sound-effect. not optimized on mobile, not well positioned on desktop.
-
-### 22-06-03
-
-I'm adjusting the image shortcodes for the Eleventy Image Plugin. Deleted colorthief for background color as I consider it unnecessary.
-To do: Projects sections and books I read.
-
-### 22-05-28
-
-Trying to figure out the best way to implement Every Layout web components and generally to combine it with the CUBE CSS methodology. Striving to not use any breakpoints and generally achieve an intrinsic and fluid design.
+https://www.joshwcomeau.com/tutorials/
+https://courses.joshwcomeau.com/css-for-js
