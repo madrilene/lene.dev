@@ -35,3 +35,34 @@
 .collapsible toggle-section[role='region'] + toggle-section {
 	border-top: 0;
 }
+
+.collapsible h3 {
+	margin: 0;
+}
+
+.collapsible h3 button {
+	all: inherit;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0.5em 0;
+	cursor: pointer;
+}
+
+.collapsible h3 button:focus svg {
+	outline: 2px solid;
+}
+
+.collapsible button svg {
+	height: 1em;
+	margin-left: 0.5em;
+}
+
+[aria-expanded='true'] .vert {
+	display: none;
+}
+
+[aria-expanded] rect {
+	fill: currentColor;
+}
