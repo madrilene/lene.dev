@@ -4,17 +4,21 @@
     <!-- include head  -->
     {% include "partials/head.njk" %}
 
-    <!-- inline css -->
-    <!--    {% if meta.env %} {% set css %}{% include "global.min.css" %}{% include "cube.min.css" %}{% endset %}
-    <style nonce="a2cx1c3">
-      {{ css | cssmin | safe }}
-    </style>     {% endif %} -->
+    <!-- check if production -->
+    {% if meta.env %}
+    <!-- set inline css -->
+    {% set css %}{% include "global.min.css" %}{% include "cube.min.css" %}{% endset %}
 
-    <!-- not inlining for readability -->
+    <style nonce="a2cx1c3">
+
+      {{ css | cssmin | safe }}
+    </style>
+    {% else %}
     <link rel="stylesheet" href="/_assets/css/global.css" />
     <link rel="stylesheet" href="/_assets/css/cube.css" />
+    {% endif %}
 
-    <!-- defering js  -->
+    <!-- not defering because very small and web component contains inline styles  -->
     <script src="/_assets/app.min.js" defer></script>
 
     <!-- include base schema  -->
