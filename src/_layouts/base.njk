@@ -8,7 +8,9 @@
     {% if meta.env %}
     <!-- set inline css -->
     {% set css %}{% include "global.min.css" %}{% include "cube.min.css" %}{% endset %}
+
     <style nonce="a2cx1c3">
+
       {{ css | cssmin | safe }}
     </style>
     {% else %}
