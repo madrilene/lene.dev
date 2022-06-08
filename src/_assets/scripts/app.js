@@ -28,10 +28,16 @@ function initiateWobble() {
 	modeToggle.classList.add = 'wobble-horizontal-top';
 }
 
+// make a little click sound on click
+const clickSound = new Audio('/_assets/sounds/light-on.wav');
+
+// put it all together
+
 modeToggle.onclick = function () {
 	console.log('clicked!');
 	bodyInvert.classList.toggle('invert');
 	initiateWobble();
+	clickSound.play();
 };
 
 // collapsible project section - web component

@@ -106,8 +106,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy('src/_assets/fonts/');
 	eleventyConfig.addPassthroughCopy('src/_assets/svg/');
-	eleventyConfig.addPassthroughCopy('src/_assets/pdf/');
-	eleventyConfig.addPassthroughCopy('src/_assets/fonts.min.css');
+	eleventyConfig.addPassthroughCopy('src/_assets/sounds/');
 	eleventyConfig.addPassthroughCopy('src/_assets/images/image-placeholder.png');
 	eleventyConfig.addPassthroughCopy('src/_assets/images/opengraph-default.jpg');
 	// social icons von images zu root

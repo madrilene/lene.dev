@@ -9,6 +9,12 @@ This is also where I try new stuff, so things might be a little inconsistent and
 
 ## Logbook
 
+### 22-06-08
+
+uninstalling unused dependencies.
+adding <meta name="generator" content="Eleventy"> for Leaderboards.
+Adding a little sound effect for light switch.
+
 ### 22-06-07
 
 - Fixed z-index issue with lightbulb. Added web component for projects accordeon.
