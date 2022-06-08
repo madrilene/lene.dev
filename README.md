@@ -79,6 +79,7 @@ I learned how to use Eleventy in 2020 with his (now free) course.
 He is developing Eleventy.
 
 - https://www.11ty.dev/
+- https://www.zachleat.com/
 
 **Stephanie Eckles**
 
@@ -98,11 +99,11 @@ I love order and structure. Aleksandr Hovhannisyan does this in an exemplary way
 For his great taste and knowledge in fonts.
 He introduced Charter and Outfit to me in his weekly newsletter.
 
-https://pimpmytype.com/
+- https://pimpmytype.com/
 
 **Josh Comeau**
 
 He created a fantastic CSS course that I am currently working through. Also, his in-depth tutorials are a great resource.
 
-https://www.joshwcomeau.com/tutorials/
-https://courses.joshwcomeau.com/css-for-js
+- https://www.joshwcomeau.com/tutorials/
+- https://courses.joshwcomeau.com/css-for-js

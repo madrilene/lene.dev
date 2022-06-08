@@ -5,9 +5,10 @@ excludeFromSitemap: true
 ---
 
 /* TEAM */
-	Name: {{ meta.author }}
+	Developer: {{ meta.author }}
+	Contact: {{ meta.authorEmail }}
 	Site: {{ meta.siteURL }}
-	{% if meta.meta_data.twitter %}Twitter: {{ meta.meta_data.twitter }}{% endif %}
+	{% if meta.meta_data.twitterCreator %}Twitter: {{ meta.meta_data.twitterCreator }}{% endif %}
 
 /* SITE */
 	Doctype: HTML5
