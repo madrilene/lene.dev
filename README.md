@@ -9,11 +9,24 @@ This is also where I try new stuff, so things might be a little inconsistent and
 
 ## Logbook
 
+### 22-06-13
+
+- added 2 projects
+- adjusted screenshot-sizes
+- now hiding mobile screenshot on mobile devices
+
 ### 22-06-08
 
-uninstalling unused dependencies.
-adding <meta name="generator" content="Eleventy"> for Leaderboards.
-Adding a little sound effect for light switch.
+- uninstalling unused dependencies.
+- adding
+
+```
+<meta name="generator" content="Eleventy">
+```
+
+for Leaderboards.
+
+- Adding a tiny sound effect for light switch.
 
 ### 22-06-07
 
@@ -21,22 +34,27 @@ Adding a little sound effect for light switch.
 - Learnt that strict csp does not go well with shadow dom styles from web component. deactivated custom csp for now completely.
 - Added missing bold for font outfit and preloaded them.
 - added plausible.io for stats.
-  **to do**: add more projects, learning section with books and courses. generally strip out unneeded filters, dependencies etc.
+- **to do**: add more projects, learning section with books and courses. generally strip out unneeded filters, dependencies etc.
 
 ### 22-06-06
 
 - Adding projects section. I still have to structure index.md more clearly.
 - Adding lightbulb switch for mode-toggle.
-  **to do**: Striving for a better animation and a tiny sound-effect. not optimized on mobile, not well positioned on desktop.
+- **to do**: Striving for a better animation and a tiny sound-effect. Changing the very basic invert filter to something that's nicer and sets prefers color scheme.
 
 ### 22-06-03
 
-I'm adjusting the image shortcodes for the Eleventy Image Plugin. Deleted colorthief for background color as I consider it unnecessary.
-**to do**: Projects sections and books I read.
+- adjusting the image shortcodes for the Eleventy Image Plugin. Deleted colorthief for background color as I consider it unnecessary.
+- **to do**: Projects sections and books I read.
 
 ### 22-05-28
 
-Trying to figure out the best way to implement Every Layout web components and generally to combine it with the CUBE CSS methodology. Striving to not use any breakpoints and generally achieve an intrinsic and fluid design.
+- first commit.
+
+#### overall goals
+
+- Trying to figure out the best way to implement Every Layout web components and generally to combine it with the CUBE CSS methodology.
+- Striving to not use any breakpoints and generally achieve an intrinsic and fluid design.
 
 ## Using this
 

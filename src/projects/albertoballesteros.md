@@ -1,6 +1,6 @@
 ---
 title: albertoballesteros.com
-description: "The website, created with the Jamstack method, had to represent the dynamism, strength and electricity of the singer-songwriter's new album. The website has a shop made with Snipcart. With Plausible.io the statistics can be viewed in compliance with the data protection law."
+description: "As with most websites I've done, I was responsible for all components, from design to deployment. The website, created with the Jamstack method, had to represent the dynamism, strength and electricity of the singer-songwriter's new album. The shop was created with Snipcart. With Plausible.io the statistics can be viewed in compliance with the data protection law."
 technologies:
   - Eleventy
   - Tailwind CSS

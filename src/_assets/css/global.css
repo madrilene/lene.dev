@@ -12,6 +12,7 @@
 html {
 	/* block body's background propagation */
 	background-color: var(--color-light);
+	scroll-behavior: smooth;
 }
 
 body {
