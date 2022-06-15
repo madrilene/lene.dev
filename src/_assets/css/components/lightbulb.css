@@ -3,19 +3,6 @@
 	right: 0;
 	cursor: pointer;
 	transform: translateY(-10px);
-	transform: scale(1);
-}
-
-@media (min-width: 1024px) {
-	.lightbulb {
-		transform: scale(1.2);
-	}
-}
-
-@media (min-width: 1280px) {
-	.lightbulb {
-		transform: scale(1.4);
-	}
 }
 
 .invert #lightcircle,
