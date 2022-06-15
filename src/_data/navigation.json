@@ -13,6 +13,10 @@
 		{
 			"text": "Projects",
 			"url": "/#projects"
+		},
+		{
+			"text": "Books & courses",
+			"url": "/#learnings"
 		}
 	]
 }

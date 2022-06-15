@@ -9,6 +9,11 @@ This is also where I try new stuff, so things might be a little inconsistent and
 
 ## Logbook
 
+### 22-06-15
+
+- added learnings section with 3 books, tbc.
+- made lightbulb scale up on desktop
+
 ### 22-06-13
 
 - added 2 projects

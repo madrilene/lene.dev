@@ -9,6 +9,9 @@ tools:
 projects:
   title: Recent Projects
   content: 'Expand to see the details of some of my recent client projects.'
+learnings:
+  title: Learnings
+  content: "Books I've read and courses I've taken. I'll only mention those I appreciated and finished or plan to finish in the future. List incomplete."
 ---
 
 ## About me
@@ -21,7 +24,7 @@ In 2018 I discovered Jamstack and soon after changed all my (somewhat antiquated
 
 {% include "components/presentation.njk" %}
 
-As far as Javascript frameworks are concerned, Svelte appeals to me the most. I also want to learn more about [Astro](https://astro.build/) and [Slinkity](https://slinkity.dev/).
+As far as Javascript frameworks are concerned, [Svelte](https://svelte.dev/) appeals to me the most. I also want to learn more about [Astro](https://astro.build/) and [Slinkity](https://slinkity.dev/).
 
 I take accessibility and performance very seriously, testing and re-testing until the result is what I want it to be. Which is (as close as I can get to) perfect.
 

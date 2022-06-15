@@ -1,0 +1,19 @@
+.book {
+	display: flex;
+	gap: var(--space-size-5);
+	align-items: center;
+	justify-content: space-between;
+	border-top: 2px dashed;
+	border-bottom: 2px dashed;
+	padding: var(--space-size-2) 0;
+}
+
+.book:last-child {
+	border-top: none;
+}
+
+.book img {
+	width: 20rem;
+
+	outline: 2px solid var(--color-dark);
+}

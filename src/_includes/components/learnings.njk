@@ -1,0 +1,19 @@
+<div id="dropoutofflow">
+  <header class="content mx-auto flow mb-size-3">
+    <h2 id="learnings">{{ learnings.title }}</h2>
+    <p>{{ learnings.content }}</p>
+  </header>
+  {%- for product in learnings.products -%}
+  <article class="content mx-auto">
+    <div class="book sidebar relative">
+      {% image product.image, "bg-transparent", "object-cover w-full h-max rounded-tr-xl
+      rounded-br-xl", "product.alt", "(max-width: 463px) 400px, (max-width: 718px) 700px,
+      (max-width: 912px) 400px, 700px" %}
+      <div class="flow">
+        <h3 class="font-body">{{ product.title }}</h3>
+        <p>{{ product.opinion }}</p>
+      </div>
+    </div>
+  </article>
+  {%- endfor -%}
+</div>

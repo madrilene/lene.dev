@@ -7,10 +7,11 @@ layout: base
     <article class="content mx-auto flow">
       {{ content | safe }}
     </article>
-
+    <!-- toolbox, loops over global data file -->
     {% include "components/toolbox.njk" %}
-    <!-- prj -->
+    <!-- projects, native web component -->
     {% include "components/projects-collapsible.njk" %}
-    <!-- prj -->
+    <!-- learnings, loops over global data file -->
+    {% include "components/learnings.njk" %}
   </div>
 </main>

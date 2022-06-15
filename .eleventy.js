@@ -22,6 +22,7 @@ const {
 // module import shortcodes
 const {
 	asideShortcode,
+	insertionShortcode,
 	imageShortcode,
 	imageShortcodePlaceholder,
 	liteYoutube,
@@ -85,6 +86,7 @@ module.exports = function (eleventyConfig) {
 
 	// 	--------------------- Custom shortcodes ---------------------
 	eleventyConfig.addPairedShortcode('aside', asideShortcode);
+	eleventyConfig.addPairedShortcode('insertion', insertionShortcode);
 	eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 	eleventyConfig.addNunjucksAsyncShortcode('imagePlaceholder', imageShortcodePlaceholder);
 	eleventyConfig.addShortcode('youtube', liteYoutube);
