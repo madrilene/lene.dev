@@ -10,8 +10,8 @@ projects:
   title: Recent Projects
   content: 'Expand to see the details of some of my recent client projects.'
 learnings:
-  title: Learnings
-  content: "Books I've read and courses I've taken. I'll only mention those I appreciated and finished or plan to finish in the future. List incomplete."
+  title: Books I've read
+  content: "Technical books I've read in the past years. I'll only mention books that made a difference for me, the ones I really appreciate and recommend wholeheartedly. "
 ---
 
 ## About me

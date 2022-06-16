@@ -2,20 +2,51 @@
 	"products": [
 		{
 			"title": "Javascript Cookbook",
-			"opinion": "By far my favourite Javascript book and the one I would recommend to anyone with a bit of basic knowledge. At no point did I have the feeling of being left behind, all the examples are simple and true to life, the code wonderfully comprehensible. I don't think there's a single foo-bar-baz example except for one, which I really appreciate - I can't be bothered with these placeholders at all, they're totally unlikeable to me. The book even has a bit of humour in many places. I really enjoyed reading it and I always have it near me to look something up.",
+			"year": 2021,
+			"topic": "Javascript",
+			"opinion": "By far my favourite Javascript book and the one I recommend to anyone with basic knowledge. At no point did I have the feeling of being left behind, the code examples are simple and true to life and wonderfully comprehensible. There's but one foo-bar-baz example (and I think it got in there by accident), which I really appreciate. The book even shows a sense of humour. I really enjoyed reading it and I always have it near me to look something up.",
 			"image": "./src/_assets/images/learnings/js-cookbook.jpg",
 			"alt": "Cover of the book"
 		},
 		{
-			"title": "You Don't Know Javascript Yet: Get Started",
-			"opinion": "Another javascript book that I enjoyed very much. Kyle Simpson is renowned in the community for his consistent affection for classic Javascript elements like var and the equality operator, but if you know a bit about the different opinions (which overwhelmingly disagree with him) it's almost refreshing to read a fervent admirer of the pre-ES6 days. Apart from that, he explains the basic workings of Javascript with comprehensible code examples and the book was crucial for me to understand concepts like closure, prototypes and scope.",
+			"title": "Inclusive Components",
+			"year": 2019,
+			"topic": "Accessible UI patterns",
+			"opinion": "Inclusive Components is all about accessible patterns like accordions, dropdowns, sliders and modals. I use Heydon Pickering redundant click solution for cards in literally every project.",
+			"image": "./src/_assets/images/learnings/inclusive-components.jpg",
+			"alt": "Cover of the book"
+		},
+		{
+			"title": "Every Layout",
+			"year": 2022,
+			"topic": "CSS",
+			"opinion": "A book by two individuals that share a deep understanding of the web in general and CSS in particular. I love how it's written and how much it teaches me. It gets regular updates and provides access to invaluable code.",
+			"image": "./src/_assets/images/learnings/every-layout.jpg",
+			"alt": "Cover of the book"
+		},
+		{
+			"title": "You Don't Know JS Yet: Get Started",
+			"year": 2020,
+			"topic": "Javascript",
+			"opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson is renowned for his consistent affection for classic Javascript elements like var and the equality operator, but if you know a bit about the different opinions (which overwhelmingly disagree with him) it's almost refreshing. Apart from that, he explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope.",
 			"image": "./src/_assets/images/learnings/ydkjsy-getstarted.jpg",
 			"alt": "Cover of the book"
 		},
 		{
+			"title": "Git for Humans",
+			"year": 2016,
+			"topic": "Git",
+			"opinion": "I understand Git (or at least I think I do) thanks to this book. It really let me understand how this complex system works, and it's nice and short.",
+			"image": "./src/_assets/images/learnings/git-humans.jpg",
+			"alt": "Cover of the book"
+		},
+
+		{
 			"title": "SVG Animations",
-			"opinion": "Not quite up to date as far as browser compatibility is concerned, but great fun to learn how to work with SVG and especially the animation of SVG. The book works best when you actively work with it. I haven't finished it yet, but I'm looking forward to picking it up again.",
-			"image": "./src/_assets/images/learnings/svg-animations.jpg",
+			"year": 2017,
+			"topic": "SVG",
+			"opinion": "Great fun for learning how to work with SVG and the animation of SVG in particular. The book works best when you actively work with it. I haven't finished it yet, but I'm looking forward to picking it up again.",
+			"image": "./src/_assets/images/learnings/svg-animations-drasner.jpg",
 			"alt": "Cover of the book"
 		}
 	]

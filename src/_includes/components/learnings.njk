@@ -1,6 +1,7 @@
 <div id="dropoutofflow">
   <header class="content mx-auto flow mb-size-3">
     <h2 id="learnings">{{ learnings.title }}</h2>
+
     <p>{{ learnings.content }}</p>
   </header>
   {%- for product in learnings.products -%}
@@ -11,7 +12,12 @@
       (max-width: 912px) 400px, 700px" %}
       <div class="flow">
         <h3 class="font-body">{{ product.title }}</h3>
-        <p>{{ product.opinion }}</p>
+
+        <p>
+          <span class="text-size-0 block font-bold uppercase opacity-80"
+            >{{ product.year }}, {{ product.topic }}</span
+          >{{ product.opinion }}
+        </p>
       </div>
     </div>
   </article>

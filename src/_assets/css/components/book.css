@@ -1,6 +1,6 @@
 .book {
 	display: flex;
-	gap: var(--space-size-5);
+	gap: var(--space-size-3);
 	align-items: center;
 	justify-content: space-between;
 	border-top: 2px dashed;
@@ -13,7 +13,6 @@
 }
 
 .book img {
-	width: 20rem;
-
+	width: 14rem;
 	outline: 2px solid var(--color-dark);
 }

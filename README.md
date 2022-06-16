@@ -9,10 +9,13 @@ This is also where I try new stuff, so things might be a little inconsistent and
 
 ## Logbook
 
+### 22-06-16
+
+- added some more books and reduced section to books, no courses.
+
 ### 22-06-15
 
 - added learnings section with 3 books, tbc.
-- made lightbulb scale up on desktop
 
 ### 22-06-13
 
