@@ -12,6 +12,7 @@ This is also where I try new stuff, so things might be a little inconsistent and
 ### 22-06-16
 
 - added some more books and reduced section to books, no courses.
+- reduced wrapper padding.
 
 ### 22-06-15
 

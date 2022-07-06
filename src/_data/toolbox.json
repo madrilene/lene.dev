@@ -6,14 +6,14 @@
 			"possible": ["Python (automation scripts)", "PHP (within the scope of WP)"]
 		},
 		{
-			"division": "JS-Frameworks",
-			"preference": ["Alpine.js", "Svelte"],
-			"possible": ["React", "jQuery"]
+			"division": "CSS & JS-Frameworks",
+			"preference": ["Tailwind CSS", "Alpine.js", "Svelte"],
+			"possible": ["Bootstrap", "React", "jQuery"]
 		},
 		{
-			"division": "CSS-Frameworks",
-			"preference": ["Tailwind CSS"],
-			"possible": ["Bootstrap"]
+			"division": "API",
+			"preference": ["REST", "GraphQL "],
+			"possible": []
 		},
 		{
 			"division": "SSG/SSR/Metaframework",
