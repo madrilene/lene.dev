@@ -9,6 +9,11 @@ This is also where I try new stuff, so things might be a little inconsistent and
 
 ## Logbook
 
+### 22-07-07
+
+- fixed open graph img issue.
+- fixed short title / meta desc
+
 ### 22-07-06
 
 - back from vacation. url-error in sitemap corrected, twitter removed, API section added.

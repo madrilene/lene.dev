@@ -11,19 +11,19 @@
 			"possible": ["Bootstrap", "React", "jQuery"]
 		},
 		{
-			"division": "API",
-			"preference": ["REST", "GraphQL "],
-			"possible": []
-		},
-		{
 			"division": "SSG/SSR/Metaframework",
 			"preference": ["Eleventy", "Astro"],
 			"possible": ["SvelteKit", "Next.js"]
 		},
 		{
+			"division": "API",
+			"preference": ["REST", "GraphQL "],
+			"possible": []
+		},
+		{
 			"division": "CMS",
 			"preference": ["Wordpress", "Netlify CMS"],
-			"possible": ["Forestry", "Sanity"]
+			"possible": ["Strapi", "Forestry", "Sanity"]
 		},
 		{
 			"division": "Templating Languages ",

@@ -1,5 +1,5 @@
 ---
-title: Legal notice
+title: Legal notice | Lene Saile. Designer and Full Stack developer
 permalink: /imprint/index.html
 description: Emisor, titular y responsable de la página web y información sobre las técnicas usadas en desarrollo y producción
 layout: page
