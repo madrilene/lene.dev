@@ -2,8 +2,14 @@
 	"tools": [
 		{
 			"division": "Languages",
-			"preference": ["Semantic accessible HTML", "CSS", "Javascript ES6, Node.js", "SVG"],
-			"possible": ["Python (automation scripts)", "PHP (within the scope of WP)"]
+			"preference": [
+				"Semantic accessible HTML",
+				"CSS",
+				"Javascript ES6, Node.js",
+				"SVG",
+				"PHP (within the scope of WP)"
+			],
+			"possible": ["Python (automation scripts)"]
 		},
 		{
 			"division": "CSS & JS-Frameworks",
