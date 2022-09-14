@@ -9,6 +9,11 @@ This is also where I try new stuff, so things might be a little inconsistent and
 
 ## Logbook
 
+### 22-09-14
+
+- updated dependencies.
+- changed Books to Learnings, now including courses.
+
 ### 22-07-07
 
 - fixed open graph img issue.
