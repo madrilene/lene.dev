@@ -47,10 +47,10 @@
 		},
 		{
 			"title": "learnjavascript.online",
-			"year": 2022,
+			"year": 2021,
 			"medium": "course",
 			"topic": "Javascript",
-			"opinion": "This course comes with an interactive environment. Short lessons are directly followed by interactive challenges directly in the browser, which can't be skipped. It's all about practice!",
+			"opinion": "This course comes with an interactive environment. Short lessons are directly followed by challenges, inspired by real-world projects. Exercising anywhere is a joy thanks to a separate flashcards app. It's all about practice!",
 			"image": "./src/_assets/images/learnings/learnjs.jpg",
 			"alt": "Cover of the course"
 		},
