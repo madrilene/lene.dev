@@ -33,8 +33,8 @@
 		},
 		{
 			"division": "Templating Languages ",
-			"preference": ["Markdown", "Nunjucks"],
-			"possible": ["Liquid", "Twig", "Blade"]
+			"preference": ["Markdown", "Nunjucks", "Liquid", "Twig", "Blade", "Pug"],
+			"possible": []
 		},
 		{
 			"division": "Bundler / Build tools",
@@ -43,13 +43,13 @@
 		},
 		{
 			"division": "CSS & JS preprocessors ",
-			"preference": [],
-			"possible": ["Sass", "Babel", "Typescript"]
+			"preference": ["Typescript"],
+			"possible": ["Sass", "Babel"]
 		},
 		{
 			"division": "Version Control, Hosts",
-			"preference": ["Git/GitHub", "Netlify"],
-			"possible": ["Vercel", "Siteground"]
+			"preference": ["Git/GitHub", "Netlify", "Siteground"],
+			"possible": ["Vercel"]
 		},
 		{
 			"division": "Design",
