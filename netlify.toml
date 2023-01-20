@@ -7,13 +7,6 @@
     wcagLevel = 'WCAG2AAA'
 
 
-[[plugins]]
-  package = "netlify-plugin-11ty"
-  [plugins.inputs]
-    cache_img = './_assets/images'
-    cache_img_httpHeader = false
-
-
 [[headers]]
     for = "/*"
     [headers.values]
