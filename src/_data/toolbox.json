@@ -2,19 +2,13 @@
 	"tools": [
 		{
 			"division": "Languages",
-			"preference": [
-				"Semantic accessible HTML",
-				"CSS",
-				"Javascript ES6, Node.js",
-				"SVG",
-				"PHP (within the scope of WP)"
-			],
-			"possible": ["Python (automation scripts)"]
+			"preference": ["Semantic HTML", "CSS", "Javascript ES6, Node.js", "SVG"],
+			"possible": ["PHP (within the scope of WP)", "Python (automation scripts)"]
 		},
 		{
 			"division": "CSS & JS-Frameworks",
-			"preference": ["Tailwind CSS", "Alpine.js", "Svelte"],
-			"possible": ["Bootstrap", "React", "jQuery"]
+			"preference": ["Tailwind CSS", "Alpine.js", "Svelte", "React"],
+			"possible": ["Bootstrap", "jQuery"]
 		},
 		{
 			"division": "SSG/SSR/Metaframework",
@@ -23,13 +17,13 @@
 		},
 		{
 			"division": "API",
-			"preference": ["REST", "GraphQL "],
-			"possible": []
+			"preference": ["REST"],
+			"possible": ["GraphQL"]
 		},
 		{
 			"division": "CMS",
 			"preference": ["Wordpress", "Netlify CMS"],
-			"possible": ["Strapi", "Forestry", "Sanity"]
+			"possible": ["Strapi", "Sanity", "Shopify"]
 		},
 		{
 			"division": "Templating Languages ",
@@ -38,13 +32,13 @@
 		},
 		{
 			"division": "Bundler / Build tools",
-			"preference": ["esbuild", "vite"],
+			"preference": ["vite", "esbuild"],
 			"possible": ["snowpack", "webpack"]
 		},
 		{
 			"division": "CSS & JS preprocessors ",
-			"preference": ["Typescript"],
-			"possible": ["Sass", "Babel"]
+			"preference": ["PostCSS", "Typescript"],
+			"possible": ["Sass"]
 		},
 		{
 			"division": "Version Control, Hosts",

@@ -17,7 +17,7 @@ const imageShortcodePlaceholder = async (
 
 	let metadata = await Image(src, {
 		widths: [400, 700, 1280],
-		formats: ['avif', 'webp', 'jpeg'],
+		formats: ['webp', 'jpeg'],
 		urlPath: '/_assets/images/',
 		outputDir: './dist/_assets/images/',
 		filenameFormat: function (id, src, width, format, options) {
