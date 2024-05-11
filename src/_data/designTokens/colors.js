@@ -4,27 +4,27 @@ export default {
   "items": [
     {
       "name": "Highlight",
-      "value": "#008488"
+      "value": "#4465d8"
     },
     {
       "name": "Dark",
-      "value": "#161b1b"
+      "value": "#181a1d"
     },
     {
       "name": "Light",
-      "value": "#e4ffff"
+      "value": "#f8feff"
     },
     {
       "name": "Glare",
-      "value": "#8bd4d6"
+      "value": "#b1c4f5"
     },
     {
       "name": "Shade",
-      "value": "#004043"
+      "value": "#142486"
     },
     {
       "name": "Desaturated",
-      "value": "#006164"
+      "value": "#3049a0"
     }
   ]
 }

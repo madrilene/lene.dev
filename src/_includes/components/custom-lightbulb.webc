@@ -26,7 +26,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     button:active svg {
-      transform: translateY(10px) rotate(-1.2deg);
+      transform: translateY(5px);
     }
 
     .pendulum {
@@ -35,7 +35,7 @@
 
     @keyframes pendulum {
       0% {
-        transform: rotate(0) translateY(10px);
+        transform: rotate(0);
       }
       10% {
         transform: rotate(2deg) translateY(0px);

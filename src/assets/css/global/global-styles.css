@@ -20,6 +20,7 @@ body {
 
 main {
   flex: auto;
+  border-block-start: 2px solid var(--color-text);
 }
 
 /* Base typesetting */
