@@ -1,67 +1,67 @@
 {
-	"products": [
-		{
-			"title": "Javascript Cookbook",
-			"year": 2021,
-			"medium": "book",
-			"topic": "Javascript",
-			"opinion": "By far my favourite Javascript book and the one I recommend to anyone with basic knowledge. At no point did I have the feeling of being left behind, the code examples are simple and true to life and wonderfully comprehensible. There's but one foo-bar-baz example (and I think it got in there by accident), which I really appreciate. The book even shows a sense of humour. I really enjoyed reading it and I always have it near me to look something up.",
-			"image": "./src/_assets/images/learnings/js-cookbook.jpg",
-			"alt": "Cover of the book"
-		},
-		{
-			"title": "Inclusive Components",
-			"year": 2019,
-			"medium": "book",
-			"topic": "Accessible UI patterns",
-			"opinion": "Inclusive Components is all about accessible patterns like accordions, dropdowns, sliders and modals. I use Heydon Pickering redundant click solution for cards in literally every project.",
-			"image": "./src/_assets/images/learnings/inclusive-components.jpg",
-			"alt": "Cover of the book"
-		},
-		{
-			"title": "Every Layout",
-			"year": 2022,
-			"medium": "book",
-			"topic": "CSS",
-			"opinion": "A book by two individuals that share a deep understanding of the web in general and CSS in particular. I love how it's written and how much it teaches me. It gets regular updates and provides access to invaluable code.",
-			"image": "./src/_assets/images/learnings/every-layout.jpg",
-			"alt": "Cover of the book"
-		},
-		{
-			"title": "CSS for JS",
-			"year": 2021,
-			"medium": "course",
-			"topic": "CSS",
-			"opinion": "Very detailed, interactive and comprehensive course made by Josh Comeau. It's huge, 9 modules taking you from the fundamentals to very advanced tricks for next-level user experiences. I'm not done with it yet and it's a joy every time I get to continue to progress.",
-			"image": "./src/_assets/images/learnings/css-for-js.jpg",
-			"alt": "Cover of the course"
-		},
-		{
-			"title": "You Don't Know JS Yet: Get Started",
-			"year": 2020,
-			"medium": "book",
-			"topic": "Javascript",
-			"opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson is renowned for his consistent affection for classic Javascript elements like var and the equality operator, but if you know a bit about the different opinions (which overwhelmingly disagree with him) it's almost refreshing. Apart from that, he explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope.",
-			"image": "./src/_assets/images/learnings/ydkjsy-getstarted.jpg",
-			"alt": "Cover of the book"
-		},
-		{
-			"title": "learnjavascript.online",
-			"year": 2021,
-			"medium": "course",
-			"topic": "Javascript",
-			"opinion": "This course comes with an interactive environment. Short lessons are directly followed by challenges, inspired by real-world projects. Exercising anywhere is a joy thanks to a separate flashcards app. It's all about practice!",
-			"image": "./src/_assets/images/learnings/learnjs.jpg",
-			"alt": "Cover of the course"
-		},
-		{
-			"title": "Git for Humans",
-			"year": 2016,
-			"medium": "book",
-			"topic": "Git",
-			"opinion": "I understand Git (or at least I think I do) thanks to this book. It really let me understand how this complex system works, and it's nice and short.",
-			"image": "./src/_assets/images/learnings/git-humans.jpg",
-			"alt": "Cover of the book"
-		}
-	]
+  "products": [
+    {
+      "title": "Javascript Cookbook",
+      "year": 2021,
+      "medium": "book",
+      "topic": "Javascript",
+      "opinion": "By far my favourite Javascript book and the one I recommend to anyone with basic knowledge. At no point did I have the feeling of being left behind, the code examples are simple and true to life and wonderfully comprehensible. There's but one foo-bar-baz example (and I think it got in there by accident), which I really appreciate. The book even shows a sense of humour. I really enjoyed reading it and I always have it near me to look something up.",
+      "image": "/js-cookbook.jpg",
+      "alt": "Cover of the book"
+    },
+    {
+      "title": "Inclusive Components",
+      "year": 2019,
+      "medium": "book",
+      "topic": "Accessible UI patterns",
+      "opinion": "Inclusive Components is all about accessible patterns like accordions, dropdowns, sliders and modals. I use Heydon Pickering redundant click solution for cards in literally every project.",
+      "image": "/inclusive-components.jpg",
+      "alt": "Cover of the book"
+    },
+    {
+      "title": "Every Layout",
+      "year": 2022,
+      "medium": "book",
+      "topic": "CSS",
+      "opinion": "A book by two individuals that share a deep understanding of the web in general and CSS in particular. I love how it's written and how much it teaches me. It gets regular updates and provides access to invaluable code.",
+      "image": "/every-layout.jpg",
+      "alt": "Cover of the book"
+    },
+    {
+      "title": "CSS for JS",
+      "year": 2021,
+      "medium": "course",
+      "topic": "CSS",
+      "opinion": "Very detailed, interactive and comprehensive course made by Josh Comeau. It's huge, 9 modules taking you from the fundamentals to very advanced tricks for next-level user experiences. I'm not done with it yet and it's a joy every time I get to continue to progress.",
+      "image": "/css-for-js.jpg",
+      "alt": "Cover of the course"
+    },
+    {
+      "title": "You Don't Know JS Yet: Get Started",
+      "year": 2020,
+      "medium": "book",
+      "topic": "Javascript",
+      "opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson is renowned for his consistent affection for classic Javascript elements like var and the equality operator, but if you know a bit about the different opinions (which overwhelmingly disagree with him) it's almost refreshing. Apart from that, he explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope.",
+      "image": "/ydkjsy-getstarted.jpg",
+      "alt": "Cover of the book"
+    },
+    {
+      "title": "learnjavascript.online",
+      "year": 2021,
+      "medium": "course",
+      "topic": "Javascript",
+      "opinion": "This course comes with an interactive environment. Short lessons are directly followed by challenges, inspired by real-world projects. Exercising anywhere is a joy thanks to a separate flashcards app. It's all about practice!",
+      "image": "/learnjs.jpg",
+      "alt": "Cover of the course"
+    },
+    {
+      "title": "Git for Humans",
+      "year": 2016,
+      "medium": "book",
+      "topic": "Git",
+      "opinion": "I understand Git (or at least I think I do) thanks to this book. It really let me understand how this complex system works, and it's nice and short.",
+      "image": "/git-humans.jpg",
+      "alt": "Cover of the book"
+    }
+  ]
 }

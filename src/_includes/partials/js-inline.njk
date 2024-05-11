@@ -1,0 +1,7 @@
+
+<!-- independent partial hydration islands architecture: https://github.com/11ty/is-land -->
+<script>{% getBundle "js", "inline" %}</script>
+{%- js "inline" %}{% include "scripts/is-land-inline.js" %}{% endjs %}
+
+<!-- WebC components -->
+<script>{% getBundle "js" %}</script>

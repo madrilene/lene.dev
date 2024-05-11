@@ -1,0 +1,24 @@
+<p>{{ tools.content }}</p>
+<custom-masonry class="text-center">
+  {%- for tool in toolbox.tools -%}
+    <custom-card class="toolbox">
+      <h3 slot="headline">{{ tool.division }}</h3>
+      <ul slot="content">
+        <!-- preference -->
+        {%- for item in tool.preference -%}
+          <li>
+            <strong> {{ item }} </strong>
+          </li>
+        {%- endfor -%}
+        <!-- possible -->
+        {%- for item in tool.possible -%}
+          <li>{{ item }}</li>
+        {%- endfor -%}
+        <!-- nope -->
+        {%- for item in tool.nope -%}
+          <li><s>{{ item }}</s></li>
+        {%- endfor -%}
+      </ul>
+    </custom-card>
+  {%- endfor -%}
+</custom-masonry>

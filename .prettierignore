@@ -1,7 +1,4 @@
-src/_assets/helperfiles/_redirects.njk
-src/_assets/helperfiles/humans.njk
-src/_assets/helperfiles/sitemap.njk
-src/_assets/helperfiles/google35901daa0ceb7399.html
-src/_includes/fontFace.liquid
-src/_includes/fontVariables.liquid
-app/src/folder/
+src/**/*.md
+src/_includes/components/**/custom-*.njk
+src/common/*
+src/_includes/scripts/*

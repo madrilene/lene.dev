@@ -1,0 +1,29 @@
+.intro {
+  --region-space-top: var(--space-3xl);
+}
+
+.intro custom-split {
+  --gutter: var(--space-m);
+  font-family: var(--font-display);
+  font-size: var(--size-step-1);
+}
+
+.intro custom-split img {
+  aspect-ratio: 16 / 9;
+  filter: grayscale(100%) brightness(110%);
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.intro custom-split picture {
+  position: relative;
+}
+
+.intro custom-split picture::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: hard-light;
+  opacity: 0.3;
+  background-image: linear-gradient(to top right, var(--color-bg), var(--color-primary));
+}

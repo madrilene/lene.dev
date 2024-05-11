@@ -1,0 +1,16 @@
+<p>{{ learnings.content }}</p>
+{%- for product in learnings.products -%}
+  <article class="flow">
+    <div class="learning sidebar relative">
+      {% image product.image | replace("/", "./src/assets/images/learnings/"), product.alt %}
+      <div class="flow">
+        <h3 class="font-body">{{ product.title }}</h3>
+        <p>
+          <span class="text-size-0 block font-bold uppercase opacity-80"
+            >{{ product.medium }} / {{ product.year }}, {{ product.topic }}</span
+          >{{ product.opinion }}
+        </p>
+      </div>
+    </div>
+  </article>
+{%- endfor -%}

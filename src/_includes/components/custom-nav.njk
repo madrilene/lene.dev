@@ -1,0 +1,17 @@
+<custom-nav aria="{{ meta.navigation.ariaTop }}" label="{{ meta.navigation.navLabel }}" drawer="false">
+  {% for item in navigation.top %}
+    <li>
+      <a
+        class="nav"
+        href="{{ item.url }}"
+        {{
+          helpers.getLinkActiveState(item.url,
+          page.url)
+          |
+          safe
+        }}
+        >{{ item.text }}</a
+      >
+    </li>
+  {% endfor %}
+</custom-nav>

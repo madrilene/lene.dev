@@ -1,70 +1,52 @@
-<!DOCTYPE html>
+{% set assetHash = helpers.random() %}
+
+<!doctype html>
 <html lang="{{ meta.lang }}">
+  <!-- The order of elements in the head follows recommendations by Harry Roberts. learn more here: https://www.youtube.com/watch?v=MHyAOZ45vnU -->
+
   <head>
-    <!-- include head  -->
-    {% include "partials/head.njk" %}
+    <!-- 1 charset/viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- fonts preload -->
-    <link
-      rel="preload"
-      href="/_assets/fonts/outfit/outfit-v5-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/_assets/fonts/charter/charter_regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/_assets/fonts/charter/charter_bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <!-- 2 title -->
+    <title>
+      {% if discover.title %}
+        {{ discover.title }}
+      {% elif title %}
+        {{ title }}
+      {% else %}
+        {{ meta.siteName }}
+      {% endif %}
+    </title>
 
-    <!-- check if production -->
-    {% if meta.env %}
-    <!-- set inline css -->
-    {% set css %}{% include "global.min.css" %}{% include "cube.min.css" %}{% endset %}
+    <!-- 3 synchronous js  -->
+    {% include "partials/js-inline.njk" %}
 
-    <style nonce="a2cx1c3">
+    <!-- 4 schema settings -->
+    {% include "partials/schema.njk" %}
 
-      {{ css | cssmin | safe }}
-    </style>
-    {% else %}
-    <link rel="stylesheet" href="/_assets/css/global.css" />
-    <link rel="stylesheet" href="/_assets/css/cube.css" />
-    {% endif %}
+    <!-- 5 CSS  -->
+    {% include "partials/css.njk" %}
 
-    <!-- defer js  -->
-    <script src="/_assets/app.min.js" defer></script>
+    <!-- 6 preloads  -->
+    {% include "partials/preloads.njk" %}
 
-    <!-- plausible for gdpr-compliant stats  -->
-    <script
-      defer
-      data-domain="lene.dev"
-      src="https://plausible.io/js/plausible.js"
-    ></script>
+    <!-- 7 defered JS  -->
+    {% include "partials/js-defered.njk" %}
 
-    <!-- include base schema  -->
-    {%- include "schemas/base-schema.njk" %}
+    <!-- 8 everything else: meta tags, icons, open graph etc.  -->
+    {% include "partials/meta-info.njk" %}
   </head>
 
-  <body>
-    <div class="wrapper z-10">{%- include "components/lightbulb.njk" %}</div>
-
-    <div hidden>{% svgSprite %}</div>
-    <!-- include logo, menu  -->
+  <body class="{{ layout }}">
     {% include "partials/header.njk" %}
 
-    {{ content | safe }}
+    <main id="main" class="flow">{{ content | safe }}</main>
 
-    <!-- include lfooter  -->
     {% include "partials/footer.njk" %}
+
+    <script type="module" src="/assets/components/custom-easteregg.js"></script>
+    <custom-easteregg keyword="yay" shape="🌈" particle-count="50"></custom-easteregg>
   </body>
 </html>

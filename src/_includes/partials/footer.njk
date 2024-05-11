@@ -1,25 +1,47 @@
-<footer class="wrapper pb-size-3 pt-size-5" aria-labelledby="footer-heading">
-  <h2 id="footer-heading" class="sr-only">Footer information</h2>
+<footer class="site-footer ">
+  <div class="wrapper">
+    <div class="footer__meta | cluster">
+      <nav class="footer__meta | cluster text-step-0" aria-label="{{ meta.navigation.ariaBottom }}">
+        &copy; {% year %}
+        <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}
+          >{{ meta.siteName }} <small>{{ pkg.version }}</small>
+        </a>
 
-  <div class="sidebar space-between">
-    <div class="cluster">
-      {% for site in social %} {% if site.url %}
-      <a
-        aria-label="Link to {{ site.platform }}"
-        href="{{ site.url | url }}"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        {% svg site.platform, "h-5 w-5", "visible", site.title %}
-      </a>
-      {% endif %} {% endfor %}
+        {% for item in navigation.bottom %}
+          <a
+            href="{{ item.url }}"
+            {{
+              helpers.getLinkActiveState(item.url,
+              page.url)
+              |
+              safe
+            }}
+            >{{ item.text }}</a
+          >
+        {% endfor %}
+      </nav>
+
+      <nav class="footer__meta | cluster" aria-label="{{ meta.navigation.ariaPlatforms }}">
+        {% for key, value in personal.platforms %}
+          {% if value != "" %}
+            <!-- regular platforms -->
+            <a href="{{ value }}" rel="me">
+              <span class="visually-hidden">{{ key | capitalize }}</span>
+              {% svg 'platform/' + key %}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </nav>
     </div>
 
-    <p class="cluster">
-      &copy; {% year %} {{ meta.siteName }}
-      <a href="/imprint/"> Imprint </a>
+    <!-- theme switch -->
+    {% include 'components/custom-theme.njk' %}
 
-      <a href="/privacy/"> Privacy </a><br />
-    </p>
+    <aside class="creator">
+      <a class="cluster" href="{{ meta.creator.website }}"
+        >Made with <span class="visually-hidden">love</span> <span>{% svg "misc/heart" %}</span> by
+        {{ meta.creator.name }}</a
+      >
+    </aside>
   </div>
 </footer>

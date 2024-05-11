@@ -1,0 +1,68 @@
+/* ----------- Mono: Monaspace -----------  */
+@font-face {
+  font-family: Monaspace;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local(''),
+    url(/assets/fonts/monaspace/monaspace-500.woff2) format('woff2');
+}
+
+/* ----------- Display: Charter -----------  */
+@font-face {
+  font-family: Charter;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local(''),
+    url(/assets/fonts/charter/charter-400.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Charter;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local(''),
+    url(/assets/fonts/charter/charter-700.woff2) format('woff2');
+}
+
+/* ----------- Base: Outfit -----------  */
+/* Set up for older browsers  */
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: Outfit;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src:
+      local(''),
+      url(/assets/fonts/outfit/outfit-400.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: Outfit;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src:
+      local(''),
+      url(/assets/fonts/outfit/outfit-700.woff2) format('woff2');
+  }
+}
+
+/* Set up for modern browsers */
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: 'Outfit';
+    src:
+      url('/assets/fonts/outfit/outfit-variable.woff2') format('woff2 supports variations'),
+      url('/assets/fonts/outfit/outfit-variable.woff2') format('woff2-variations');
+    font-weight: 400 800;
+    font-style: normal;
+    font-display: swap;
+  }
+}

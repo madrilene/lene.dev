@@ -2,16 +2,10 @@
 layout: base
 ---
 
-<main id="main" class="wrapper mt-size-3">
-  <div class="flow">
-    <article class="content mx-auto flow">
-      {{ content | safe }}
-    </article>
-    <!-- toolbox, loops over global data file -->
-    {% include "components/toolbox.njk" %}
-    <!-- projects, native web component -->
-    {% include "components/projects-collapsible.njk" %}
-    <!-- learnings, loops over global data file -->
-    {% include "components/learnings.njk" %}
-  </div>
-</main>
+<div class="wrapper">
+  {% svg "misc/seperator", null, "seperator" %}
+
+  <article class="full intro | region">
+    <div class="wrapper flow prose">{{ content | safe }}</div>
+  </article>
+</div>

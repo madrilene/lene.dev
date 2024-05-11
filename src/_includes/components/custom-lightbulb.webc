@@ -1,0 +1,113 @@
+<button aria-label="Switch theme" aria-pressed="false">
+  <custom-svg aria-hidden="true" src="./src/assets/svg/misc/lightbulb.svg"></custom-svg>
+</button>
+
+<style>
+  custom-lightbulb {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    transform: translateY(-10px);
+  }
+
+  custom-lightbulb svg {
+    block-size: auto;
+    transition: transform 0.3s;
+    transform-origin: top; /* Set the origin of rotation at the top of the SVG */
+  }
+
+  #lightcircle {
+    opacity: 0.1;
+  }
+
+  [data-theme='dark'] :is(#lightcircle, #innerbulb, #lightlines) {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    button:active svg {
+      transform: translateY(10px) rotate(-1.2deg);
+    }
+
+    .pendulum {
+      animation: pendulum 1s ease-out forwards; /* Adjust duration for more realism */
+    }
+
+    @keyframes pendulum {
+      0% {
+        transform: rotate(0) translateY(10px);
+      }
+      10% {
+        transform: rotate(2deg) translateY(0px);
+      }
+      30% {
+        transform: rotate(-1.8deg);
+      }
+      50% {
+        transform: rotate(1.5deg);
+      }
+      70% {
+        transform: rotate(-1.2deg);
+      }
+      90% {
+        transform: rotate(1deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+  }
+</style>
+
+<script>
+  class CustomLightbulb extends HTMLElement {
+    constructor() {
+      super();
+      this.storageKey = 'theme-preference';
+      this.button = this.querySelector('button');
+      this.svg = this.querySelector('svg');
+    }
+
+    connectedCallback() {
+      this.currentTheme = this.getColorPreference();
+      this.updateTheme();
+      this.button.addEventListener('click', () => this.toggleTheme());
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        this.currentTheme = e.matches ? 'dark' : 'light';
+        this.updateTheme();
+      });
+    }
+
+    toggleTheme() {
+      this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+      this.updateTheme();
+    }
+
+    getColorPreference() {
+      const storedPreference = localStorage.getItem(this.storageKey);
+      return (
+        storedPreference || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      );
+    }
+
+    updateTheme() {
+      document.documentElement.setAttribute('data-theme', this.currentTheme);
+      localStorage.setItem(this.storageKey, this.currentTheme);
+      this.button.setAttribute('aria-pressed', this.currentTheme === 'dark' ? 'true' : 'false');
+      this.button.setAttribute(
+        'aria-label',
+        `Switch to ${this.currentTheme === 'dark' ? 'light' : 'dark'} theme`
+      );
+      this.svg.classList.toggle('dark', this.currentTheme === 'dark');
+      this.svg.classList.toggle('light', this.currentTheme === 'light');
+      this.triggerPendulumEffect();
+    }
+
+    triggerPendulumEffect() {
+      this.svg.classList.add('pendulum');
+      setTimeout(() => this.svg.classList.remove('pendulum'), 1000); // Duration of the pendulum animation
+    }
+  }
+
+  customElements.define('custom-lightbulb', CustomLightbulb);
+</script>

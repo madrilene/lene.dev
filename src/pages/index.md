@@ -1,29 +1,35 @@
 ---
 permalink: /index.html
-layout: home
-title: Lene Saile, frontend developer based in Madrid
-description: 'I make fast and accessible websites and web apps. I enjoy building sites with vanilla Javascript and the possibilities of modern CSS. '
+title: 'Lene Saile'
+description: 'Hi, I’m Lene, I do web design and development for a living. I was born in Berlin and have been living for over a decade in Madrid. I work with clients all over the world.'
+layout: 'home'
 tools:
   title: Tools
-  content: 'These are the tools I work with or have worked with in the past. Bold indicates higher preference/proficiency.'
-projects:
-  title: Recent Projects
-  content: 'Expand to see the details of some of my recent client projects.'
+  content: "These are some tools I work with or have worked with in the past. Bold indicates in most cases what I prefer, still use, or, in some cases, I am more proficient with. Strike through indicates.. well, nope. I don't want to work with that anymore, even though I have experience."
 learnings:
-  title: Favorite learning resources
-  content: "Technical books I've read and courses I've taken in the past years. I'll only mention what made a difference for me, the learning resources I really appreciate and recommend wholeheartedly. "
+  title: My learning recommendations
+  content: "I really love good technical books and courses. I have taken a lit of courses and read a lot of books. I am not going to list thema ll, instead I share only what really made a difference for me. The following books and courses I really appreciate and recommend wholeheartedly to everyone who wants to learn frontend."
 ---
 
-## About me
+## A little bit about me
 
-I have always enjoyed experimenting with computers. In 2004, I tried building my first websites with HTML and CSS. Four years later, I started earning a living with my hobby. Since 2010, I have been living and working in Madrid. I have worked as a freelancer mainly on small to medium-sized business websites.
+I consider myself part of a group of people who want to build a human-centered web. As Michelle Barker states in her [manifesto](https://humanewebmanifesto.com/), I strive to make all my projects accessible, inclusive, sustainable, safe, secure, resilient, reliable and independent.
 
-After reaching my limits with static websites, I discovered Wordpress. Theme platforms like Themeforest didn't exist yet, so I messed around with the default theme until I liked the way it looked. Next, I played around with PHP to broaden the possibilities. For a long time I didn't have the confidence to learn Javascript properly. A few years ago, I started studying it after all. Now I really enjoy experimenting with Javascript.
+<custom-split>
+{% image "./src/assets/images/content/lene2023.jpg", "Me, in front of my desk, not directly looking into the camera. I'm smiling and wear a blazer I wouldn't normally wear when I'm working, because I like to be comfy" %}
+Hi, I'm Lene. I have been doing web design and development (mainly frontend) for a living since 2008. I was born in Berlin and have been living for over a decade in Madrid. I work with clients all over the world.
+</custom-split>
 
-In 2018 I discovered Jamstack and soon after changed all my (somewhat antiquated) methods. I started integrating Git by default for all projects, tested new bundlers, CSS and Javscript frameworks and discovered the wonderful world of Continuous deployments via GitHub and Netlify.
+I work with code according to the principles <q>Content over code</q> and [Rule of Least Power](https://www.w3.org/2001/tag/doc/leastPower.html): HTML first, everything what's possible with CSS, and JavaScript only for selected interactivity, polyfills and accessibility.
 
-{% include "components/presentation.njk" %}
+I really like to organize my projects well so that I and others can always manage them with ease. I share insights that I think might be of interest to the community on a blog on my website [lenesaile.com](https://www.lenesaile.com/en/blog/). I'm a big fan of [Eleventy](https://www.11ty.dev/) and build most of my projects with it.
 
-I take accessibility and performance very seriously, testing and re-testing until the result is what I want it to be. Which is (as close as I can get to) perfect.
+Lately I've been reading a lot about <sparkly-text number-of-sparkles="5" style="--sparkly-text-color: var(--color-primary)">**web components**</sparkly-text>  and I'm integrating them everywhere I can.
 
-I'm constantly reading and learning, and I'm especially enthusiastic about everything that's happening in the areas of Jamstack, accessibility and performance. I don't consider myself an expert anywhere, as I'm constantly optimising and every field is incredibly large. But I am a quick and flexible learner and have no trouble familiarising myself with new methods and techniques.
+(Disclaimer: I am currently updating this site.)
+
+## Tools
+{% include "contents/toolbox.njk" %}
+
+## Recommendations
+{% include "contents/learnings.njk" %}

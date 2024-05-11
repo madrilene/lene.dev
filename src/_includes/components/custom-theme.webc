@@ -1,0 +1,66 @@
+<is-land on:visible>
+  <style>
+    /* Hide without JS */
+    is-land:not(:defined) custom-theme {
+      display: none;
+    }
+
+    .icon {
+      /* shared styles for the icon */
+    }
+    .icon.light {
+      /* styles specific to light theme */
+    }
+    .icon.dark {
+      /* styles specific to dark theme */
+    }
+  </style>
+  <custom-theme
+    class="theme-switch | cluster mt-xs"
+    style="--cluster-horizontal-alignment: center; --gutter: 0.5rem"
+    aria-labelledby="theme-switcher-label"
+  >
+    <script>
+      class CustomTheme extends HTMLElement {
+        constructor() {
+          super();
+          this.storageKey = 'theme-preference';
+        }
+
+        connectedCallback() {
+          this.currentTheme = this.getColorPreference();
+          this.updateTheme();
+          this.addEventListener('click', this.toggleTheme.bind(this));
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            this.currentTheme = e.matches ? 'dark' : 'light';
+            this.updateTheme();
+          });
+        }
+
+        toggleTheme() {
+          this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+          this.updateTheme();
+        }
+
+        getColorPreference() {
+          const storedPreference = localStorage.getItem(this.storageKey);
+          return (
+            storedPreference || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          );
+        }
+
+        updateTheme() {
+          document.documentElement.setAttribute('data-theme', this.currentTheme);
+          localStorage.setItem(this.storageKey, this.currentTheme);
+          this.innerHTML = `<svg class="lightbulb icon ${this.currentTheme}" aria-label="Toggle theme"></svg>`;
+        }
+      }
+
+      customElements.define('custom-theme', CustomTheme);
+    </script>
+
+    <template data-island="once" webc:raw>
+      <link rel="stylesheet" href="/assets/components/custom-theme.css" />
+    </template>
+  </custom-theme>
+</is-land>

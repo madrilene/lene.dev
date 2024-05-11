@@ -1,0 +1,19 @@
+.learning {
+  display: flex;
+  gap: var(--space-xl);
+  justify-content: space-between;
+  border-top: 2px dashed;
+  border-bottom: 2px dashed;
+  padding: var(--space-l) 0;
+}
+.learning:last-child {
+  border-top: none;
+}
+.learning img {
+  width: fit-content;
+  outline: 2px solid var(--color-text);
+}
+
+.learning p {
+  font-size: var(--size-step-min-1);
+}

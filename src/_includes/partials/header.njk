@@ -1,13 +1,16 @@
 <a href="#main" class="skip-link">{{ meta.skipContent }}</a>
 
-<header class="wrapper | py-size-1 relative" role="banner">
-  <div class="sidebar | max-w-prose mx-auto items-center">
-    <h1>
-      <a href="/" class="logo | font-bold no-underline"> Lene Saile </a>
-    </h1>
-
-    {% include "partials/menu.njk" %}
+<header class="site-header | relative wrapper">
+  <div class="wrapper prose">
+    <div class="repel ontop">
+      <h1>
+        <a href="/" class="logo | cluster" {% if page.url == "/" %}aria-current="page"{% endif %}>
+          {{ meta.siteName }}
+        </a>
+      </h1>
+      {% include "components/custom-nav.njk" %}
+    </div>
   </div>
-</header>
 
-{% svg "seperator", "mx-auto w-full h-5", visible, "seperator" %}
+  <custom-lightbulb></custom-lightbulb>
+</header>

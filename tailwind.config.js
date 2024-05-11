@@ -1,75 +1,144 @@
-module.exports = {
-	content: [
-		'./src/**/*.{html,md,11ty.js,js,json,liquid,njk,hbs,mustache,ejs,haml,pug}',
-		'./utils/**/*.js'
-	],
-	theme: {
-		fontFamily: {
-			body: [
-				'Outfit',
-				'"Segoe UI"',
-				'Roboto',
-				'"Helvetica Neue"',
-				'ui-sans-serif',
-				'system-ui',
-				'sans-serif'
-			],
-			display: ['Charter', 'ui-sans-serif', 'system-ui', 'sans-serif']
-		},
-		extend: {
-			colors: {
-				primary: '#FF7F5C',
-				secondary: '#3C4558',
-				light: 'hsl(30, 40%, 96%)',
-				dark: 'hsl(30, 40%, 8%)'
-			},
-			spacing: {
-				'size-0': 'clamp(0.83rem, 0.90rem + -0.32vw, 0.67rem)',
-				'base': 'clamp(1.00rem, 1.00rem + 0.00vw, 1.00rem)',
-				'size-1': 'clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem)',
-				'size-2': 'clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem)',
-				'size-3': 'clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem)',
-				'size-4': 'clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem)',
-				'size-5': 'clamp(2.49rem, 0.50rem + 9.96vw, 7.59rem)',
-				'lightbulb': 'clamp(0.83rem, 0.50rem + 9.96vw, 7.59rem)'
-			},
-			fontSize: {
-				'size-0': 'clamp(0.83rem, 0.90rem + -0.32vw, 0.67rem)',
-				'base': 'clamp(1.00rem, 1.00rem + 0.00vw, 1.00rem)',
-				'size-1': 'clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem)',
-				'size-2': 'clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem)',
-				'size-3': 'clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem)',
-				'size-4': 'clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem)',
-				'size-5': 'clamp(2.49rem, 0.50rem + 9.96vw, 7.59rem)'
-			},
-			height: {
-				'size-0': 'clamp(0.83rem, 0.90rem + -0.32vw, 0.67rem)',
-				'base': 'clamp(1.00rem, 1.00rem + 0.00vw, 1.00rem)',
-				'size-1': 'clamp(1.20rem, 1.08rem + 0.59vw, 1.50rem)',
-				'size-2': 'clamp(1.44rem, 1.12rem + 1.58vw, 2.25rem)',
-				'size-3': 'clamp(1.73rem, 1.09rem + 3.21vw, 3.38rem)',
-				'size-4': 'clamp(2.07rem, 0.91rem + 5.83vw, 5.06rem)',
-				'size-5': 'clamp(2.49rem, 0.50rem + 9.96vw, 7.59rem)'
-			}
-		}
-	},
-	variantOrder: [
-		'first',
-		'last',
-		'odd',
-		'even',
-		'visited',
-		'checked',
-		'empty',
-		'read-only',
-		'group-hover',
-		'group-focus',
-		'focus-within',
-		'hover',
-		'focus',
-		'focus-visible',
-		'active',
-		'disabled'
-	],
-	plugins: []
+/* © Andy Bell - https://buildexcellentwebsit.es/ */
+
+import plugin from 'tailwindcss/plugin';
+import postcss from 'postcss';
+import postcssJs from 'postcss-js';
+
+import {clampGenerator} from './src/_config/utils/clamp-generator.js';
+import {tokensToTailwind} from './src/_config/utils/tokens-to-tailwind.js';
+
+// Raw design tokens
+import colorTokens from './src/_data/designTokens/colors.js';
+import fontTokens from './src/_data/designTokens/fonts.json';
+import spacingTokens from './src/_data/designTokens/spacing.json';
+import textSizeTokens from './src/_data/designTokens/textSizes.json';
+import textLeadingTokens from './src/_data/designTokens/textLeading.json';
+import textWeightTokens from './src/_data/designTokens/textWeights.json';
+import viewportTokens from './src/_data/designTokens/viewports.json';
+
+// Process design tokens
+const colors = tokensToTailwind(colorTokens.items);
+const fontFamily = tokensToTailwind(fontTokens.items);
+const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
+const fontWeight = tokensToTailwind(textWeightTokens.items);
+const fontLeading = tokensToTailwind(textLeadingTokens.items);
+const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
+
+export default {
+  content: ['./src/**/*.{html,js,md,njk,liquid,webc}'],
+  presets: [],
+  theme: {
+    screens: {
+      ltsm: {max: `${viewportTokens.sm}px`},
+      sm: `${viewportTokens.sm}px`,
+      md: `${viewportTokens.md}px`,
+      navigation: `${viewportTokens.navigation}px`
+    },
+    colors,
+    spacing,
+    fontFamily,
+    fontSize,
+    fontWeight,
+    fontLeading,
+    backgroundColor: ({theme}) => theme('colors'),
+    textColor: ({theme}) => theme('colors'),
+    margin: ({theme}) => ({
+      auto: 'auto',
+      ...theme('spacing')
+    }),
+    padding: ({theme}) => theme('spacing')
+  },
+  variantOrder: [
+    'first',
+    'last',
+    'odd',
+    'even',
+    'visited',
+    'checked',
+    'empty',
+    'read-only',
+    'group-hover',
+    'group-focus',
+    'focus-within',
+    'hover',
+    'focus',
+    'focus-visible',
+    'active',
+    'disabled'
+  ],
+
+  // Disables Tailwind's reset etc
+  corePlugins: {
+    preflight: false,
+    textOpacity: false,
+    backgroundOpacity: false,
+    borderOpacity: false
+  },
+
+  // Prevents Tailwind's core components
+  blocklist: ['container'],
+
+  // Prevents Tailwind from generating that wall of empty custom properties
+  experimental: {
+    optimizeUniversalDefaults: true
+  },
+
+  plugins: [
+    // Generates custom property values from tailwind config
+    plugin(function ({addComponents, config}) {
+      let result = '';
+
+      const currentConfig = config();
+
+      const groups = [
+        {key: 'colors', prefix: 'color'},
+        {key: 'spacing', prefix: 'space'},
+        {key: 'fontSize', prefix: 'size'},
+        {key: 'fontLeading', prefix: 'leading'},
+        {key: 'fontFamily', prefix: 'font'},
+        {key: 'fontWeight', prefix: 'font'}
+      ];
+
+      groups.forEach(({key, prefix}) => {
+        const group = currentConfig.theme[key];
+
+        if (!group) {
+          return;
+        }
+
+        Object.keys(group).forEach(key => {
+          result += `--${prefix}-${key}: ${group[key]};`;
+        });
+      });
+
+      addComponents({
+        ':root': postcssJs.objectify(postcss.parse(result))
+      });
+    }),
+
+    // Generates custom utility classes
+    plugin(function ({addUtilities, config}) {
+      const currentConfig = config();
+      const customUtilities = [
+        {key: 'spacing', prefix: 'flow-space', property: '--flow-space'},
+        {key: 'colors', prefix: 'spot-color', property: '--spot-color'}
+      ];
+
+      customUtilities.forEach(({key, prefix, property}) => {
+        const group = currentConfig.theme[key];
+
+        if (!group) {
+          return;
+        }
+
+        Object.keys(group).forEach(key => {
+          addUtilities({
+            [`.${prefix}-${key}`]: postcssJs.objectify(
+              postcss.parse(`${property}: ${group[key]}`)
+            )
+          });
+        });
+      });
+    })
+  ]
 };

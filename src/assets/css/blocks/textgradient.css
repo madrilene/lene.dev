@@ -1,0 +1,7 @@
+.gradient-text {
+  color: transparent;
+  background-image: var(--gradient-conic);
+  padding: 0.6rem 0;
+  background-size: 50%;
+  background-clip: text;
+}

@@ -1,63 +1,75 @@
 {
-	"tools": [
-		{
-			"division": "Languages",
-			"preference": ["Semantic HTML", "CSS", "Javascript ES6, Node.js", "SVG"],
-			"possible": ["PHP (within the scope of WP)", "Python (automation scripts)"]
-		},
-		{
-			"division": "CSS & JS-Frameworks",
-			"preference": ["Tailwind CSS", "Alpine.js", "Svelte", "React"],
-			"possible": ["Bootstrap", "jQuery"]
-		},
-		{
-			"division": "SSG/SSR/Metaframework",
-			"preference": ["Eleventy", "Astro"],
-			"possible": ["SvelteKit", "Next.js"]
-		},
-		{
-			"division": "API",
-			"preference": ["REST"],
-			"possible": ["GraphQL"]
-		},
-		{
-			"division": "CMS",
-			"preference": ["Wordpress", "Netlify CMS"],
-			"possible": ["Strapi", "Sanity", "Shopify"]
-		},
-		{
-			"division": "Templating Languages ",
-			"preference": ["Markdown", "Nunjucks", "Liquid", "Twig", "Blade", "Pug"],
-			"possible": []
-		},
-		{
-			"division": "Bundler / Build tools",
-			"preference": ["vite", "esbuild"],
-			"possible": ["snowpack", "webpack"]
-		},
-		{
-			"division": "CSS & JS preprocessors ",
-			"preference": ["PostCSS", "Typescript"],
-			"possible": ["Sass"]
-		},
-		{
-			"division": "Version Control, Hosts",
-			"preference": ["Git/GitHub", "Netlify", "Siteground"],
-			"possible": ["Vercel"]
-		},
-		{
-			"division": "Design",
-			"preference": ["Figma", "Photoshop", "InDesign", "Premiere"],
-			"possible": ["After Effects"]
-		},
-		{
-			"division": "SEO / Monitoring",
-			"preference": ["Plausible.io", "ahrefs", "Google Search Console"],
-			"possible": ["Google Analytics"]
-		},
-		{
-			"division": "Code editors / Terminal",
-			"preference": ["VSCode", "Notepad++", "Hyper"]
-		}
-	]
+  "tools": [
+    {
+      "division": "Languages",
+      "preference": ["Semantic HTML", "CSS", "Javascript ES6, Node.js", "SVG", "PHP", "Bash"],
+      "possible": ["Python"],
+      "nope": []
+    },
+    {
+      "division": "CSS & JS-Frameworks",
+      "preference": ["I prefer everything vanilla"],
+      "possible": ["Tailwind CSS", "Svelte", "Alpine.js"],
+      "nope": ["React", "Bootstrap", "jQuery"]
+    },
+    {
+      "division": "SSG/SSR/Metaframework",
+      "preference": ["Eleventy", "Astro"],
+      "possible": ["SvelteKit"],
+      "nope": ["Next.js"]
+    },
+    {
+      "division": "API",
+      "preference": ["REST"],
+      "possible": ["GraphQL"],
+      "nope": []
+    },
+    {
+      "division": "CMS",
+      "preference": ["Cloudcannon", "Tina", "Wordpress", "Decap CMS", "Shopify"],
+      "possible": ["Strapi", "Sanity"],
+      "nope": []
+    },
+    {
+      "division": "Templating Languages ",
+      "preference": ["Markdown", "Nunjucks", "Liquid", "webC", "Twig", "Pug"],
+      "possible": ["Blade"],
+      "nope": []
+    },
+    {
+      "division": "Bundler / Build tools",
+      "preference": ["vite", "esbuild"],
+      "possible": ["snowpack", "parcel"],
+      "nope": ["webpack"]
+    },
+    {
+      "division": "CSS & JS preprocessors ",
+      "preference": ["PostCSS", "Lightning CSS"],
+      "possible": ["Typescript", "Sass"],
+      "nope": []
+    },
+    {
+      "division": "Version Control, Hosts",
+      "preference": ["GitHub/GitLab", "Netlify", "Neocities", "Siteground"],
+      "possible": [],
+      "nope": []
+    },
+    {
+      "division": "Design",
+      "preference": ["Figma", "Penpot"],
+      "possible": [],
+      "nope": ["Adobe products (not working on Linux)"]
+    },
+    {
+      "division": "Discover / Monitoring",
+      "preference": ["Plausible.io", "Fathom", "ahrefs"],
+      "possible": [],
+      "nope": ["Google Analytics"]
+    },
+    {
+      "division": "Code editors / Terminal",
+      "preference": ["VSCode", "Hyper"],
+      "nope": []
+    }
+  ]
 }

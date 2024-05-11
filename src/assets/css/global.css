@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+
+@import 'global/reset.css';
+@import 'global/fonts.css';
+
+@import 'tailwindcss/components';
+
+@import 'global/variables.css';
+@import 'global/global-styles.css';
+
+@import-glob 'blocks/*.css';
+
+@import 'components/custom-card.css';
+@import 'components/custom-split.css';
+@import-glob 'compositions/*.css';
+@import-glob 'utilities/*.css';
+
+/* activate for testing */
+/* @import-glob 'tests/*.css'; */
+
+@import 'tailwindcss/utilities';

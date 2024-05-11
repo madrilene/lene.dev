@@ -2,8 +2,8 @@
 layout: base
 ---
 
-<main id="main" class="wrapper mt-size-3">
-  <article class="content mx-auto flow">
-    {{ content | safe }}
-  </article>
-</main>
+<article class="region wrapper flow prose" style="--region-space-top: var(--space-xl-2xl)">
+  {% svg "misc/seperator", null, "seperator" %}
+  <h1 class="gradient-text">{{ title }}</h1>
+  {{ content | safe }}
+</article>

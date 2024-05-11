@@ -1,5 +1,0 @@
-.nav__list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--gutter, var(--space-size-1));
-}

@@ -1,0 +1,31 @@
+<custom-nav :drawer="drawer">
+  <nav id="mainnav" class="main" :aria-label="this.aria">
+    <ul class="cluster" role="list">
+      <slot></slot>
+    </ul>
+  </nav>
+
+  <template webc:if="drawer === 'true'" id="burger-template">
+    <button type="button" aria-expanded="false" aria-label="Menu" aria-controls="mainnav">
+      <span @text="label"></span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M5 12h14" />
+        <path d="M12 5v14" />
+      </svg>
+    </button>
+  </template>
+
+  <script webc:if="drawer === 'true'" src="/assets/components/custom-nav-drawer.js" defer></script>
+  <link webc:if="drawer === 'true'" rel="stylesheet" href="/assets/components/custom-nav-drawer.css" />
+  <link webc:else rel="stylesheet" href="/assets/components/custom-nav-pills.css" />
+</custom-nav>

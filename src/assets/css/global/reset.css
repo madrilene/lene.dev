@@ -1,0 +1,95 @@
+/* inspired by: */
+/* Modern reset: https://piccalil.li/blog/a-modern-css-reset/ */
+/* https://keithjgrant.com/posts/2024/01/my-css-resets/ */
+/* https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#css-reset-additions */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+:where(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+:where(ul[role='list'], ol[role='list']) {
+  list-style: none;
+}
+
+/* Prevent zooming when orientation changes on some iOS devices */
+/* Make gutter area stable and present on both edges of the scrollbar */
+:where(html) {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  scrollbar-gutter: stable;
+}
+
+/* Set core root defaults */
+:where(html:focus-within) {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+:where(body) {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+:where([role='list']) {
+  padding: 0;
+}
+
+/* A elements that don't have a class get default styles */
+:where(a:not([class])) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+:where(img, picture, svg, canvas) {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+/* remove default button styles */
+:where(button) {
+  all: unset;
+}
+
+/* Inherit fonts for inputs and buttons */
+:where(button, input, select, textarea) {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+:where(textarea:not([rows])) {
+  min-height: 10em;
+}
+
+/* Adding cursor style to interactive elements */
+:where(button, label, select, summary, [role='button'], [role='option']) {
+  cursor: pointer;
+}
+
+/* No typographic widows */
+:where(*) {
+  text-wrap: pretty;
+}
+:where(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+
+/* Scroll margin allowance above anchor links */
+:where(:target) {
+  scroll-margin-block-start: 1ex;
+}
+
+/* Scroll margin allowance below focused elements
+	to ensure they are clearly in view */
+:where(:focus) {
+  scroll-margin-block-end: 8vh;
+}

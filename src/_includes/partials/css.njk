@@ -1,0 +1,14 @@
+
+    <!-- Critical CSS in production, blocking stylesheet for local dev for better livereload -->
+		{% if eleventy.env.runMode == "serve" %}
+    <link rel="stylesheet" href="/assets/css/global.css" />
+		{% else %}
+		<!-- bundle css -->
+    <style>{% getBundle "css", "global" %}</style>
+	  {% endif %}
+
+   	{%- css "global" %}{% include "css/global-inline.css" %}{% endcss %}
+	  <!-- WebC components -->
+		<style>{% getBundle 'css' %}</style>
+
+
