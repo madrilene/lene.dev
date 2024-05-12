@@ -1,9 +1,9 @@
-import fs from 'fs';
+import fs from 'node:fs';
 import sharp from 'sharp';
 import Jimp from 'jimp';
-import colorTokens from '../../_data/designTokens/colors.js';
+import {colorVariations} from '../../_data/designTokens/colorArray.js';
 
-const primaryColor = colorTokens.items[0].value;
+const primaryColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
 
 export const createFavicons = async function () {
   const outputDir = 'src/assets/images/favicons';
@@ -12,20 +12,18 @@ export const createFavicons = async function () {
 
   // ------------------ define base SVG
   const svgContent = `
-		<svg xmlns="http://www.w3.org/2000/svg" width="33.51" height="33.508" viewBox="0 0 33.51 33.508">
-		<g transform="translate(1.307 1.315)">
-			<path
-				fill="${primaryColor}"
-				stroke="${primaryColor}"
-				stroke-width="2px"
-				d="M15.448,0l2.265,1.935L20.481.843,22,3.411l2.972-.131.6,2.923,2.853.844-.375,2.961,2.425,1.728-1.313,2.678L30.9,16.838l-2.108,2.105.856,2.858-2.675,1.3-.115,2.982L23.9,26.45l-1.074,2.783-2.91-.62L18,30.9l-2.551-1.534L12.9,30.9,10.98,28.614l-2.91.62L7,26.45l-2.952-.362-.115-2.982L1.253,21.8l.856-2.858L0,16.838l1.734-2.425L.421,11.736l2.425-1.728L2.471,7.047,5.324,6.2l.6-2.923L8.9,3.411,10.415.843l2.768,1.092Z"
-			/>
-			<path
-				fill="#fff"
-				d="M3.976,17.891a3.828,3.828,0,0,1-2.808-1.168,3.959,3.959,0,0,1,0-5.616A3.829,3.829,0,0,1,3.976,9.94a3.877,3.877,0,0,1,1.056.137,3.712,3.712,0,0,1,.932.41V0h5.964V2.162H7.952V13.916a3.828,3.828,0,0,1-1.168,2.808A3.828,3.828,0,0,1,3.976,17.891Z"
-				transform="matrix(0.966, 0.259, -0.259, 0.966, 13.244, 5.264)"
-			/>
-		</g>
+		<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		width="1em"
+		height="1em"
+		fill="${primaryColor}"
+	>
+		<path
+			fill-rule="evenodd"
+			d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+			clip-rule="evenodd"
+		/>
 	</svg>
 	`;
 
@@ -33,6 +31,7 @@ export const createFavicons = async function () {
 
   // ------------------ Save original SVG
   fs.writeFileSync(`${outputDir}/favicon.svg`, svgBuffer);
+  console.log('Original SVG saved');
 
   // ------------------ Generate PNGs
   await sharp(svgBuffer).resize(192, 192).toFile(`${outputDir}/icon-192x192.png`);
@@ -58,4 +57,5 @@ export const createFavicons = async function () {
   const pngBuffer = await sharp(Buffer.from(svgContent)).resize(32, 32).png().toBuffer();
   const image = await Jimp.read(pngBuffer);
   await image.writeAsync(`${outputDir}/favicon.ico`);
+  console.log('Favicons generated');
 };
