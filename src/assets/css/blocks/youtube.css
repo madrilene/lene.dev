@@ -1,8 +1,0 @@
-.video-wrapper {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-}
-
-is-land.video-wrapper {
-  display: block;
-}
