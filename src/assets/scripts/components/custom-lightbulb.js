@@ -16,7 +16,6 @@ class CustomLightbulb extends HTMLElement {
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', this.handleSystemThemeChange.bind(this));
-    console.log('Connected and event listeners added'); // Debugging output
   }
 
   toggleTheme() {
@@ -35,7 +34,6 @@ class CustomLightbulb extends HTMLElement {
   }
 
   updateTheme() {
-    console.log('Updating theme to:', this.currentTheme); // Debugging output
     document.documentElement.setAttribute('data-theme', this.currentTheme);
     localStorage.setItem(this.storageKey, this.currentTheme);
     this.button.setAttribute('aria-pressed', this.currentTheme === 'dark' ? 'true' : 'false');
@@ -61,11 +59,6 @@ class CustomLightbulb extends HTMLElement {
     if (!this.svg) return; // Check if svg is available
     this.svg.classList.add('pendulum');
     setTimeout(() => this.svg.classList.remove('pendulum'), 1000);
-  }
-
-  triggerPendulumEffect() {
-    this.svg.classList.add('pendulum');
-    setTimeout(() => this.svg.classList.remove('pendulum'), 1000); // Duration of the pendulum animation
   }
 }
 
