@@ -1,0 +1,78 @@
+---
+permalink: colors/index.html
+title: 'Colors'
+description: ''
+layout: 'page'
+excludeFromSitemap: true
+noindex: true
+customColors:
+  - property: '--color-primary'
+  - property: '--color-text'
+  - property: '--color-bg'
+  - property: '--color-bg-accent'
+  - property: '--color-light'
+  - property: '--color-dark'
+  - property: '--color-desaturated'
+customGradients:
+  - property: '--gradient-conic'
+---
+
+<style>
+  li {
+    display: grid;
+    inline-size: min(11rem, 40%);
+    aspect-ratio: 1;
+    background: var(--grey);
+    border: 1px solid gray;
+  }
+
+  li.big {
+    inline-size: min(18rem, 40%);
+  }
+
+  code {
+    font-size: var(--size-step-min-1);
+    background-color: var(--color-bg);
+    justify-self: center;
+    align-self: end;
+    margin-block-end: var(--space-xs);
+    padding-inline: var(--space-xs);
+  }
+</style>
+
+<div class="region flow" style="--region-space-top: var(--space-xl) ">
+  <h2>Current Primary color:</h2>
+  <ul role="list" class="cluster">
+    {%- for color in customColors -%}
+      <li class="big" style="background-color: var({{ color.property }})">
+        <code>{{ color.property }}</code>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  <h2 class=" mt-xl">Color array:</h2>
+  <p>
+    Generated in OKLCH and (for now) converted back to HEX, going around the hue wheel in steps of 10,
+    skipping some rather ugly brownish values between red and green
+  </p>
+
+  <ul role="list" class="cluster">
+    {%- for color in designTokens.colorArray.colorVariations -%}
+      <li style="background-color: {{ color }}">
+        <code> <strong>{{ color }}</strong></code>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  <ul role="list">
+    {%- for gradient in customGradients -%}
+      <li>
+        <div style="background-image: var({{ gradient.property }})"></div>
+
+        <p>
+          <code>{{ gradient.property }}</code>
+        </p>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

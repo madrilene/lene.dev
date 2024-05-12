@@ -29,7 +29,7 @@ class CustomLightbulb extends HTMLElement {
   }
 
   updateTheme() {
-    if (!document.documentElement) return; // Check if document.documentElement is available
+    if (!document.documentElement) return; // Ensure the root element is available
     document.documentElement.setAttribute('data-theme', this.currentTheme);
     localStorage.setItem(this.storageKey, this.currentTheme);
     this.button?.setAttribute('aria-pressed', this.currentTheme === 'dark' ? 'true' : 'false');
@@ -42,26 +42,35 @@ class CustomLightbulb extends HTMLElement {
     this.svg?.classList.toggle('light', this.currentTheme === 'light');
     this.triggerPendulumEffect();
 
-    // Adjust primary color based on the theme
+    // Set a random color from the variations for the light theme or adjust for dark theme
+    const randomColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
     if (this.currentTheme === 'light') {
-      // Get the computed style of the document root to check the current primary color
-      var style = window.getComputedStyle(document.documentElement);
-      var currentPrimaryColor = style.getPropertyValue('--color-primary').trim();
-
-      // Logic to select and apply a new color
-      if (currentPrimaryColor === 'rgba(0, 0, 0, 0)' || currentPrimaryColor === '') {
-        // If the color is not set or fails to retrieve, set a default new random color
-        const randomColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
-        document.documentElement.style.setProperty('--color-primary', randomColor);
-      } else {
-        // Modify the current color if needed, or just reapply to ensure it's active
-        const randomColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
-        document.documentElement.style.setProperty('--color-primary', randomColor);
-      }
+      document.documentElement.style.setProperty('--color-primary', randomColor);
+      document.documentElement.style.setProperty(
+        '--color-bg',
+        `color-mix(in oklab, ${randomColor} 5%, white)`
+      );
+      document.documentElement.style.setProperty(
+        '--color-text',
+        `color-mix(in oklab, ${randomColor} 5%, black)`
+      );
     } else if (this.currentTheme === 'dark') {
-      // Optionally set a different color for dark mode
-      document.documentElement.style.setProperty('--color-primary', '#333'); // Example dark mode color
+      document.documentElement.style.setProperty('--color-primary', randomColor);
+      document.documentElement.style.setProperty(
+        '--color-bg',
+        `color-mix(in oklab, ${randomColor} 5%, black)`
+      );
+      document.documentElement.style.setProperty(
+        '--color-text',
+        `color-mix(in oklab, ${randomColor} 5%, white)`
+      );
     }
+  }
+
+  triggerPendulumEffect() {
+    if (!this.svg) return; // Check if svg is available
+    this.svg.classList.add('pendulum');
+    setTimeout(() => this.svg.classList.remove('pendulum'), 1000);
   }
 
   triggerPendulumEffect() {
