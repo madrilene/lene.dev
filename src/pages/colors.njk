@@ -10,15 +10,12 @@ customColors:
   - property: '--color-text'
   - property: '--color-bg'
   - property: '--color-bg-accent'
-  - property: '--color-light'
-  - property: '--color-dark'
-  - property: '--color-desaturated'
 customGradients:
   - property: '--gradient-conic'
 ---
 
 <style>
-  li {
+  .colors li {
     display: grid;
     inline-size: min(11rem, 40%);
     aspect-ratio: 1;
@@ -26,7 +23,7 @@ customGradients:
     border: 1px solid gray;
   }
 
-  li.big {
+  .colors li.big {
     inline-size: min(18rem, 40%);
   }
 
@@ -40,12 +37,17 @@ customGradients:
   }
 </style>
 
-<div class="region flow" style="--region-space-top: var(--space-xl) ">
+<div class="colors | flow">
   <h2>Current Primary color:</h2>
   <ul role="list" class="cluster">
     {%- for color in customColors -%}
       <li class="big" style="background-color: var({{ color.property }})">
         <code>{{ color.property }}</code>
+      </li>
+    {%- endfor -%}
+    {%- for gradient in customGradients -%}
+      <li class="big" style="background-image: var({{ gradient.property }})">
+        <code>{{ gradient.property }}</code>
       </li>
     {%- endfor -%}
   </ul>
@@ -60,18 +62,6 @@ customGradients:
     {%- for color in designTokens.colorArray.colorVariations -%}
       <li style="background-color: {{ color }}">
         <code> <strong>{{ color }}</strong></code>
-      </li>
-    {%- endfor -%}
-  </ul>
-
-  <ul role="list">
-    {%- for gradient in customGradients -%}
-      <li>
-        <div style="background-image: var({{ gradient.property }})"></div>
-
-        <p>
-          <code>{{ gradient.property }}</code>
-        </p>
       </li>
     {%- endfor -%}
   </ul>

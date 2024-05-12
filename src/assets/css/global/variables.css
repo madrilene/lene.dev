@@ -14,9 +14,9 @@
   --tracking-wide: 0.05ch;
 
   --gradient-conic: conic-gradient(
-    var(--color-highlight) 0 28%,
-    var(--color-shade) 0 67%,
-    var(--color-desaturated) 0 100%
+    var(--color-primary) 0 28%,
+    color-mix(in oklab, var(--color-primary) 50%, white) 0 67%,
+    color-mix(in oklab, var(--color-primary) 50%, black) 0 100%
   );
 }
 

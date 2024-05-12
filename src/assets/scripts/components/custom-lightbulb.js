@@ -4,6 +4,7 @@ class CustomLightbulb extends HTMLElement {
   constructor() {
     super();
     this.storageKey = 'theme-preference';
+    this.lastLightColor = null;
     this.button = this.querySelector('button');
     this.svg = this.querySelector('svg');
   }
@@ -12,14 +13,19 @@ class CustomLightbulb extends HTMLElement {
     this.currentTheme = this.getColorPreference();
     this.updateTheme();
     this.button.addEventListener('click', () => this.toggleTheme());
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      this.currentTheme = e.matches ? 'dark' : 'light';
-      this.updateTheme();
-    });
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', this.handleSystemThemeChange.bind(this));
+    console.log('Connected and event listeners added'); // Debugging output
   }
 
   toggleTheme() {
     this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.updateTheme();
+  }
+
+  handleSystemThemeChange(e) {
+    this.currentTheme = e.matches ? 'dark' : 'light';
     this.updateTheme();
   }
 
@@ -29,11 +35,11 @@ class CustomLightbulb extends HTMLElement {
   }
 
   updateTheme() {
-    if (!document.documentElement) return; // Ensure the root element is available
+    console.log('Updating theme to:', this.currentTheme); // Debugging output
     document.documentElement.setAttribute('data-theme', this.currentTheme);
     localStorage.setItem(this.storageKey, this.currentTheme);
-    this.button?.setAttribute('aria-pressed', this.currentTheme === 'dark' ? 'true' : 'false');
-    this.button?.setAttribute(
+    this.button.setAttribute('aria-pressed', this.currentTheme === 'dark' ? 'true' : 'false');
+    this.button.setAttribute(
       'aria-label',
       `Switch to ${this.currentTheme === 'dark' ? 'light' : 'dark'} theme`
     );
@@ -42,28 +48,12 @@ class CustomLightbulb extends HTMLElement {
     this.svg?.classList.toggle('light', this.currentTheme === 'light');
     this.triggerPendulumEffect();
 
-    // Set a random color from the variations for the light theme or adjust for dark theme
-    const randomColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
     if (this.currentTheme === 'light') {
+      const randomColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
       document.documentElement.style.setProperty('--color-primary', randomColor);
-      document.documentElement.style.setProperty(
-        '--color-bg',
-        `color-mix(in oklab, ${randomColor} 5%, white)`
-      );
-      document.documentElement.style.setProperty(
-        '--color-text',
-        `color-mix(in oklab, ${randomColor} 5%, black)`
-      );
-    } else if (this.currentTheme === 'dark') {
-      document.documentElement.style.setProperty('--color-primary', randomColor);
-      document.documentElement.style.setProperty(
-        '--color-bg',
-        `color-mix(in oklab, ${randomColor} 5%, black)`
-      );
-      document.documentElement.style.setProperty(
-        '--color-text',
-        `color-mix(in oklab, ${randomColor} 5%, white)`
-      );
+      this.lastLightColor = randomColor;
+    } else if (this.currentTheme === 'dark' && this.lastLightColor) {
+      document.documentElement.style.setProperty('--color-primary', this.lastLightColor);
     }
   }
 

@@ -5,9 +5,9 @@
 <style>
   custom-lightbulb {
     position: absolute;
-    right: 0;
+    right: -3rem;
     cursor: pointer;
-    transform: translateY(-10px);
+    transform: translateY(-2rem);
   }
 
   custom-lightbulb svg {
@@ -26,7 +26,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     button:active svg {
-      transform: translateY(5px);
+      transform: rotate(-2deg);
     }
 
     .pendulum {
@@ -38,7 +38,7 @@
         transform: rotate(0);
       }
       10% {
-        transform: rotate(2deg) translateY(0px);
+        transform: rotate(2deg);
       }
       30% {
         transform: rotate(-1.8deg);
