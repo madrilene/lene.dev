@@ -6,9 +6,9 @@ custom-nav ul {
 }
 
 custom-nav a {
-  --text-color: var(--color-text);
-  --background-color: var(--color-bg);
-  --border-color: var(--color-bg-accent-2);
+  --text-color: var(--color-bg);
+  --background-color: var(--color-text);
+  --border-color: var(--color-bg-text);
   background-color: var(--background-color);
   color: var(--text-color);
   padding: var(--space-s);
@@ -37,6 +37,7 @@ custom-nav [data-state='active'] {
   /* Basic link styling */
   custom-nav ul {
     padding-block-end: 0;
+    margin-inline-end: var(--space-l);
   }
 
   custom-nav a {

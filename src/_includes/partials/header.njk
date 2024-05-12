@@ -1,15 +1,13 @@
 <a href="#main" class="skip-link">{{ meta.skipContent }}</a>
 
-<header class="site-header | relative wrapper">
-  <div class="wrapper prose">
-    <div class="repel ontop">
-      <h1>
-        <a href="/" class="logo | cluster" {% if page.url == "/" %}aria-current="page"{% endif %}>
-          {{ meta.siteName }}
-        </a>
-      </h1>
-      {% include "components/custom-nav.njk" %}
-    </div>
+<header class="site-header | relative wrapper prose">
+  <div class="repel ontop">
+    <h1>
+      <a href="/" class="logo | cluster" {% if page.url == "/" %}aria-current="page"{% endif %}>
+        {{ meta.siteName }}
+      </a>
+    </h1>
+    {% include "components/custom-nav.njk" %}
   </div>
 
   <custom-lightbulb></custom-lightbulb>
