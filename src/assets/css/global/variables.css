@@ -23,12 +23,12 @@
 /* Default / Light theme specific variables */
 :root,
 :root[data-theme='light'] {
-  --color-bg-accent: color-mix(in oklab, var(--color-bg) 90%, var(--color-text));
   --color-primary: gold;
   --color-light: color-mix(in oklab, var(--color-primary) 5%, white);
-  --color-dark: color-mix(in oklab, var(--color-primary) 5%, black);
+  --color-dark: color-mix(in oklab, var(--color-primary) 20%, black);
   --color-bg: var(--color-light);
   --color-text: var(--color-dark);
+  --color-bg-accent: color-mix(in oklab, var(--color-bg) 90%, var(--color-text));
 }
 
 /* Dark theme specific variables based on system preference */
@@ -36,10 +36,12 @@
   :root {
     --color-bg: var(--color-dark);
     --color-text: var(--color-light);
+    --color-bg-accent: color-mix(in oklab, var(--color-text) 4%, transparent);
   }
 }
 
 :root[data-theme='dark'] {
   --color-bg: var(--color-dark);
   --color-text: var(--color-light);
+  --color-bg-accent: color-mix(in oklab, var(--color-text) 4%, transparent);
 }
