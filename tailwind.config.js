@@ -8,7 +8,6 @@ import {clampGenerator} from './src/_config/utils/clamp-generator.js';
 import {tokensToTailwind} from './src/_config/utils/tokens-to-tailwind.js';
 
 // Raw design tokens
-import colorTokens from './src/_data/designTokens/colors.js';
 import fontTokens from './src/_data/designTokens/fonts.json';
 import spacingTokens from './src/_data/designTokens/spacing.json';
 import textSizeTokens from './src/_data/designTokens/textSizes.json';
@@ -17,7 +16,6 @@ import textWeightTokens from './src/_data/designTokens/textWeights.json';
 import viewportTokens from './src/_data/designTokens/viewports.json';
 
 // Process design tokens
-const colors = tokensToTailwind(colorTokens.items);
 const fontFamily = tokensToTailwind(fontTokens.items);
 const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
 const fontWeight = tokensToTailwind(textWeightTokens.items);
@@ -34,7 +32,6 @@ export default {
       md: `${viewportTokens.md}px`,
       navigation: `${viewportTokens.navigation}px`
     },
-    colors,
     spacing,
     fontFamily,
     fontSize,
@@ -133,9 +130,7 @@ export default {
 
         Object.keys(group).forEach(key => {
           addUtilities({
-            [`.${prefix}-${key}`]: postcssJs.objectify(
-              postcss.parse(`${property}: ${group[key]}`)
-            )
+            [`.${prefix}-${key}`]: postcssJs.objectify(postcss.parse(`${property}: ${group[key]}`))
           });
         });
       });

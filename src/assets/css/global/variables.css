@@ -23,23 +23,25 @@
 /* Default / Light theme specific variables */
 :root,
 :root[data-theme='light'] {
-  --color-primary: var(--color-highlight);
   --color-bg: var(--color-light);
   --color-text: var(--color-dark);
   --color-bg-accent: color-mix(in oklab, var(--color-bg) 90%, var(--color-text));
+  --color-dark: #10090e;
+  --color-light: #fff8ff;
+  --color-glare: #e5b3d5;
+  --color-shade: #620050;
+  --color-desaturated: #81296d;
 }
 
 /* Dark theme specific variables based on system preference */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: var(--color-desaturated);
     --color-bg: var(--color-dark);
     --color-text: var(--color-light);
   }
 }
 
 :root[data-theme='dark'] {
-  --color-primary: var(--color-desaturated);
   --color-bg: var(--color-dark);
   --color-text: var(--color-light);
 }
