@@ -27,9 +27,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'base.njk');
   eleventyConfig.addLayoutAlias('home', 'home.njk');
   eleventyConfig.addLayoutAlias('page', 'page.njk');
-  eleventyConfig.addLayoutAlias('blog', 'blog.njk');
-  eleventyConfig.addLayoutAlias('post', 'post.njk');
-  eleventyConfig.addLayoutAlias('tags', 'tags.njk');
 
   //	---------------------  Collections
   eleventyConfig.addCollection('allPosts', getAllPosts);
@@ -88,10 +85,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     // -- to root
-    'src/assets/images/favicon/*': '/',
-
-    // -- node_modules
-    'node_modules/lite-youtube-embed/src/lite-yt-embed.{css,js}': `assets/components/`,
+    'src/assets/images/favicons/*': '/',
 
     // -- webc assets
     'src/_includes/components/**/*.{css,js}': `assets/components/`
