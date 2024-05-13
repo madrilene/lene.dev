@@ -1,5 +1,5 @@
-/* ----------- Mono: Monaspace -----------  */
-@font-face {
+/* ----------- Mono: Monaspace. integrsate when needed -----------  */
+/* @font-face {
   font-family: Monaspace;
   font-style: normal;
   font-display: swap;
@@ -7,7 +7,7 @@
   src:
     local(''),
     url(/assets/fonts/monaspace/monaspace-500.woff2) format('woff2');
-}
+} */
 
 /* ----------- Display: Charter -----------  */
 @font-face {
