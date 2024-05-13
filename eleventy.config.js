@@ -25,7 +25,6 @@ export default async function (eleventyConfig) {
 
   // --------------------- layout aliases
   eleventyConfig.addLayoutAlias('base', 'base.njk');
-  eleventyConfig.addLayoutAlias('home', 'home.njk');
   eleventyConfig.addLayoutAlias('page', 'page.njk');
 
   //	---------------------  Collections
