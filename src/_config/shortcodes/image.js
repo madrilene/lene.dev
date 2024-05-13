@@ -36,7 +36,7 @@ export const imageShortcode = async (
   decoding = 'async',
   className,
   sizes = '90vw',
-  widths = [440, 650, 960, 1200],
+  widths = [440, 650, 960],
   formats = ['avif', 'webp', 'jpeg']
 ) => {
   const metadata = await Image(src, {

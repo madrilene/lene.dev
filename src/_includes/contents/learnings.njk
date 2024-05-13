@@ -1,7 +1,7 @@
 <p>{{ learnings.content }}</p>
 {%- for product in learnings.products -%}
   <article class="learning | sidebar">
-    {% image product.image | replace("/", "./src/assets/images/learnings/"), product.alt %}
+    {% image product.image | replace("/", "./src/assets/images/learnings/"), product.alt, null, "lazy", "async", null, "(max-width: 568x) 90vw, 400px" %}
     <div class="flow">
       <h3>{{ product.title }}</h3>
       <ul role="list" class="cluster">

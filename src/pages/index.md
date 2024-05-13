@@ -16,7 +16,7 @@ clients:
 I consider myself part of a group of people who want to build a human-centered web. As Michelle Barker states in her [manifesto](https://humanewebmanifesto.com/), I strive to make all my projects accessible, inclusive, sustainable, safe, secure, resilient, reliable and independent.
 
 <custom-split>
-{% image "./src/assets/images/content/lene2023.jpg", "Me, in front of my desk, not directly looking into the camera. I'm smiling and wear a blazer I wouldn't normally wear when I'm working", null, "eager", "sync" %}
+{% image "./src/assets/images/content/lene2023.jpg", "Me, in front of my desk, not directly looking into the camera. I'm smiling and wear a blazer I wouldn't normally wear when I'm working", null, "eager", "sync", null, "(max-width: 1010px) 90vw, 650px" %}
 Hi, I'm Lene. I have been doing web design and development (mainly frontend) for a living since 2008. I was born in Berlin and have been living for over a decade in Madrid. I work with clients all over the world.
 </custom-split>
 
