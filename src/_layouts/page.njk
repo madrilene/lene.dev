@@ -2,7 +2,8 @@
 layout: base
 ---
 
-<article class="region wrapper flow prose" style="--region-space-top: var(--space-xl-2xl)">
-  <h1 class="gradient-text">{{ title }}</h1>
-  {{ content | safe }}
-</article>
+<div class="wrapper">
+  <article class="full intro | region">
+    <div class="wrapper flow prose">{{ content | safe }}</div>
+  </article>
+</div>
