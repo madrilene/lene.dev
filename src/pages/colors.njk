@@ -7,6 +7,8 @@ excludeFromSitemap: true
 noindex: true
 customColors:
   - property: '--color-primary'
+  - property: '--color-shade'
+  - property: '--color-glare'
   - property: '--color-text'
   - property: '--color-bg'
   - property: '--color-bg-accent'
@@ -53,10 +55,7 @@ customGradients:
   </ul>
 
   <h2 class=" mt-xl">Color array:</h2>
-  <p>
-    Generated in OKLCH and (for now) converted back to HEX, going around the hue wheel in steps of 10,
-    skipping some rather ugly brownish values between red and green
-  </p>
+  <p>Generated in OKLCH and (for now) converted back to HEX, going around the hue wheel in steps of 10.</p>
 
   <ul role="list" class="cluster">
     {%- for color in designTokens.colorArray.colorVariations -%}

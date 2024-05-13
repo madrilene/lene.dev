@@ -15,8 +15,8 @@ export default {
   ],
   bottom: [
     {
-      text: 'Style guide',
-      url: '/styleguide/'
+      text: 'Colors',
+      url: '/colors/'
     },
     {
       text: 'Privacy',
