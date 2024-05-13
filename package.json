@@ -11,9 +11,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "favicons": "node ./src/_config/utils/create-favicons.js",
-    "dev:colors": "node ./src/_config/utils/create-colors.js",
+    "colors": "node ./src/_config/utils/create-colors.js",
     "dev:11ty": "eleventy --serve --watch",
-    "build:colors": "node ./src/_config/utils/create-colors.js",
     "build:11ty": "eleventy",
     "start": "run-p dev:*",
     "build": "run-s clean build:*"
