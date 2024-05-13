@@ -25,7 +25,7 @@
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    button:active svg {
+    button:hover svg {
       transform: rotate(-2deg);
     }
 
