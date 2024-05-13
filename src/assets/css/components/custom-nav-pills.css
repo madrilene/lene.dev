@@ -3,6 +3,7 @@ custom-nav ul {
   margin: 0;
   gap: var(--space-xs);
   line-height: 0.5em;
+  margin-block-end: var(--space-xs);
 }
 
 custom-nav a {
