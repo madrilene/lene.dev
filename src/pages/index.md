@@ -1,7 +1,7 @@
 ---
 permalink: /index.html
 title: 'Lene Saile'
-description: 'Hi, I’m Lene, I do web design and development for a living. I was born in Berlin and have been living for over a decade in Madrid. I work with clients all over the world.'
+description: 'I’m Lene, I do web design and development for a living. I was born in Berlin and now live in Madrid, Spain. I work with clients all over the world.'
 layout: 'page'
 tools:
   content: "These are some tools I work with or have worked with in the past. Bold indicates in most cases what I prefer, still use, or, in some cases, I am more proficient with. Strike through indicates that even though I have experience, I'd rather not work with that anymore."
