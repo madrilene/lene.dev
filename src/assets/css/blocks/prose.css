@@ -50,12 +50,12 @@
 
 /* marker only for "regular lists" */
 .prose :where(ul:not(.grid):not([role='list'])) li::marker {
-  color: var(--color-primary);
+  color: var(--color-shade);
   content: '– ';
 }
 
 .prose ol li::marker {
-  color: var(--color-primary);
+  color: var(--color-shade);
 }
 
 .prose img {

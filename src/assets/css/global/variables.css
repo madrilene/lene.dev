@@ -4,7 +4,7 @@
 /* Basic variable definitions for color schemes */
 :root {
   color-scheme: light dark;
-  --gutter: var(--space-xs-l);
+  --gutter: var(--space-m-l);
   --border-radius: 0.1rem;
   --transition-duration: 250ms;
   --transition-timing: ease;
@@ -15,8 +15,8 @@
 
   --gradient-conic: conic-gradient(
     var(--color-primary) 0 28%,
-    color-mix(in oklab, var(--color-primary) 50%, white) 0 67%,
-    color-mix(in oklab, var(--color-primary) 50%, black) 0 100%
+    var(--color-glare) 0 67%,
+    var(--color-shade) 0 100%
   );
 }
 
@@ -24,11 +24,13 @@
 :root,
 :root[data-theme='light'] {
   --color-primary: gold;
+  --color-shade: color-mix(in oklab, var(--color-primary) 90%, black);
+  --color-glare: color-mix(in oklab, var(--color-primary) 70%, white);
   --color-light: color-mix(in oklab, var(--color-primary) 5%, white);
   --color-dark: color-mix(in oklab, var(--color-primary) 20%, black);
   --color-bg: var(--color-light);
   --color-text: var(--color-dark);
-  --color-bg-accent: color-mix(in oklab, var(--color-bg) 90%, var(--color-text));
+  --color-bg-accent: color-mix(in oklab, var(--color-bg) 95%, var(--color-text));
 }
 
 /* Dark theme specific variables based on system preference */
@@ -36,12 +38,12 @@
   :root {
     --color-bg: var(--color-dark);
     --color-text: var(--color-light);
-    --color-bg-accent: color-mix(in oklab, var(--color-text) 4%, transparent);
+    --color-bg-accent: color-mix(in oklab, var(--color-text) 4%, var(--color-bg));
   }
 }
 
 :root[data-theme='dark'] {
   --color-bg: var(--color-dark);
   --color-text: var(--color-light);
-  --color-bg-accent: color-mix(in oklab, var(--color-text) 4%, transparent);
+  --color-bg-accent: color-mix(in oklab, var(--color-text) 4%, var(--color-bg));
 }

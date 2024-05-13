@@ -24,6 +24,12 @@
   position: absolute;
   inset: 0;
   mix-blend-mode: hard-light;
-  opacity: 0.3;
+  background-color: var(--color-primary);
+  opacity: 0.1;
+}
+
+[data-theme='light'] .intro custom-split picture::after {
+  mix-blend-mode: soft-light;
+  opacity: 0.6;
   background-image: linear-gradient(to top right, var(--color-bg), var(--color-primary));
 }
