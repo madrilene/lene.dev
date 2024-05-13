@@ -1,0 +1,62 @@
+/* Hide without JS */
+custom-lightbulb:not(:defined) {
+  display: none;
+}
+
+custom-lightbulb {
+  position: absolute;
+  right: -1em;
+  cursor: pointer;
+  transform: translateY(-2rem);
+}
+
+custom-lightbulb svg {
+  block-size: auto;
+  transition: transform 0.3s;
+  transform-origin: top; /* Set the origin of rotation at the top of the SVG */
+}
+
+#lightcircle {
+  opacity: 0.1;
+}
+
+[data-theme='dark'] :is(#lightcircle, #innerbulb, #lightlines) {
+  display: none;
+}
+
+@media (hover: hover) {
+  button:hover svg {
+    transform: rotate(-2deg);
+    /* transform: translateY(0.5rem); */
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pendulum {
+    animation: pendulum 1s ease-out forwards; /* Adjust duration for more realism */
+  }
+
+  @keyframes pendulum {
+    0% {
+      transform: rotate(0);
+    }
+    10% {
+      transform: rotate(2deg);
+    }
+    30% {
+      transform: rotate(-1.8deg);
+    }
+    50% {
+      transform: rotate(1.5deg);
+    }
+    70% {
+      transform: rotate(-1.2deg);
+    }
+    90% {
+      transform: rotate(1deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+}
