@@ -34,7 +34,9 @@
       transform: rotate(-2deg);
       /* transform: translateY(0.5rem); */
     }
+  }
 
+  @media (prefers-reduced-motion: no-preference) {
     .pendulum {
       animation: pendulum 1s ease-out forwards; /* Adjust duration for more realism */
     }
