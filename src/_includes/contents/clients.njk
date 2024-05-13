@@ -1,0 +1,10 @@
+<p>{{ clients.content }}</p>
+<section class="clients feature | cluster">
+  {%- for client in clients.items -%}
+    <custom-svg
+      role="img"
+      aria-label="{{ client.name }}"
+      src="./src/assets/svg/clients/{{ client.logo }}"
+    ></custom-svg>
+  {%- endfor -%}
+</section>

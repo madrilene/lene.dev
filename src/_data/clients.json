@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "UnlockOpen",
+      "link": "https://unlockopen.com/",
+      "logo": "unlock-open.svg"
+    },
+    {
+      "name": "DX",
+      "link": "https://getdx.com/",
+      "logo": "getdx.svg"
+    },
+    {
+      "name": "RedRadix",
+      "link": "https://redradix.com/",
+      "logo": "redradix.svg"
+    },
+    {
+      "name": "DX",
+      "link": "https://www.juliecampiche.com/",
+      "logo": "julie.svg"
+    },
+    {
+      "name": "Fundación Goethe",
+      "link": "https://fundaciongoethe.org/",
+      "logo": "fg.svg"
+    }
+  ]
+}
