@@ -1,22 +1,26 @@
 {
   "products": [
     {
-      "title": "Javascript Cookbook",
+      "title": "CSS: The Definitive Guide, 5th Edition",
+      "year": 2023,
+      "medium": "book",
+      "topic": "CSS",
+      "opinion": "... have I read it completely? Of course not! It has over 1000 pages. But I'm on it. I'm actually planning to read it cover to cover, and I'm somewhere on page 240, but I keep reaching for it to look up a particular chapter. It's a treasure trove, and also lovingly and humorously written. A must have. ",
+      "image": "/css-definitive-guide.jpg",
+      "alt": "The cover shows the title and authors Eric Meyer and Estelle Weyl, as well as a lifelike illustration of three salmon",
+      "link": "https://www.oreilly.com/library/view/css-the-definitive/9781098117603/",
+      "linkText": "O'Reilly Media"
+    },
+    {
+      "title": "JavaScript Cookbook, 3rd Edition",
       "year": 2021,
       "medium": "book",
       "topic": "Javascript",
       "opinion": "By far my favourite Javascript book and the one I recommend to anyone with basic knowledge. At no point did I have the feeling of being left behind, the code examples are simple and true to life and wonderfully comprehensible. There's but one foo-bar-baz example (and I think it got in there by accident), which I really appreciate. The book even shows a sense of humour. I really enjoyed reading it and I always have it near me to look something up.",
       "image": "/js-cookbook.jpg",
-      "alt": "Cover of the book"
-    },
-    {
-      "title": "Inclusive Components",
-      "year": 2019,
-      "medium": "book",
-      "topic": "Accessible UI patterns",
-      "opinion": "Inclusive Components is all about accessible patterns like accordions, dropdowns, sliders and modals. I use Heydon Pickering redundant click solution for cards in literally every project.",
-      "image": "/inclusive-components.jpg",
-      "alt": "Cover of the book"
+      "alt": "The cover displays the book title and authors Adam D. Scott, Matthew MacDonald and Shelley Powers, as well as a lifelike illustration of a little egret (Egretta garzetta).",
+      "link": "https://www.oreilly.com/library/view/javascript-cookbook-3rd/9781492055747/",
+      "linkText": "O'Reilly Media"
     },
     {
       "title": "Every Layout",
@@ -25,34 +29,75 @@
       "topic": "CSS",
       "opinion": "A book by two individuals that share a deep understanding of the web in general and CSS in particular. I love how it's written and how much it teaches me. It gets regular updates and provides access to invaluable code.",
       "image": "/every-layout.jpg",
-      "alt": "Cover of the book"
+      "alt": "The black and white cover says 'Every Layout - Relearn CSS layout by example. 3rd edition', with the authors' names Heydon Pickering and Andy Bell below.",
+      "link": "https://every-layout.dev/",
+      "linkText": "Every Layout"
+    },
+    {
+      "title": "The Linux Command Line",
+      "year": 2019,
+      "medium": "book",
+      "topic": "Linux, Terminal",
+      "opinion": "This is one of the books that was a real eye-opener for me. I have always used the command line very dubiously and without much background knowledge, and this book has opened up a world for me. I really enjoyed reading it, it's entertaining and doesn't get unnecessarily complex at any point.",
+      "image": "/linux-command-line.png",
+      "alt": "The book cover shows the no starch press robot happily dumping Linux knowledge into its mouth -  it looks like dozens of scraps of paper with 'grep', 'chown' or 'cat' written on them, among other things.",
+      "link": "https://nostarch.com/tlcl2",
+      "linkText": "No Starch Press"
+    },
+    {
+      "title": "Inclusive Components",
+      "year": 2019,
+      "medium": "book",
+      "topic": "Accessibility, UI",
+      "opinion": "Inclusive Components is all about accessible patterns like accordions, dropdowns, sliders and modals. I use Heydon's component solution for cards in literally every project.",
+      "image": "/inclusive-components.jpg",
+      "alt": "A black cover with white font, saying 'Inclusive Components', framed by a electrical circuit illutstration that illuminates a light bulb. Subtitle: Accessible web interfaces, piece by piece. The author is Heydon Pickering.",
+      "link": "http://book.inclusive-components.design/",
+      "linkText": "Inclusive Components: The Book"
+    },
+    {
+      "title": "Practical Accessibility",
+      "year": 2022,
+      "medium": "course",
+      "topic": "Accessibility",
+      "opinion": "Great in depth accessibility course by Sara Soueidan. I learned an incredible amount and felt an urgent desire to immediately revamp all my existing websites. I highly recommend taking this course!",
+      "image": "/practical-accessibility.png",
+      "alt": "Text content: Practical accessibilty.today with Sara Soueidan. A self paced, a self-paced, get-right-down-to-it video course designed to demystify web accessibility and equip you with the knowledge you need to create more accessible websites and web applications today.",
+      "link": "https://practical-accessibility.today/",
+      "linkText": "Practical Accessibility"
     },
     {
       "title": "CSS for JS",
       "year": 2021,
       "medium": "course",
       "topic": "CSS",
-      "opinion": "Very detailed, interactive and comprehensive course made by Josh Comeau. It's huge, 9 modules taking you from the fundamentals to very advanced tricks for next-level user experiences. I'm not done with it yet and it's a joy every time I get to continue to progress.",
+      "opinion": "Very detailed, interactive and comprehensive course made by Josh Comeau. It's huge, 9 modules taking you from the fundamentals to very advanced tricks. It's probably made especially for JS developers who are unfamiliar with CSS, which doesn't apply to me at all, but it's nevertheless very worthwhile.",
       "image": "/css-for-js.jpg",
-      "alt": "Cover of the course"
+      "alt": "A gradient from yellow to red, saying CSS for JavaScript developers in uppercase latters. The author is Josh Comeau.",
+      "link": "https://css-for-js.dev/",
+      "linkText": "CSS for JavaScript developers"
     },
     {
       "title": "You Don't Know JS Yet: Get Started",
       "year": 2020,
       "medium": "book",
       "topic": "Javascript",
-      "opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson is renowned for his consistent affection for classic Javascript elements like var and the equality operator, but if you know a bit about the different opinions (which overwhelmingly disagree with him) it's almost refreshing. Apart from that, he explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope.",
+      "opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson is renowned for his consistent affection for classic Javascript elements like var and the equality operator, but if you know a bit about the different opinions (which overwhelmingly disagree with him) it's almost refreshing. Apart from that, he explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope. The books can be read for free on GitHub.",
       "image": "/ydkjsy-getstarted.jpg",
-      "alt": "Cover of the book"
+      "alt": "'You Don't Know JS Yet' written on yellow background between two simplified black illustrations of faces that seem to scream at each other, somehing that took me very long to see. 'Get started' is the first book of a series by Kyle Simpson. On the bottom arfe some chess figures, some of them are knocked over.",
+      "link": "https://github.com/getify/You-Dont-Know-JS",
+      "linkText": "GitHub"
     },
     {
       "title": "learnjavascript.online",
       "year": 2021,
       "medium": "course",
       "topic": "Javascript",
-      "opinion": "This course comes with an interactive environment. Short lessons are directly followed by challenges, inspired by real-world projects. Exercising anywhere is a joy thanks to a separate flashcards app. It's all about practice!",
+      "opinion": "This course comes with an interactive environment. Short lessons are directly followed by challenges, inspired by real-world projects. Exercising anywhere is a joy thanks to a separate flashcards app. It took me ages to learn JS properly. This course definitely helped me with that. ",
       "image": "/learnjs.jpg",
-      "alt": "Cover of the course"
+      "alt": "",
+      "link": "https://learnjavascript.online/",
+      "linkText": "Learn JavaScript"
     },
     {
       "title": "Git for Humans",
@@ -61,7 +106,9 @@
       "topic": "Git",
       "opinion": "I understand Git (or at least I think I do) thanks to this book. It really let me understand how this complex system works, and it's nice and short.",
       "image": "/git-humans.jpg",
-      "alt": "Cover of the book"
+      "alt": "A book apart cover in dark red, displaying author David Demaree's 'Git for Humans' in white letters.",
+      "link": "https://abookapart.com/products/git-for-humans",
+      "linkText": "Git for Humans"
     }
   ]
 }

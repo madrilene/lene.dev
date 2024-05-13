@@ -1,14 +1,17 @@
 .learning {
-  display: flex;
-  gap: var(--space-xl);
-  justify-content: space-between;
-  border-top: 2px dashed;
-  border-bottom: 2px dashed;
-  padding: var(--space-l) 0;
+  --sidebar-target-width: 13rem;
+  --gutter: var(--space-xl);
+  padding-block: var(--space-l) var(--space-xl);
 }
-.learning:last-child {
-  border-top: none;
+
+.learning > :first-child {
+  transform: rotate(-2deg);
 }
+
+.learning {
+  border-block-end: 2px dashed var(--color-text);
+}
+
 .learning img {
   width: fit-content;
   outline: 2px solid var(--color-text);
@@ -16,4 +19,11 @@
 
 .learning p {
   font-size: var(--size-step-min-1);
+}
+
+.learning ul {
+  --gutter: var(--space-s);
+  font-size: var(--size-step-min-2);
+  letter-spacing: var(--tracking);
+  text-transform: uppercase;
 }

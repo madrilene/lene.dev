@@ -1,16 +1,16 @@
 <p>{{ learnings.content }}</p>
 {%- for product in learnings.products -%}
-  <article class="flow">
-    <div class="learning sidebar relative">
-      {% image product.image | replace("/", "./src/assets/images/learnings/"), product.alt %}
-      <div class="flow">
-        <h3 class="font-body">{{ product.title }}</h3>
-        <p>
-          <span class="text-size-0 block font-bold uppercase opacity-80"
-            >{{ product.medium }} / {{ product.year }}, {{ product.topic }}</span
-          >{{ product.opinion }}
-        </p>
-      </div>
+  <article class="learning | sidebar">
+    {% image product.image | replace("/", "./src/assets/images/learnings/"), product.alt %}
+    <div class="flow">
+      <h3>{{ product.title }}</h3>
+      <ul role="list" class="cluster">
+        <li>{{ product.medium }}</li>
+        <li>{{ product.year }}</li>
+        <li>{{ product.topic }}</li>
+        <li><a href="{{ product.link }}">{{ product.linkText }}</a></li>
+      </ul>
+      <p>{{ product.opinion }}</p>
     </div>
   </article>
 {%- endfor -%}
