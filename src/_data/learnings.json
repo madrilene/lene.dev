@@ -40,7 +40,7 @@
       "topic": "Linux, Terminal",
       "opinion": "This is one of the books that was a real eye-opener for me. I have always used the command line very dubiously and without much background knowledge, and this book has opened up a world for me. I really enjoyed reading it, it's entertaining and doesn't get unnecessarily complex at any point.",
       "image": "/linux-command-line.png",
-      "alt": "The book cover shows the no starch press robot happily dumping Linux knowledge into its mouth -  it looks like dozens of scraps of paper with 'grep', 'chown' or 'cat' written on them, among other things.",
+      "alt": "Cover image: A robot happily dumping Linux knowledge into its mouth -  it looks like dozens of scraps of paper with 'grep', 'chown' or 'cat' written on them, among other things.",
       "link": "https://nostarch.com/tlcl2",
       "linkText": "No Starch Press"
     },
@@ -51,7 +51,7 @@
       "topic": "Accessibility, UI",
       "opinion": "Inclusive Components is all about accessible patterns like accordions, dropdowns, sliders and modals. I use Heydon's component solution for cards in literally every project.",
       "image": "/inclusive-components.jpg",
-      "alt": "A black cover with white font, saying 'Inclusive Components', framed by a electrical circuit illutstration that illuminates a light bulb. Subtitle: Accessible web interfaces, piece by piece. The author is Heydon Pickering.",
+      "alt": "'Inclusive Components', framed by a electrical circuit illutstration that illuminates a light bulb. Subtitle: Accessible web interfaces, piece by piece. The author is Heydon Pickering.",
       "link": "http://book.inclusive-components.design/",
       "linkText": "Inclusive Components: The Book"
     },
@@ -62,7 +62,7 @@
       "topic": "Accessibility",
       "opinion": "Great in depth accessibility course by Sara Soueidan. I learned an incredible amount and felt an urgent desire to immediately revamp all my existing websites. I highly recommend taking this course!",
       "image": "/practical-accessibility.png",
-      "alt": "Text content: Practical accessibilty.today with Sara Soueidan. A self paced, a self-paced, get-right-down-to-it video course designed to demystify web accessibility and equip you with the knowledge you need to create more accessible websites and web applications today.",
+      "alt": "Practical accessibilty.today with Sara Soueidan. A self paced, get-right-down-to-it video course designed to demystify web accessibility and equip you with the knowledge you need to create more accessible websites and web applications today.",
       "link": "https://practical-accessibility.today/",
       "linkText": "Practical Accessibility"
     },
@@ -84,7 +84,7 @@
       "topic": "Javascript",
       "opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson is renowned for his consistent affection for classic Javascript elements like var and the equality operator, but if you know a bit about the different opinions (which overwhelmingly disagree with him) it's almost refreshing. Apart from that, he explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope. The books can be read for free on GitHub.",
       "image": "/ydkjsy-getstarted.jpg",
-      "alt": "'You Don't Know JS Yet' written on yellow background between two simplified black illustrations of faces that seem to scream at each other, somehing that took me very long to see. 'Get started' is the first book of a series by Kyle Simpson. On the bottom arfe some chess figures, some of them are knocked over.",
+      "alt": "'You Don't Know JS Yet' written between two simplified black illustrations of faces that seem to scream at each other, somehing that took me very long to see. 'Get started' is the first book of a series by Kyle Simpson. On the bottom are some chess figures, some of them knocked over.",
       "link": "https://github.com/getify/You-Dont-Know-JS",
       "linkText": "GitHub"
     },
