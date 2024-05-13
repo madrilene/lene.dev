@@ -37,7 +37,7 @@ custom-nav [data-state='active'] {
   /* Basic link styling */
   custom-nav ul {
     padding-block-end: 0;
-    margin-inline-end: var(--space-l);
+    margin-inline-end: var(--space-xl);
   }
 
   custom-nav a {

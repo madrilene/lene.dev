@@ -5,7 +5,7 @@
 <style>
   custom-lightbulb {
     position: absolute;
-    right: -3rem;
+    right: -1em;
     cursor: pointer;
     transform: translateY(-2rem);
   }
