@@ -3,6 +3,11 @@
 </button>
 
 <style>
+  /* Hide without JS */
+  custom-lightbulb:not(:defined) {
+    display: none;
+  }
+
   custom-lightbulb {
     position: absolute;
     right: -1em;
