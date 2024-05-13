@@ -29,9 +29,10 @@
     display: none;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  @media (hover: hover) {
     button:hover svg {
       transform: rotate(-2deg);
+      /* transform: translateY(0.5rem); */
     }
 
     .pendulum {
