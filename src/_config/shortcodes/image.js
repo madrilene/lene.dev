@@ -33,6 +33,7 @@ export const imageShortcode = async (
   alt = '',
   caption = '',
   loading = 'lazy',
+  decoding = 'async',
   className,
   sizes = '90vw',
   widths = [440, 650, 960, 1200],
@@ -75,7 +76,7 @@ export const imageShortcode = async (
     height: lowsrc.height,
     alt,
     loading,
-    decoding: 'async'
+    decoding
   });
 
   const imageElement = caption
