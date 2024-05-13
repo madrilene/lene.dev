@@ -5,7 +5,7 @@ description: 'Hi, I’m Lene, I do web design and development for a living. I wa
 layout: 'home'
 tools:
   title: Tools
-  content: "These are some tools I work with or have worked with in the past. Bold indicates in most cases what I prefer, still use, or, in some cases, I am more proficient with. Strike through indicates.. well, nope. I don't want to work with that anymore, even though I have experience."
+  content: "These are some tools I work with or have worked with in the past. Bold indicates in most cases what I prefer, still use, or, in some cases, I am more proficient with. Strike through indicates that even though I have experience, I'd rather not work with that anymore."
 learnings:
   title: My learning recommendations
   content: "I love good technical books and courses. I have taken a lot of courses and read a lot of books. I am not going to list thema ll, instead I share only what really made a difference for me. The following books and courses I really appreciate and recommend wholeheartedly to everyone who wants to learn frontend."
