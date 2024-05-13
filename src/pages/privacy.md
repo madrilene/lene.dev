@@ -13,6 +13,7 @@ I respect the EU General Data Protection Regulation (GDPR) and this policy docum
 
 **What background data is collected?**
 This site does not use any third party tracking scripts.
+For visitor statistics I use Plausible Analytics, a privacy-first web analytics tool. It is built to comply with the different privacy regulations, such as GDPR and CCPA. Plausible does not use cookies and does not collect any personal data.
 
 **How do I use the data you provide?**
 This website does not collect any data.
