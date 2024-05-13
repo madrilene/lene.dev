@@ -6,7 +6,7 @@ layout: 'page'
 tools:
   content: "These are some tools I work with or have worked with in the past. Bold indicates in most cases what I prefer, still use, or, in some cases, I am more proficient with. Strike through indicates that even though I have experience, I'd rather not work with that anymore."
 learnings:
-  content: "I love good technical books and courses. I have taken a lot of courses and read a lot of books. I am not going to list thema ll, instead I share only what really made a difference for me. The following books and courses I really appreciate and recommend wholeheartedly to everyone who wants to learn frontend."
+  content: "I love good technical books and courses. I am not going to list everything I have 'consumed', instead I share only what really made a difference for me. All following books and courses are my most sincere recommendation for everyone who wants to learn frontend."
 clients:
   content: "Some of the people and organizations I have been working with most recently."
 ---
@@ -22,11 +22,10 @@ Hi, I'm Lene. I have been doing web design and development (mainly frontend) for
 
 I write code according to the principles <q>Content over code</q> and [Rule of Least Power](https://www.w3.org/2001/tag/doc/leastPower.html): HTML first, everything what's possible with CSS, and JavaScript only for selected interactivity, polyfills and accessibility.
 
-I really like to organize my projects well so that I and others can always manage them with ease. I share insights that I think might be of interest to the community on a blog on my website [lenesaile.com](https://www.lenesaile.com/en/blog/). I'm a big fan of [Eleventy](https://www.11ty.dev/) and build most of my projects with it.
+I like to organize my projects well so that I and others can always manage them with ease. I share insights that I think might be of interest to the community on a blog on my website [lenesaile.com](https://www.lenesaile.com/en/blog/). I'm a big fan of [Eleventy](https://www.11ty.dev/) and build most of my projects with it.
 
 Lately I have been diving deep into (HTML) <sparkly-text number-of-sparkles="5" style="--sparkly-text-color: var(--color-primary)">**web components**</sparkly-text>  and I'm integrating them everywhere I can.
 
-(Disclaimer: I am currently updating this site. Things might be a little off.)
 
 ## Tools
 {% include "contents/toolbox.njk" %}
