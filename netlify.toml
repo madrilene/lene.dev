@@ -13,6 +13,7 @@ package = "netlify-plugin-cache"
         style-src 'self' 'unsafe-inline';
         img-src 'self';
         object-src 'none';
+				connect-src 'self' https://plausible.io;
         upgrade-insecure-requests;
         block-all-mixed-content;
     '''
