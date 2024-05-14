@@ -1,2 +1,4 @@
-<script type="module" src="/assets/components/sparkly-text.js"></script>
-<script defer data-domain="lene.dev" src="https://plausible.io/js/plausible.js"></script>
+{% set assetHash = helpers.random() %}
+
+<script type="module" src="/assets/components/sparkly-text.js?{{ assetHash }}"></script>
+<script defer data-domain="lene.dev" src="https://plausible.io/js/plausible.js?{{ assetHash }}"></script>
