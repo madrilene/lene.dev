@@ -13,7 +13,7 @@
       "nope": ["React", "Bootstrap", "jQuery"]
     },
     {
-      "division": "SSG/SSR/Metaframework",
+      "division": "Site generators & Meta-frameworks",
       "preference": ["Eleventy", "Astro"],
       "possible": ["SvelteKit"],
       "nope": ["Next.js"]

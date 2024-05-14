@@ -45,7 +45,7 @@
 
 /* inline space only for "regular lists" */
 .prose :where(ul:not(.grid, [role='list']), ol:not(.grid)) {
-  padding-inline-start: 1.5ch;
+  padding-inline-start: 0.8ch;
 }
 
 /* marker only for "regular lists" */
