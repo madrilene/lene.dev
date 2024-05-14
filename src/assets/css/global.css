@@ -10,6 +10,7 @@
 
 @import-glob 'blocks/*.css';
 
+@import 'components/custom-nav-pills.css';
 @import 'components/custom-lightbulb.css';
 @import 'components/custom-card.css';
 @import 'components/custom-split.css';

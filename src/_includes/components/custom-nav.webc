@@ -27,5 +27,4 @@
 
   <script webc:if="drawer === 'true'" src="/assets/components/custom-nav-drawer.js" defer></script>
   <link webc:if="drawer === 'true'" rel="stylesheet" href="/assets/components/custom-nav-drawer.css" />
-  <link webc:else rel="stylesheet" href="/assets/components/custom-nav-pills.css" />
 </custom-nav>
