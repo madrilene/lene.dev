@@ -27,9 +27,9 @@ main {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: var(--leading-fine);
   font-weight: var(--font-regular);
-  font-family: var(--font-display);
+  font-family: var(--font-base);
 }
 
 h1 {

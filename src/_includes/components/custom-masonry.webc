@@ -1,4 +1,4 @@
-<is-land on:visible>
+<is-land class="feature" on:visible>
   <custom-masonry class="grid" data-rows="masonry">
     <slot></slot>
 
