@@ -52,8 +52,11 @@ custom-lightbulb svg {
     70% {
       transform: rotate(-1.2deg);
     }
+    80% {
+      transform: rotate(0.9deg);
+    }
     90% {
-      transform: rotate(1deg);
+      transform: rotate(-0.3deg);
     }
     100% {
       transform: rotate(0);

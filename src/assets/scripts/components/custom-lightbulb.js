@@ -58,7 +58,7 @@ class CustomLightbulb extends HTMLElement {
   triggerPendulumEffect() {
     if (!this.svg) return; // Check if svg is available
     this.svg.classList.add('pendulum');
-    setTimeout(() => this.svg.classList.remove('pendulum'), 1000);
+    setTimeout(() => this.svg.classList.remove('pendulum'), 1100);
   }
 }
 
