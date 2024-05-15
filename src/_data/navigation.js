@@ -2,15 +2,15 @@ export default {
   top: [
     {
       text: 'About',
-      url: '#a-little-bit-about-me'
+      url: '/#a-little-bit-about-me'
     },
     {
       text: 'Tools',
-      url: '#tools'
+      url: '/#tools'
     },
     {
       text: 'Recommendations',
-      url: '#recommendations'
+      url: '/#recommendations'
     }
   ],
   bottom: [
