@@ -7,13 +7,15 @@ description: I respect the EU General Data Protection Regulation (GDPR). This po
 layout: page
 ---
 
-Edit your details in `_data/personal.yaml`
+## Privacy Policy
 
 I respect the EU General Data Protection Regulation (GDPR) and this policy document explains how I collect and handle any information you provide to me.
 
 **What background data is collected?**
 This site does not use any third party tracking scripts.
 For visitor statistics I use Plausible Analytics, a privacy-first web analytics tool. It is built to comply with the different privacy regulations, such as GDPR and CCPA. Plausible does not use cookies and does not collect any personal data.
+
+I am not doing anything with this data, I am just curious and occasionally like to peek where people came from.
 
 **How do I use the data you provide?**
 This website does not collect any data.
