@@ -13,8 +13,8 @@
       "nope": ["React", "Bootstrap", "jQuery"]
     },
     {
-      "division": "Site generators & Meta-frameworks",
-      "preference": ["Eleventy", "Astro"],
+      "division": "Site generators &, web- & meta-frameworks",
+      "preference": ["Eleventy", "Astro", "Enhance"],
       "possible": ["SvelteKit"],
       "nope": ["Next.js"]
     },
