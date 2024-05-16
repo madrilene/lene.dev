@@ -1,16 +1,23 @@
 <p>{{ learnings.content }}</p>
 {%- for product in learnings.products -%}
-  <article class="learning | sidebar">
-    {% image product.image | replace("/", "./src/assets/images/learnings/"), product.alt, null, "lazy", "async", null, "(max-width: 568x) 90vw, 400px" %}
-    <div class="flow">
-      <h3>{{ product.title }}</h3>
-      <ul role="list" class="cluster">
-        <li>{{ product.medium }}</li>
-        <li>{{ product.year }}</li>
-        <li>{{ product.topic }}</li>
-        <li><a href="{{ product.link }}">{{ product.linkText }}</a></li>
-      </ul>
-      <p>{{ product.opinion }}</p>
-    </div>
-  </article>
+<article class="learning | sidebar">
+<figure class="alt-container relative">
+{% set uniqueId = product.title | slugify %}
+{% image product.image | replace("/", "./src/assets/images/learnings/"), product.alt, null, "lazy", "async", null, "(max-width: 568px) 90vw, 400px" %}
+<div id="target-popover-{{ uniqueId }}" class="target" popover="auto" style="position-anchor: --anchor-btn-{{ uniqueId }}"><b>Image description:</b> {{ product.alt }}</div>
+<button id="anchor-popover-{{ uniqueId }}" class="anchor" popovertarget="target-popover-{{ uniqueId }}" style="anchor-name: --anchor-btn-{{ uniqueId }}">
+alt
+</button>
+</figure>
+<div class="flow">
+<h3>{{ product.title }}</h3>
+<ul role="list" class="cluster">
+<li>{{ product.medium }}</li>
+<li>{{ product.year }}</li>
+<li>{{ product.topic }}</li>
+<li><a href="{{ product.link }}">{{ product.linkText }}</a></li>
+</ul>
+<p>{{ product.opinion }}</p>
+</div>
+</article>
 {%- endfor -%}

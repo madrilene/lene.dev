@@ -57,12 +57,14 @@
 }
 /* remove default button styles */
 :where(button) {
-  all: unset;
+  border: 0;
+  background: none;
 }
 
 /* Inherit fonts for inputs and buttons */
 :where(button, input, select, textarea) {
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */

@@ -40,7 +40,7 @@
       "topic": "Linux, Terminal",
       "opinion": "This is one of the books that was a real eye-opener for me. I have always used the command line very dubiously and without much background knowledge, and this book has opened up a world for me. I really enjoyed reading it, it's entertaining and doesn't get unnecessarily complex at any point.",
       "image": "/linux-command-line.png",
-      "alt": "Cover image: A robot happily dumping Linux knowledge into its mouth -  it looks like dozens of scraps of paper with 'grep', 'chown' or 'cat' written on them, among other things.",
+      "alt": "A robot happily dumping Linux knowledge into its mouth -  it looks like dozens of scraps of paper with 'grep', 'chown' or 'cat' written on them, among other things.",
       "link": "https://nostarch.com/tlcl2",
       "linkText": "No Starch Press"
     },
@@ -95,7 +95,7 @@
       "topic": "Javascript",
       "opinion": "This course comes with an interactive environment. The short lessons are directly followed by challenges. Exercising anywhere is possible with a special flashcards app, based on your progress. It took me ages to understand Javascript. This course definitely helped me with that. ",
       "image": "/learnjs.jpg",
-      "alt": "",
+      "alt": "Yellow circle with 'JS' in big letters in its center",
       "link": "https://learnjavascript.online/",
       "linkText": "Learn JavaScript"
     },

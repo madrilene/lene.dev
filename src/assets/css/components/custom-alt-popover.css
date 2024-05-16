@@ -1,0 +1,70 @@
+.alt-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  align-items: end;
+  justify-items: start;
+}
+
+.alt-container > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.alt-container > button {
+  margin: var(--space-xs);
+}
+
+.anchor {
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--anchor-bg, var(--color-dark));
+  color: var(--anchor-color, var(--color-light));
+  border: 2px solid var(--anchor-border, var(--color-text));
+  font-size: var(--anchor-font-size, var(--size-step-min-2));
+  font-family: var(--anchor-font-family, inherit);
+  font-weight: var(--font-bold);
+}
+
+.anchor:focus-visible {
+  outline-color: var(--color-primary);
+}
+
+.target {
+  inline-size: min(20rem, 60%);
+  background-color: var(--target-bg, var(--color-primary));
+  color: var(--target-color, var(--color-dark));
+  border: 2px solid var(--target-border, var(--color-primary));
+  font-size: var(--target-font-size, var(--size-step-min-1));
+  overflow: visible;
+}
+
+.anchor,
+.target {
+  border-radius: var(--element-radius, 0.1em);
+  padding: var(--space-xs);
+}
+
+@supports (position-anchor: --anchor-el) {
+  .target {
+    position: absolute;
+    margin: 0;
+    margin-left: 1.2rem;
+    left: anchor(right);
+    top: anchor(top);
+  }
+
+  .target::before {
+    content: '';
+    top: var(--space-xs);
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-right-color: var(--target-bg, var(--color-primary));
+    border-width: 10px;
+    margin-inline-start: -1.8rem;
+  }
+}

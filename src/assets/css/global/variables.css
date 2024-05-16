@@ -6,7 +6,7 @@
   color-scheme: light dark;
   --gutter: var(--space-m-l);
   --border-radius: 0.1rem;
-  --border-radius-large: 0.7rem;
+  --border-radius-large: 0rem;
   --transition-duration: 250ms;
   --transition-timing: ease;
   --wrapper-width: 100rem;
@@ -19,7 +19,7 @@
     var(--color-glare) 0 67%,
     var(--color-shade) 0 100%
   );
-  --gradient-linear: linear-gradient(90deg, #cf4662 10%, #fbbe25 30%, #62c95c 50%, #08bccb 75%, #a977d5 90%);
+  --gradient-linear: linear-gradient(90deg, #cf4662 0%, #fbbe25 30%, #62c95c 50%, #08bccb 75%, #a977d5 90%);
 }
 
 /* Default / Light theme specific variables */
