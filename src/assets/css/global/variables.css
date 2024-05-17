@@ -6,7 +6,7 @@
   color-scheme: light dark;
   --gutter: var(--space-m-l);
   --border-radius: 0.1rem;
-  --border-radius-large: 0rem;
+  --border-radius-large: 0.7rem;
   --transition-duration: 250ms;
   --transition-timing: ease;
   --wrapper-width: 100rem;
