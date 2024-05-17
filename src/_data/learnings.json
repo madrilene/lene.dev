@@ -7,7 +7,7 @@
       "topic": "CSS",
       "opinion": "... have I read it completely? Of course not! It has over 1000 pages. But I'm on it. I'm actually planning to read it cover to cover, and I'm somewhere on page 240, but I keep reaching for it to look up a particular chapter. It's a treasure trove, and also lovingly and humorously written. A must have. ",
       "image": "/css-definitive-guide.jpg",
-      "alt": "The cover shows the title and authors Eric Meyer and Estelle Weyl, as well as a lifelike illustration of three salmon",
+      "alt": "The cover features the title as well as authors Eric Meyer and Estelle Weyl, as well as a lifelike illustration of three salmon",
       "link": "https://www.oreilly.com/library/view/css-the-definitive/9781098117603/",
       "linkText": "O'Reilly Media"
     },
@@ -73,7 +73,7 @@
       "topic": "CSS",
       "opinion": "Very long, detailed, interactive and comprehensive course made by Josh Comeau. It's made especially for JavaScript developers that started off on a wrong foot with CSS, which doesn't apply to me at all, but it's nevertheless very worthwhile.",
       "image": "/css-for-js.jpg",
-      "alt": "A gradient from yellow to red, saying CSS for JavaScript developers in uppercase latters. The author is Josh Comeau.",
+      "alt": "A gradient from yellow to red, saying CSS for JavaScript developers in uppercase latters.",
       "link": "https://css-for-js.dev/",
       "linkText": "CSS for JavaScript developers"
     },
@@ -82,9 +82,9 @@
       "year": 2020,
       "medium": "book",
       "topic": "Javascript",
-      "opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope. It's the first book of a series, that can be read for free on GitHub.",
+      "opinion": "Another Javascript book that I enjoyed very much. Kyle Simpson explains the basic workings of Javascript with comprehensible code examples. The book was crucial for me to understand concepts like closure, prototypes and scope. It's the first book of a series, it can be read for free on GitHub.",
       "image": "/ydkjsy-getstarted.jpg",
-      "alt": "'You Don't Know JS Yet' written between two simplified black illustrations of faces that seem to scream at each other, somehing that took me very long to see. 'Get started' is the first book of a series by Kyle Simpson. On the bottom are some chess figures, some of them knocked over.",
+      "alt": "'You Don't Know JS Yet' written between two simplified black illustrations of faces that seem to scream at each other. On the bottom are some chess figures, some of them knocked over.",
       "link": "https://github.com/getify/You-Dont-Know-JS",
       "linkText": "GitHub"
     },
@@ -94,8 +94,8 @@
       "medium": "course",
       "topic": "Javascript",
       "opinion": "This course comes with an interactive environment. The short lessons are directly followed by challenges. Exercising anywhere is possible with a special flashcards app, based on your progress. It took me ages to understand Javascript. This course definitely helped me with that. ",
-      "image": "/learnjs.jpg",
-      "alt": "Yellow circle with 'JS' in big letters in its center",
+      "image": "/learn-js-screenshot.png",
+      "alt": "Screenshot of the course UI, the challenge from chatper 69: Advanced imports.",
       "link": "https://learnjavascript.online/",
       "linkText": "Learn JavaScript"
     },
@@ -105,8 +105,8 @@
       "medium": "book",
       "topic": "Git",
       "opinion": "I understand Git a little better  thanks to this book. Like all A book apart publications it's nice and short.",
-      "image": "/git-humans.jpg",
-      "alt": "A book apart cover in dark red, displaying author David Demaree's 'Git for Humans' in white letters.",
+      "image": "/git-for-humans.png",
+      "alt": "A book apart cover in dark pink, displaying author David Demaree's 'Git for Humans' in white letters.",
       "link": "https://abookapart.com/products/git-for-humans",
       "linkText": "Git for Humans"
     }
