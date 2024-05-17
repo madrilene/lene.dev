@@ -20,7 +20,7 @@ export const creator = {
 };
 export const themeColor = '#FFC2D1'; //  Manifest: defines the default theme color for the application
 export const themeBgColor = '#332A2C'; // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
-export const opengraph_default = '/assets/images/og-images/opengraph-default.jpg'; // fallback/default meta image
+export const opengraph_default = '/assets/og-images/opengraph-default.jpg'; // fallback/default meta image
 export const opengraph_default_alt =
   'Visible content: Eleventy starter built around the CSS workflow for Cube CSS, Every Layout, Design Tokens and Tailwind for uitility, based on the concepts explained in buildexcellentwebsit.es'; // alt text for default meta image
 export const blog = {
