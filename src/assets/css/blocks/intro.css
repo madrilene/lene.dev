@@ -13,11 +13,15 @@
   filter: grayscale(100%) brightness(110%);
   inline-size: 100%;
   object-fit: cover;
-  border-end-start-radius: var(--border-radius-large);
 }
 
 .intro custom-split picture {
   position: relative;
+}
+
+.intro custom-split img,
+.intro custom-split picture::after {
+  border-end-start-radius: var(--border-radius-large);
 }
 
 .intro custom-split picture::after {
