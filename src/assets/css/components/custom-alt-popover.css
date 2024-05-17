@@ -4,6 +4,7 @@
   place-items: center;
   align-items: end;
   justify-items: start;
+  font-family: var(--font-base, system-ui);
 }
 
 .alt-container > * {
@@ -15,7 +16,7 @@
   margin: var(--space-xs);
 }
 
-.anchor {
+.alt-container .anchor {
   cursor: pointer;
   text-align: center;
   background-color: var(--anchor-bg, var(--color-dark));
@@ -24,13 +25,15 @@
   font-size: var(--anchor-font-size, var(--size-step-min-2));
   font-family: var(--anchor-font-family, inherit);
   font-weight: var(--font-bold);
+  text-transform: uppercase;
+  z-index: 1;
 }
 
-.anchor:focus-visible {
+.alt-container .anchor:focus-visible {
   outline-color: var(--color-primary);
 }
 
-.target {
+.alt-container .target {
   inline-size: min(20rem, 60%);
   background-color: var(--target-bg, var(--color-primary));
   color: var(--target-color, var(--color-dark));
@@ -39,14 +42,14 @@
   overflow: visible;
 }
 
-.anchor,
-.target {
+.alt-container .anchor,
+.alt-container .target {
   border-radius: var(--element-radius, 0.1em);
   padding: var(--space-xs);
 }
 
 @supports (position-anchor: --anchor-el) {
-  .target {
+  .alt-container .target {
     position: absolute;
     margin: 0;
     margin-left: 1.2rem;
@@ -54,7 +57,7 @@
     top: anchor(top);
   }
 
-  .target::before {
+  .alt-container .target::before {
     content: '';
     top: var(--space-xs);
     border: solid transparent;
