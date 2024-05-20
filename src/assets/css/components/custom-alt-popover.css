@@ -71,3 +71,9 @@
     margin-inline-start: -1.8rem;
   }
 }
+
+@media (scripting: none) {
+  .alt-container {
+    display: none;
+  }
+}
