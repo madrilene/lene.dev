@@ -1,3 +1,5 @@
+{% set assetHash = helpers.random() %}
+
 <!doctype html>
 <html lang="{{ meta.lang }}">
   <!-- The order of elements in the head follows recommendations by Harry Roberts. learn more here: https://www.youtube.com/watch?v=MHyAOZ45vnU -->
@@ -25,7 +27,7 @@
     {% include "partials/schema.njk" %}
 
     <!-- 5 CSS  -->
-    {% include "partials/css.njk" %}
+    <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" />
 
     <!-- 6 preloads  -->
     {% include "partials/preloads.njk" %}
