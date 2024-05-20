@@ -82,10 +82,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     // -- to root
-    'src/assets/images/favicons/*': '/',
-
-    // -- webc assets
-    'src/_includes/components/**/*.{css,js}': `assets/components/`
+    'src/assets/images/favicons/*': '/'
   });
 
   // --------------------- Build Settings

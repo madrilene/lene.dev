@@ -28,21 +28,6 @@ export const jsConfig = eleventyConfig => {
         return;
       }
 
-      // Component scripts processing
-      if (inputPath.startsWith('./src/assets/scripts/components/')) {
-        const filename = path.basename(inputPath);
-        const outputPath = `./dist/assets/components/${filename}`;
-
-        await esbuild.build({
-          target: 'es2020',
-          entryPoints: [inputPath],
-          outfile: outputPath,
-          bundle: true,
-          minify: true
-        });
-        return;
-      }
-
       // Default handling for other scripts, excluding inline scripts
       return async () => {
         let output = await esbuild.build({

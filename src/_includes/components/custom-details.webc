@@ -2,7 +2,7 @@
   ><custom-details class="flow" webc:root webc:keep>
     <slot></slot>
     <template data-island="once" webc:raw>
-      <script src="/assets/components/custom-details.js" defer></script>
+      <script src="/assets/scripts/components/custom-details.js" defer></script>
     </template>
   </custom-details>
 </is-land>
