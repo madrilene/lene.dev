@@ -52,7 +52,7 @@
   .alt-container .target {
     position: absolute;
     margin: 0;
-    margin-left: 1.2rem;
+    margin-left: 1.5rem;
     left: anchor(right);
     top: anchor(top);
   }
@@ -67,7 +67,7 @@
     pointer-events: none;
     border-color: transparent;
     border-right-color: var(--target-bg, var(--color-primary));
-    border-width: 10px;
+    border-width: 12px;
     margin-inline-start: -1.8rem;
   }
 }
