@@ -13,10 +13,7 @@ export const cssConfig = eleventyConfig => {
   eleventyConfig.addExtension('css', {
     outputFileExtension: 'css',
     compile: async (inputContent, inputPath) => {
-      if (
-        !inputPath.endsWith('/src/assets/css/global.css') &&
-        !inputPath.includes('/src/assets/css/components/')
-      ) {
+      if (!inputPath.endsWith('/src/assets/css/global.css')) {
         return;
       }
 
