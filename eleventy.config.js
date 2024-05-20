@@ -56,8 +56,6 @@ export default async function (eleventyConfig) {
   // --------------------- Filters
   eleventyConfig.addFilter('toIsoString', filters.toISOString);
   eleventyConfig.addFilter('formatDate', filters.formatDate);
-  eleventyConfig.addFilter('cssmin', filters.minifyCss);
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', filters.minifyJs);
   eleventyConfig.addFilter('splitlines', filters.splitlines);
   eleventyConfig.addFilter('striptags', filters.striptags);
   eleventyConfig.addFilter('toAbsoluteUrl', filters.toAbsoluteUrl);
