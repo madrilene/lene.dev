@@ -50,15 +50,27 @@ class CustomLightbulb extends HTMLElement {
       const randomColor = colorVariations[Math.floor(Math.random() * colorVariations.length)];
       document.documentElement.style.setProperty('--color-primary', randomColor);
       this.lastLightColor = randomColor;
+      // Update the theme color meta tag to reflect the current primary color
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', randomColor);
+      }
     } else if (this.currentTheme === 'dark' && this.lastLightColor) {
       document.documentElement.style.setProperty('--color-primary', this.lastLightColor);
     }
   }
-
   triggerPendulumEffect() {
     if (!this.svg) return; // Check if svg is available
     this.svg.classList.add('pendulum');
     setTimeout(() => this.svg.classList.remove('pendulum'), 1000);
+  }
+
+  updateThemeColor() {
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    const primaryColor = getComputedStyle(document.documentElement)
+      .getPropertyValue('--color-primary')
+      .trim();
+    themeColorMeta.setAttribute('content', primaryColor);
   }
 }
 
