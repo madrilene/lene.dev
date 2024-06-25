@@ -22,11 +22,11 @@
     "url": "https://github.com/madrilene/lene.dev.git"
   },
   "dependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.10",
+    "@11ty/eleventy": "3.0.0-alpha.13",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
     "@11ty/is-land": "^4.0.0",
@@ -42,7 +42,6 @@
     "dotenv": "^16.0.3",
     "esbuild": "^0.21.2",
     "html-minifier-terser": "^7.1.0",
-    "jimp": "^0.22.12",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "markdown-it": "^14.0.0",
@@ -65,6 +64,7 @@
     "rgb-hex": "^4.1.0",
     "rimraf": "^5.0.0",
     "sanitize-html": "^2.7.2",
+    "sharp-ico": "^0.1.5",
     "slugify": "^1.6.5",
     "svgo": "^3.2.0"
   }
