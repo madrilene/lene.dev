@@ -2,7 +2,7 @@
   "tools": [
     {
       "division": "Languages",
-      "preference": ["Semantic HTML", "CSS", "Javascript ES6, Node.js", "SVG", "PHP", "Bash"],
+      "preference": ["Semantic HTML", "CSS", "JavaScript, Node.js", "SVG", "PHP", "Bash"],
       "possible": ["Python"],
       "nope": []
     },
@@ -26,7 +26,7 @@
     },
     {
       "division": "CMS",
-      "preference": ["Cloudcannon", "Tina", "Wordpress", "Decap CMS", "Shopify"],
+      "preference": ["Cloudcannon", "Wordpress", "Decap CMS", "Shopify", "Tina", "Storyblok"],
       "possible": ["Strapi", "Sanity"],
       "nope": []
     },
