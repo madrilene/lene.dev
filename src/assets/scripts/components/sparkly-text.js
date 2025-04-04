@@ -35,10 +35,24 @@ class SparklyText extends HTMLElement {
       svg {
         animation: sparkle-spin var(--_sparkle-base-animation-length) linear infinite;
       }
+
+      svg.rainbow path {
+        animation: rainbow-colors calc(var(--_sparkle-base-animation-length) * 2) linear infinite;
+      }
     }
 
     svg path {
       fill: var(--_sparkle-base-color);
+    }
+
+    @keyframes rainbow-colors {
+      0%, 100% { fill: #ff0000; }
+      14% { fill: #ff8000; }
+      28% { fill: #ffff00; }
+      42% { fill: #00ff00; }
+      56% { fill: #0000ff; }
+      70% { fill: #4b0082; }
+      84% { fill: #8f00ff; }
     }
 
     @keyframes sparkle-spin {
@@ -103,14 +117,41 @@ class SparklyText extends HTMLElement {
       if (Number.isNaN(this.#numberOfSparkles)) {
         throw new Error(`Invalid number-of-sparkles value`);
       }
+      this.cleanupSparkles();
       this.addSparkles();
     }
 
     motionOK.addEventListener('change', this.motionOkChange);
+    window.addEventListener('popstate', this.handleNavigation);
+    window.addEventListener('pageshow', this.handlePageShow);
   }
 
   disconnectedCallback() {
     motionOK.removeEventListener('change', this.motionOkChange);
+    window.removeEventListener('popstate', this.handleNavigation);
+    window.removeEventListener('pageshow', this.handlePageShow);
+    this.cleanupSparkles();
+  }
+
+  handleNavigation = () => {
+    if (motionOK.matches) {
+      this.cleanupSparkles();
+      this.addSparkles();
+    }
+  };
+
+  handlePageShow = event => {
+    // If the page is being loaded from the bfcache
+    if (event.persisted && motionOK.matches) {
+      this.cleanupSparkles();
+      this.addSparkles();
+    }
+  };
+
+  cleanupSparkles() {
+    // Remove all existing sparkle SVGs
+    const sparkles = this.shadowRoot.querySelectorAll('svg');
+    sparkles.forEach(sparkle => sparkle.remove());
   }
 
   // Declare as an arrow function to get the appropriate 'this'
@@ -139,6 +180,13 @@ class SparklyText extends HTMLElement {
     }
 
     const sparkleWrapper = sparkleTemplate.cloneNode(true);
+
+    // Add rainbow class if --sparkly-text-color is set to 'rainbow'
+    const styles = getComputedStyle(this);
+    if (styles.getPropertyValue('--sparkly-text-color').trim() === 'rainbow') {
+      sparkleWrapper.classList.add('rainbow');
+    }
+
     update(sparkleWrapper);
     this.shadowRoot.appendChild(sparkleWrapper);
     sparkleWrapper.addEventListener('animationiteration', () => {
