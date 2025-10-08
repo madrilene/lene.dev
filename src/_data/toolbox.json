@@ -7,10 +7,10 @@
       "nope": []
     },
     {
-      "division": "CSS & JS-Frameworks",
+      "division": "CSS & JS and Frameworks",
       "preference": ["I prefer everything vanilla"],
-      "possible": ["Tailwind CSS", "Svelte", "Alpine.js"],
-      "nope": ["React", "Bootstrap", "jQuery"]
+      "possible": ["Tailwind CSS", "Alpine.js", "Svelte", "React Native (Expo)"],
+      "nope": ["React"]
     },
     {
       "division": "Site generators &, web- & meta-frameworks",
@@ -20,14 +20,14 @@
     },
     {
       "division": "API",
-      "preference": ["REST"],
-      "possible": ["GraphQL"],
+      "preference": ["REST", "GraphQL"],
+      "possible": [],
       "nope": []
     },
     {
       "division": "CMS",
-      "preference": ["Cloudcannon", "Wordpress", "Decap CMS", "Shopify", "Tina", "Storyblok"],
-      "possible": ["Strapi", "Sanity"],
+      "preference": ["Sanity", "Contentful", "Decap CMS", "Pages CMS", "Cloudcannon", "Shopify", "Storyblok"],
+      "possible": ["Strapi", "Tina", "Wordpress", "Craft"],
       "nope": []
     },
     {
